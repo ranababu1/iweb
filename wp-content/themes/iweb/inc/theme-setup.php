@@ -67,16 +67,14 @@ function iweb_setup() {
 	// Support wide and full alignment classes.
 	add_theme_support( 'align-wide' );
 
-	// Load editor styles in the block editor.
+	// Enable editor styles support (used by the block editor when it is
+	// enabled; the classic editor always picks up the stylesheet below).
 	add_theme_support( 'editor-styles' );
-
-	// Output default block styles on the frontend.
-	add_theme_support( 'wp-block-styles' );
 
 	// Enable selective refresh for widgets in the Customizer.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
-	// Add the block editor stylesheet.
+	// Add the editor stylesheet, used by the classic editor.
 	add_editor_style( 'assets/css/editor.css' );
 
 	// Register the navigation menu locations.
