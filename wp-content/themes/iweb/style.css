@@ -1,0 +1,632 @@
+/*
+Theme Name: iweb
+Theme URI: https://example.com/iweb
+Author: iweb
+Author URI: https://example.com
+Description: A minimal, design-agnostic classic WordPress starter theme. It ships all the required theme plumbing, semantic templates, accessible navigation, and a deliberately basic, token-based stylesheet meant to be replaced with your own design.
+Version: 1.0.0
+Requires at least: 6.3
+Tested up to: 6.8
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: iweb
+Tags: accessibility-ready, blog, one-column, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, footer-widgets, threaded-comments, translation-ready, editor-style
+*/
+
+/*
+This is the only stylesheet loaded on every page. It holds the theme header
+above and all global styling: reset, design tokens, base typography, layout
+shell, header, footer, accessibility helpers, and WordPress core alignment
+classes. View-specific styles live in assets/css/ and are loaded
+conditionally by inc/enqueue.php.
+*/
+
+/*
+>>> TABLE OF CONTENTS
+1. Design tokens
+2. Reset
+3. Base typography
+4. Accessibility helpers
+5. Layout shell
+6. Header and navigation
+7. Footer
+8. Search form
+9. Forms and buttons
+10. WordPress core classes
+11. Generic content classes
+*/
+
+/* 1. Design tokens */
+
+:root {
+	/* Colors. */
+	--color-bg: #ffffff;
+	--color-text: #212121;
+	--color-heading: #000000;
+	--color-muted: #5f5f5f;
+	--color-link: #1a4f8b;
+	--color-border: #d8d8d8;
+
+	/* Spacing. */
+	--space-xs: 0.25rem;
+	--space-sm: 0.5rem;
+	--space-md: 1rem;
+	--space-lg: 2rem;
+	--space-xl: 4rem;
+
+	/* Typography. */
+	--font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	--font-heading: var(--font-body);
+	--font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+	--font-size-sm: 0.875rem;
+	--font-size-base: 1rem;
+	--font-size-lg: 1.25rem;
+	--font-size-xl: 2rem;
+	--line-height-body: 1.6;
+	--line-height-heading: 1.2;
+
+	/* Layout. */
+	--content-width: 50rem;
+	--sidebar-width: 18rem;
+	--site-width: calc(var(--content-width) + var(--sidebar-width) + var(--space-lg));
+	--wide-width: 64rem;
+	--logo-max-width: 12rem;
+	--menu-submenu-width: 14rem;
+	--gallery-item-min-width: 10rem;
+	--avatar-size: 3rem;
+
+	/* Focus ring. */
+	--focus-ring-width: 2px;
+	--focus-ring-color: var(--color-link);
+}
+
+/* 2. Reset */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+figcaption,
+blockquote,
+dl,
+dd,
+pre {
+	margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+	color: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+/* 3. Base typography */
+
+body {
+	font-family: var(--font-body);
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-body);
+	color: var(--color-text);
+	background-color: var(--color-bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-heading);
+	line-height: var(--line-height-heading);
+	color: var(--color-heading);
+}
+
+h1 {
+	font-size: var(--font-size-xl);
+}
+
+h2 {
+	font-size: var(--font-size-lg);
+}
+
+a {
+	color: var(--color-link);
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: var(--font-mono);
+}
+
+blockquote {
+	margin-block: var(--space-md);
+	padding-inline-start: var(--space-md);
+	border-inline-start: var(--space-xs) solid var(--color-border);
+}
+
+hr {
+	margin-block: var(--space-lg);
+	border: 0;
+	border-top: 1px solid var(--color-border);
+}
+
+/* 4. Accessibility helpers */
+
+.screen-reader-text {
+	border: 0;
+	clip-path: inset(50%);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	word-wrap: normal !important;
+}
+
+/* The skip link stays hidden until it receives keyboard focus. */
+.skip-link:focus {
+	position: absolute;
+	z-index: 100000;
+	top: var(--space-sm);
+	left: var(--space-sm);
+	width: auto;
+	height: auto;
+	margin: 0;
+	padding: var(--space-sm) var(--space-md);
+	clip-path: none;
+	background-color: var(--color-bg);
+	border: 1px solid var(--color-border);
+}
+
+/* A visible focus indicator for every interactive element. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+	outline: var(--focus-ring-width) solid var(--focus-ring-color);
+	outline-offset: var(--focus-ring-width);
+}
+
+/* Respect user motion preferences. */
+@media (prefers-reduced-motion: reduce) {
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* 5. Layout shell */
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.site-header-inner,
+.site-content,
+.site-footer-inner {
+	margin-inline: auto;
+	width: 100%;
+	max-width: var(--site-width);
+	padding-inline: var(--space-md);
+}
+
+.site-content {
+	display: grid;
+	flex-grow: 1;
+	grid-template-columns: minmax(0, 1fr);
+	gap: var(--space-lg);
+	padding-block: var(--space-lg);
+}
+
+.site-main {
+	width: 100%;
+	max-width: var(--content-width);
+}
+
+.widget-area {
+	min-width: 0;
+}
+
+/* With a sidebar, the content grid gains a second column. */
+@media (min-width: 56rem) {
+
+	body.has-sidebar .site-content {
+		grid-template-columns: minmax(0, 1fr) minmax(0, var(--sidebar-width));
+	}
+}
+
+/* 6. Header and navigation */
+
+.site-header {
+	border-bottom: 1px solid var(--color-border);
+}
+
+.site-header-inner {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--space-md);
+	padding-block: var(--space-md);
+}
+
+.site-branding {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-xs);
+}
+
+.site-title {
+	font-size: var(--font-size-lg);
+}
+
+.site-title a {
+	color: var(--color-heading);
+	text-decoration: none;
+}
+
+.site-description {
+	font-size: var(--font-size-sm);
+	color: var(--color-muted);
+}
+
+.custom-logo {
+	max-width: var(--logo-max-width);
+	height: auto;
+}
+
+/*
+ * Mobile navigation (progressive enhancement).
+ *
+ * Without JavaScript the menu is always visible and the toggle button is
+ * hidden. JavaScript adds the `js` class to <html> (assets/js/main.js),
+ * which reveals the toggle button. The menu itself is collapsed only after
+ * assets/js/navigation.js adds the `is-collapsed` class to the nav element.
+ */
+.menu-toggle {
+	display: none;
+	align-items: center;
+	padding: var(--space-sm) var(--space-md);
+	background-color: var(--color-bg);
+	border: 1px solid var(--color-border);
+}
+
+html.js .menu-toggle {
+	display: flex;
+}
+
+.primary-navigation {
+	width: 100%;
+}
+
+.primary-navigation .nav-menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.primary-navigation .nav-menu li {
+	position: relative;
+}
+
+.primary-navigation .nav-menu a {
+	display: block;
+	padding: var(--space-sm) 0;
+	color: var(--color-text);
+	text-decoration: none;
+}
+
+.primary-navigation .nav-menu a:hover,
+.primary-navigation .nav-menu a:focus {
+	text-decoration: underline;
+}
+
+/* Submenus stay hidden until they are opened by focus, pointer, or script. */
+.primary-navigation .nav-menu ul {
+	display: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.primary-navigation .nav-menu li.is-open > ul {
+	display: block;
+}
+
+/* Without JavaScript, submenus open on hover and keyboard focus. */
+html:not(.js) .primary-navigation .nav-menu li:hover > ul,
+html:not(.js) .primary-navigation .nav-menu li:focus-within > ul {
+	display: block;
+}
+
+/* The menu is collapsed only after JavaScript adds the is-collapsed class. */
+html.js .primary-navigation.is-collapsed .nav-menu {
+	display: none;
+}
+
+/* Desktop navigation. */
+@media (min-width: 48rem) {
+
+	html.js .menu-toggle {
+		display: none;
+	}
+
+	.site-header-inner {
+		flex-wrap: nowrap;
+	}
+
+	.primary-navigation {
+		width: auto;
+	}
+
+	.primary-navigation .nav-menu {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: var(--space-md);
+	}
+
+	/* The menu is never collapsed on desktop. */
+	html.js .primary-navigation.is-collapsed .nav-menu {
+		display: flex;
+	}
+
+	.primary-navigation .nav-menu > li > a {
+		padding: var(--space-sm) var(--space-xs);
+	}
+
+	.primary-navigation .nav-menu ul {
+		position: absolute;
+		top: 100%;
+		inset-inline-start: 0;
+		min-width: var(--menu-submenu-width);
+		padding: var(--space-xs) var(--space-md);
+		background-color: var(--color-bg);
+		border: 1px solid var(--color-border);
+	}
+
+	.primary-navigation .nav-menu ul a {
+		padding-block: var(--space-xs);
+		white-space: nowrap;
+	}
+
+	/* Nested submenus open to the side. */
+	.primary-navigation .nav-menu ul ul {
+		top: 0;
+		inset-inline-start: 100%;
+	}
+}
+
+/* 7. Footer */
+
+.site-footer {
+	padding-block: var(--space-lg);
+	border-top: 1px solid var(--color-border);
+}
+
+.site-footer-inner > * + * {
+	margin-block-start: var(--space-lg);
+}
+
+.footer-widgets {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: var(--space-lg);
+}
+
+@media (min-width: 40rem) {
+
+	.footer-widgets {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 56rem) {
+
+	.footer-widgets {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+.widget-title {
+	margin-block-end: var(--space-sm);
+	font-size: var(--font-size-base);
+}
+
+.widget ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.widget li + li {
+	margin-block-start: var(--space-xs);
+}
+
+.footer-navigation ul,
+.social-navigation ul {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	column-gap: var(--space-md);
+	row-gap: var(--space-xs);
+	list-style: none;
+}
+
+.footer-navigation a,
+.social-navigation a {
+	text-decoration: none;
+}
+
+.footer-navigation a:hover,
+.footer-navigation a:focus,
+.social-navigation a:hover,
+.social-navigation a:focus {
+	text-decoration: underline;
+}
+
+.iweb-copyright {
+	font-size: var(--font-size-sm);
+	color: var(--color-muted);
+}
+
+/* 8. Search form */
+
+.search-form {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: var(--space-sm);
+}
+
+.search-label {
+	flex-basis: 100%;
+	font-size: var(--font-size-sm);
+}
+
+.search-field {
+	flex: 1 1 12rem;
+	width: auto;
+	border: 1px solid var(--color-border);
+	padding: var(--space-xs) var(--space-sm);
+}
+
+.search-submit {
+	padding: var(--space-xs) var(--space-md);
+	background-color: var(--color-bg);
+	border: 1px solid var(--color-border);
+}
+
+/* 9. Forms and buttons */
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	padding: var(--space-xs) var(--space-sm);
+	border: 1px solid var(--color-border);
+}
+
+textarea {
+	width: 100%;
+}
+
+/* 10. WordPress core classes */
+
+.alignleft {
+	float: left;
+	margin-block-end: var(--space-sm);
+	margin-inline-end: var(--space-md);
+}
+
+.alignright {
+	float: right;
+	margin-block-end: var(--space-sm);
+	margin-inline-start: var(--space-md);
+}
+
+.aligncenter {
+	clear: both;
+	margin-inline: auto;
+}
+
+.alignwide {
+	width: min(var(--wide-width), 100vw);
+	margin-inline: calc(50% - min(var(--wide-width), 100vw) / 2);
+}
+
+.alignfull {
+	width: 100vw;
+	max-width: 100vw;
+	margin-inline: calc(50% - 50vw);
+}
+
+.wp-caption {
+	max-width: 100%;
+}
+
+.wp-caption-text,
+figcaption,
+.gallery-caption {
+	margin-block-start: var(--space-xs);
+	font-size: var(--font-size-sm);
+	color: var(--color-muted);
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(var(--gallery-item-min-width), 1fr));
+	gap: var(--space-sm);
+	margin-block: var(--space-md);
+}
+
+.gallery-item {
+	margin: 0;
+}
+
+/* 11. Generic content classes */
+
+/* Base page and entry titles, used on every content view. */
+.page-header {
+	margin-block-end: var(--space-lg);
+}
+
+.page-title {
+	font-size: var(--font-size-xl);
+}
+
+.entry-title {
+	margin-block-end: var(--space-md);
+	font-size: var(--font-size-xl);
+}
+
+/* Vertical rhythm for content blocks. */
+.entry-content > * + * {
+	margin-block-start: var(--space-md);
+}

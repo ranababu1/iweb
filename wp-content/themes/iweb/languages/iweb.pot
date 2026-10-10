@@ -1,0 +1,13 @@
+# Copyright (C) 2026 iweb
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: iweb 1.0.0\n"
+"Report-Msgid-Bugs-To: https://example.com/iweb\n"
+"Last-Translator: iweb\n"
+"Language-Team: iweb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: iweb\n"

@@ -1,0 +1,231 @@
+/**
+ * Blog view styles for the iweb theme.
+ *
+ * This file loads only on the blog page, archives, search views, and single
+ * posts. Every value references a design token defined globally in style.css.
+ */
+
+/* Loop items. */
+.hentry {
+	margin-block-end: var(--space-xl);
+}
+
+/* Entry headers. */
+.entry-header {
+	margin-block-end: var(--space-md);
+}
+
+.entry-title {
+	margin-block-end: var(--space-sm);
+}
+
+.entry-title a {
+	color: var(--color-heading);
+	text-decoration: none;
+}
+
+.entry-title a:hover,
+.entry-title a:focus {
+	text-decoration: underline;
+}
+
+/* Entry meta (posted on / posted by). */
+.entry-meta {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: var(--space-md);
+	row-gap: var(--space-xs);
+	font-size: var(--font-size-sm);
+	color: var(--color-muted);
+}
+
+/* Featured images. */
+.post-thumbnail {
+	display: block;
+	margin-block: var(--space-md);
+}
+
+/* Read-more link appended by the excerpt_more filter. */
+.read-more {
+	white-space: nowrap;
+}
+
+/* Entry footers (categories, tags, edit link). */
+.entry-footer {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: var(--space-md);
+	row-gap: var(--space-xs);
+	font-size: var(--font-size-sm);
+	color: var(--color-muted);
+}
+
+/* Archive headers. */
+.archive-description {
+	margin-block-start: var(--space-sm);
+}
+
+/* Pagination. */
+.pagination {
+	margin-block-start: var(--space-lg);
+}
+
+.pagination .nav-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-sm);
+}
+
+.pagination .page-numbers {
+	padding: var(--space-xs) var(--space-sm);
+	border: 1px solid var(--color-border);
+	text-decoration: none;
+}
+
+.pagination a.page-numbers:hover,
+.pagination a.page-numbers:focus {
+	text-decoration: underline;
+}
+
+.pagination .page-numbers.current {
+	background-color: var(--color-border);
+}
+
+.pagination .page-numbers.dots {
+	border: 0;
+}
+
+/* Post navigation on single posts. */
+.post-navigation {
+	margin-block-start: var(--space-lg);
+}
+
+.post-navigation .nav-links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: var(--space-md);
+}
+
+.post-navigation .nav-previous {
+	margin-inline-end: auto;
+}
+
+.post-navigation a {
+	display: inline-block;
+	padding: var(--space-sm) var(--space-md);
+	border: 1px solid var(--color-border);
+	text-decoration: none;
+}
+
+.post-navigation a:hover,
+.post-navigation a:focus {
+	text-decoration: underline;
+}
+
+/* Comments. */
+.comments-area {
+	margin-block-start: var(--space-xl);
+}
+
+.comments-title {
+	margin-block-end: var(--space-md);
+	font-size: var(--font-size-lg);
+}
+
+.comment-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.comment-list .comment,
+.comment-list .pingback,
+.comment-list .trackback {
+	margin-block-start: var(--space-md);
+}
+
+.comment-list .children {
+	margin: 0;
+	padding-inline-start: var(--space-lg);
+	list-style: none;
+}
+
+.comment-author {
+	display: flex;
+	align-items: center;
+	gap: var(--space-sm);
+}
+
+.comment-author img {
+	width: var(--avatar-size);
+	height: var(--avatar-size);
+}
+
+.comment-metadata {
+	font-size: var(--font-size-sm);
+}
+
+.comment-metadata a {
+	color: var(--color-muted);
+}
+
+.comment-content {
+	margin-block-start: var(--space-sm);
+}
+
+.comment-content > * + * {
+	margin-block-start: var(--space-md);
+}
+
+.reply {
+	margin-block-start: var(--space-xs);
+	font-size: var(--font-size-sm);
+}
+
+.comment-awaiting-moderation {
+	margin-block-start: var(--space-xs);
+	font-size: var(--font-size-sm);
+	color: var(--color-muted);
+}
+
+/* Comment form. */
+.comment-respond {
+	margin-block-start: var(--space-xl);
+}
+
+.comment-reply-title {
+	font-size: var(--font-size-lg);
+}
+
+.comment-form p {
+	margin-block: var(--space-sm);
+}
+
+.comment-form label {
+	display: block;
+	margin-block-end: var(--space-xs);
+}
+
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"],
+.comment-form textarea {
+	width: 100%;
+}
+
+.comment-form .submit {
+	padding: var(--space-xs) var(--space-md);
+	border: 1px solid var(--color-border);
+	background-color: var(--color-bg);
+}
+
+/* Paginated posts and pages. */
+.page-links {
+	margin-block-start: var(--space-md);
+}
+
+/* Empty loops (no results). */
+.no-results {
+	padding-block: var(--space-lg);
+}
