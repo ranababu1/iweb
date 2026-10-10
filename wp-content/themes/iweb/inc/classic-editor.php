@@ -1,17 +1,18 @@
 <?php
 /**
- * Plugin Name: iweb Classic Editor
- * Description: Replaces the block (Gutenberg) editor with the classic editor for all post types, restores the classic widgets screen, and removes the block editor frontend bloat: block library CSS, global styles, duotone SVG filters, and core block patterns.
- * Version: 1.0.0
- * Author: iweb
- * License: GNU General Public License v2 or later
- * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Classic editor support for the iweb theme.
  *
- * Must-use plugin: loaded automatically on every request and cannot be
- * deactivated from the admin. Delete this file (or remove it from the
- * repository) to switch back to the block editor.
+ * The theme is built for the classic editor. This file turns the block
+ * (Gutenberg) editor off for all post types, restores the classic widgets
+ * screen, and removes the block editor frontend bloat: the block library
+ * stylesheets, global styles, the duotone SVG filters, and the core block
+ * patterns.
+ *
+ * To switch back to the block editor, remove the require line for this
+ * file in functions.php.
  *
  * @package iweb
+ * @since 1.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -22,8 +23,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * 1. Classic editor everywhere.
  *
  * WordPress ships the classic (TinyMCE) editor as its fallback, so turning
- * the block editor off is all that is needed to restore the classic
- * post, page, and CPT editing screens.
+ * the block editor off is all that is needed to restore the classic post,
+ * page, and custom post type editing screens.
  */
 add_filter( 'use_block_editor_for_post_type', '__return_false', 100 );
 add_filter( 'use_block_editor_for_post', '__return_false', 100 );
@@ -37,19 +38,15 @@ add_filter( 'use_block_editor_for_post', '__return_false', 100 );
 add_filter( 'gutenberg_use_widgets_block_editor', '__return_false', 100 );
 add_filter( 'use_widgets_block_editor', '__return_false', 100 );
 
-/*
- * 3. Remove the block editor frontend bloat.
- */
-
 /**
- * Dequeue the block library, global styles, and theme-bridge stylesheets.
+ * Remove the block editor stylesheets from the frontend.
  *
  * Runs late on the `wp_enqueue_scripts` hook so everything the block
- * system enqueued at the default priority is removed again.
+ * system enqueued at the default priority is dequeued again.
  *
- * Note: if any existing posts or pages still contain blocks, they lose the
- * core block CSS once these stylesheets are removed. Convert such content
- * to classic HTML, or drop these dequeues.
+ * Note: if any existing posts or pages still contain blocks, they lose
+ * the core block CSS once these stylesheets are removed. Convert such
+ * content to classic HTML, or remove this function.
  *
  * @since 1.0.0
  *
@@ -63,7 +60,7 @@ function iweb_dequeue_block_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'iweb_dequeue_block_styles', 100 );
 
-// Do not print the global-styles duotone SVG filter definitions.
+// Do not print the global styles duotone SVG filter definitions.
 remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
 
 /**

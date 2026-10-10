@@ -16,6 +16,7 @@ iweb is a classic (PHP template) WordPress starter theme built to be replaced: i
 Features:
 
 * Classic PHP templates; no block theme features and no theme.json required.
+* Classic editor: the block (Gutenberg) editor and the block-based widgets screen are disabled, and the block library styles are removed from the frontend (see inc/classic-editor.php).
 * Accessible mobile navigation with keyboard support (toggle, dropdowns, focus trap, Escape to close) and a no-JavaScript fallback that stays visible and expanded.
 * One global stylesheet (style.css) plus conditional view-specific stylesheets loaded from assets/css/.
 * Customizer options for the footer copyright text, social profile URLs, and the sidebar on archives.
@@ -45,6 +46,10 @@ Add widgets to the "Sidebar" widget area, then enable "Show the sidebar on archi
 = Does the theme require any plugins? =
 
 No. The theme includes no plugin-territory features such as custom post types, shortcodes, SEO, or analytics code.
+
+= Why is the block (Gutenberg) editor disabled? =
+
+The theme is built for the classic editor: posts and pages use the classic editor, the Widgets screen is the classic one, and the block library and global styles are removed from the frontend. This lives in inc/classic-editor.php. To switch back to the block editor, remove the require line for that file in functions.php.
 
 == Changelog ==
 
