@@ -118,6 +118,7 @@ function iweb_conditional_stylesheets() {
 			'iweb-blog' => array(
 				'conditional' => 'iweb_is_blog_view',
 				'file'       => 'assets/css/blog.css',
+				'script'     => 'assets/js/blog.js',
 			),
 			'iweb-home' => array(
 				'conditional' => 'iweb_is_home_view',

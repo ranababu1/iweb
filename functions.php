@@ -25,3 +25,5 @@ require_once get_template_directory() . '/inc/customizer.php';
 require_once get_template_directory() . '/inc/classic-editor.php';
 require_once get_template_directory() . '/inc/case-studies.php';
 require_once get_template_directory() . '/inc/contact-form.php';
+
+require_once get_template_directory() . '/inc/blog.php';

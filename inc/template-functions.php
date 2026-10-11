@@ -225,6 +225,10 @@ function iweb_icon( $name ) {
 		'trophy'    => '<path d="M8 4h8v6a4 4 0 0 1-8 0zM8 6H4c0 3 1.500 4 4 4M16 6h4c0 3-1.500 4-4 4M12 14v4M8 21h8M9 18h6"/>',
 		'mail'      => '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
 		'clip'      => '<path d="m20 11-8.500 8.500a5 5 0 0 1-7-7L13 4a3.500 3.500 0 0 1 5 5l-8.500 8.500a2 2 0 0 1-3-3L14 7"/>',
+		'facebook'  => '<path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/>',
+		'link'      => '<path d="M10 14a4 4 0 0 0 5.700 0l3-3a4 4 0 0 0-5.700-5.700l-1 1M14 10a4 4 0 0 0-5.700 0l-3 3a4 4 0 0 0 5.700 5.700l1-1"/>',
+		'folder'    => '<path d="M3 6h6l2 2h10v11H3z"/>',
+		'copy'      => '<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/>',
 		'image'     => '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.500"/><path d="m4 18 5-5 4 4 3-3 4 4"/>',
 	);
 
@@ -278,7 +282,7 @@ function iweb_is_marketing_view() {
  * @return string[]
  */
 function iweb_marketing_body_class( $classes ) {
-	if ( iweb_is_marketing_view() || is_singular( 'case_study' ) ) {
+	if ( iweb_is_marketing_view() || is_singular( 'case_study' ) || iweb_is_blog_view() ) {
 		$classes[] = 'is-marketing';
 	}
 
