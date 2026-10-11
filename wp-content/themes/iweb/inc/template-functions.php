@@ -172,3 +172,110 @@ function iweb_head_cleanup() {
 	remove_action( 'wp_head', 'wp_generator' );                 // WordPress version generator.
 }
 add_action( 'init', 'iweb_head_cleanup' );
+
+/**
+ * Return an inline SVG icon.
+ *
+ * Icons are 24x24 line icons that inherit the current text color.
+ *
+ * @since 1.1.0
+ *
+ * @param string $name Icon name.
+ * @return string SVG markup, or an empty string for an unknown icon.
+ */
+function iweb_icon( $name ) {
+	$paths = array(
+		'search'    => '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
+		'cursor'    => '<path d="M5 3l14 7-6 2-2 6z"/>',
+		'gear'      => '<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/>',
+		'chart'     => '<path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/>',
+		'code'      => '<path d="m8 8-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/>',
+		'clock'     => '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+		'users'     => '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6M16 4.5a3.5 3.5 0 0 1 0 7M18 14.3c2 .7 3.5 2.6 3.5 5.7"/>',
+		'globe'     => '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>',
+		'layers'    => '<path d="m12 3 9 5-9 5-9-5zM3 13l9 5 9-5"/>',
+		'arrow'     => '<path d="M5 12h14M13 6l6 6-6 6"/>',
+		'calendar'  => '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+		'bulb'      => '<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/>',
+		'doc'       => '<path d="M6 3h8l4 4v14H6zM14 3v4h4M9 12h6M9 16h6"/>',
+		'sparkle'   => '<path d="M12 3c.7 4.5 2.5 6.3 7 7-4.5.7-6.3 2.5-7 7-.7-4.5-2.5-6.3-7-7 4.5-.7 6.3-2.5 7-7z"/>',
+		'funnel'    => '<path d="M3 4h18l-7 8v7l-4 2v-9z"/>',
+		'leaf'      => '<path d="M5 19C5 10 10 5 20 4c0 10-5 15-14 15zM5 19l8-8"/>',
+		'megaphone' => '<path d="M3 10v4h4l9 5V5l-9 5zM19 9a4 4 0 0 1 0 6"/>',
+		'check'     => '<path d="m5 12 5 5 9-10"/>',
+		'plus'      => '<path d="M12 5v14M5 12h14"/>',
+		'linkedin'  => '<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 11v6M8 8v.01M12 17v-6M12 13c0-3 5-3 5 0v4"/>',
+		'x'         => '<path d="M4 4l16 16M20 4 4 20"/>',
+		'github'    => '<path d="M9 19c-4 1.5-4-2-6-2m12 4v-3.5c0-1 .1-1.4-.5-2 3-.3 6-1.500 6-6.500a5 5 0 0 0-1.400-3.500 4.700 4.700 0 0 0-.1-3.500s-1.100-.3-3.500 1.300a12 12 0 0 0-6.200 0C6.900 2.900 5.800 3.200 5.800 3.200a4.700 4.700 0 0 0-.1 3.500A5 5 0 0 0 4.300 10.200c0 5 3 6.200 6 6.500-.6.600-.6 1.200-.5 2V21"/>',
+		'youtube'   => '<rect x="2.500" y="5" width="19" height="14" rx="4"/><path d="m10 9.500 5 2.500-5 2.500z"/>',
+		'image'     => '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.500"/><path d="m4 18 5-5 4 4 3-3 4 4"/>',
+	);
+
+	if ( ! isset( $paths[ $name ] ) ) {
+		return '';
+	}
+
+	return '<svg class="icon icon-' . esc_attr( $name ) . '" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">' . $paths[ $name ] . '</svg>';
+}
+
+/**
+ * Default primary navigation, used until a menu is assigned.
+ *
+ * @since 1.1.0
+ *
+ * @return void
+ */
+function iweb_fallback_menu() {
+	$items = array(
+		__( 'Services', 'iweb' )     => home_url( '/#services' ),
+		__( 'How we work', 'iweb' )  => home_url( '/#process' ),
+		__( 'Work', 'iweb' )         => home_url( '/work/' ),
+		__( 'Insights', 'iweb' )     => home_url( '/blog/' ),
+		__( 'About', 'iweb' )        => home_url( '/about/' ),
+	);
+
+	echo '<ul class="nav-menu">';
+	foreach ( $items as $label => $url ) {
+		printf( '<li><a href="%s">%s</a></li>', esc_url( $url ), esc_html( $label ) );
+	}
+	echo '</ul>';
+}
+
+/**
+ * Whether the current view is a full-width marketing template.
+ *
+ * @since 1.1.0
+ *
+ * @return bool
+ */
+function iweb_is_marketing_view() {
+	return is_front_page() || is_page_template( 'page-templates/service-get-found.php' );
+}
+
+/**
+ * Add a body class for full-width marketing templates.
+ *
+ * @since 1.1.0
+ *
+ * @param string[] $classes Body classes.
+ * @return string[]
+ */
+function iweb_marketing_body_class( $classes ) {
+	if ( iweb_is_marketing_view() ) {
+		$classes[] = 'is-marketing';
+	}
+
+	return $classes;
+}
+add_filter( 'body_class', 'iweb_marketing_body_class' );
+
+/**
+ * The text wordmark: a green "i" followed by the rest of the name.
+ *
+ * @since 1.1.0
+ *
+ * @return string Markup using span.logo-i; pass through wp_kses().
+ */
+function iweb_wordmark() {
+	return '<span class="logo-i">i</span>WebAndSEO';
+}

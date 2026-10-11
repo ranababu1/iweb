@@ -37,7 +37,7 @@ All global styles live in style.css, below the theme header. Design tokens are d
 
 = How do I add another conditional stylesheet? =
 
-Add one entry to the array returned by iweb_conditional_stylesheets() in inc/enqueue.php, or filter `iweb_conditional_stylesheets` from a child theme.
+Add one entry to the array returned by iweb_conditional_stylesheets() in inc/enqueue.php (an optional `script` key loads a matching JS file, as home.css/home.js and service.css/service.js do), or filter `iweb_conditional_stylesheets` from a child theme.
 
 = How do I show the sidebar? =
 
