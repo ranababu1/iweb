@@ -586,3 +586,6 @@ details[open] { border-color: var(--iws-ink) !important; }
 .ui-mock--form, .ui-mock--dashboard, .ui-mock--code, .ui-mock--seo { width: 100%; max-width: 30rem; margin-inline: auto; }
 .footer-email { margin-top: 2rem; }
 .footer-wordmark { margin-top: 1.5rem; }
+.about-hero__visual.has-mock { display: block !important; }
+.about-values { background: var(--iws-soft) !important; border: 1px solid var(--iws-line); }
+.about-values .icon-tile, .about-values .icon { color: var(--iws-lime); }
