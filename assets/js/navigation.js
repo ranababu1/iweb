@@ -333,6 +333,32 @@
 			}() );
 		}
 
+		// Tap targets for submenus on touch / mobile: a button after each parent link.
+		for ( i = 0; i < parents.length; i++ ) {
+			( function () {
+				var li = parents[ i ];
+				var link = getDirectLink( li );
+				var btn = document.createElement( 'button' );
+
+				btn.type = 'button';
+				btn.className = 'submenu-toggle';
+				btn.setAttribute( 'aria-expanded', 'false' );
+				btn.setAttribute( 'aria-label', ( strings.subLabel || 'Show submenu for' ) + ' ' + ( link ? link.textContent.trim() : '' ) );
+				btn.innerHTML = '<span aria-hidden="true">+</span>';
+
+				if ( link ) {
+					link.insertAdjacentElement( 'afterend', btn );
+				}
+
+				btn.addEventListener( 'click', function ( event ) {
+					var open = ! li.classList.contains( 'is-tapped' );
+					event.stopPropagation();
+					li.classList.toggle( 'is-tapped', open );
+					btn.setAttribute( 'aria-expanded', open ? 'true' : 'false' );
+				} );
+			}() );
+		}
+
 		document.addEventListener( 'keydown', onKeyDown );
 		document.addEventListener( 'click', onOutsideClick );
 		window.addEventListener( 'resize', onResize );

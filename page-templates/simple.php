@@ -33,7 +33,8 @@ get_header();
 					?>
 					<p class="eyebrow"><?php echo esc_html( $iweb_eyebrow ); ?></p>
 				<?php endif; ?>
-				<h1 class="simple-hero__title"><?php the_title(); ?></h1>
+				<?php $iweb_h1 = get_post_meta( get_the_ID(), 'iweb_h1', true ); ?>
+				<h1 class="simple-hero__title"><?php echo $iweb_h1 ? esc_html( $iweb_h1 ) : esc_html( get_the_title() ); ?></h1>
 				<?php if ( has_excerpt() ) : ?>
 					<p class="simple-hero__lead"><?php echo esc_html( get_the_excerpt() ); ?></p>
 				<?php endif; ?>
