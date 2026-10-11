@@ -66,41 +66,28 @@ get_header();
 <main id="primary" class="site-main service service--analytics" tabindex="-1">
 
 	<!-- Hero -->
-	<section class="service-hero">
-		<div class="container service-hero__inner">
-			<div class="service-hero__copy">
-				<nav class="breadcrumb" aria-label="<?php esc_attr_e( 'Breadcrumb', 'iweb' ); ?>">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'iweb' ); ?></a> ›
-					<a href="<?php echo esc_url( home_url( '/services/' ) ); ?>"><?php esc_html_e( 'Services', 'iweb' ); ?></a> ›
-					<span aria-current="page"><?php esc_html_e( 'Know what\'s working', 'iweb' ); ?></span>
-				</nav>
-				<p class="eyebrow"><?php esc_html_e( 'Know what\'s working', 'iweb' ); ?></p>
-				<h1 class="service-hero__title"><?php esc_html_e( 'Track. Understand.', 'iweb' ); ?> <span class="accent"><?php esc_html_e( 'Make better decisions.', 'iweb' ); ?></span></h1>
-				<p class="service-hero__lead"><?php esc_html_e( 'We set up reliable tracking, analytics and dashboards so you can see what\'s working, what\'s not and where to focus next.', 'iweb' ); ?></p>
-				<div class="cta-row">
-					<a class="btn btn--primary" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
-					<a class="btn btn--outline" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
-				</div>
-				<?php /* TODO: confirm the "no long contracts" claim with Imran before publishing. */ ?>
-				<p class="fine-print"><?php esc_html_e( 'No long contracts required to get started.', 'iweb' ); ?></p>
-			</div>
-
-			<div class="service-hero__visual service-hero__visual--analytics" aria-hidden="true">
-				<div class="analytics-card">
-					<p class="analytics-card__title"><?php esc_html_e( 'Analytics Overview', 'iweb' ); ?></p>
-					<div class="analytics-card__bars"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-				</div>
-				<ul class="chip-list">
-					<?php foreach ( $iweb_chips as $iweb_chip ) : ?>
-						<li class="tone-<?php echo esc_attr( $iweb_chip[0] ); ?>">
-							<span class="icon-tile"><?php echo iweb_icon( $iweb_chip[1] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></span>
-							<?php echo esc_html( $iweb_chip[2] ); ?>
-						</li>
-					<?php endforeach; ?>
-				</ul>
-			</div>
-		</div>
-	</section>
+	<?php
+	get_template_part(
+		'template-parts/service-hero',
+		null,
+		array(
+			'label'       => __( 'Know what\'s working', 'iweb' ),
+			'lines'       => array( __( 'Clean data.', 'iweb' ), __( 'Clear reports.', 'iweb' ), __( 'Better decisions.', 'iweb' ) ),
+			'highlight'   => __( 'Know what drives growth.', 'iweb' ),
+			'lead'        => __( 'We set up tracking you can trust and dashboards that use AI to point out what changed, so you can see where your leads and sales come from.', 'iweb' ),
+			'steps'       => array(
+				array( 'search', __( 'Tracking audit', 'iweb' ), __( 'Find gaps and broken tags', 'iweb' ) ),
+				array( 'tag', __( 'GA4 and Tag Manager setup', 'iweb' ), __( 'Clean, consistent tracking', 'iweb' ) ),
+				array( 'target', __( 'Conversion events', 'iweb' ), __( 'Measure the actions that matter', 'iweb' ) ),
+				array( 'link', __( 'Connect ad and CRM data', 'iweb' ), __( 'See the full picture in one place', 'iweb' ) ),
+				array( 'gauge', __( 'Live dashboards', 'iweb' ), __( 'Key numbers at a glance', 'iweb' ) ),
+				array( 'bulb', __( 'Monthly insights', 'iweb' ), __( 'Plain-English notes on what to do next', 'iweb' ) ),
+			),
+			'result_icon' => 'chart',
+			'result'      => __( 'Decisions backed by data', 'iweb' ),
+		)
+	);
+	?>
 
 	<!-- Benefits strip -->
 	<section class="trust-strip" aria-label="<?php esc_attr_e( 'Benefits', 'iweb' ); ?>">

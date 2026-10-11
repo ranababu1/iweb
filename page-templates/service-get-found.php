@@ -60,39 +60,28 @@ get_header();
 <main id="primary" class="site-main service" tabindex="-1">
 
 	<!-- Hero -->
-	<section class="service-hero">
-		<div class="container service-hero__inner">
-			<div class="service-hero__copy">
-				<nav class="breadcrumb" aria-label="<?php esc_attr_e( 'Breadcrumb', 'iweb' ); ?>">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'iweb' ); ?></a> ›
-					<a href="<?php echo esc_url( home_url( '/services/' ) ); ?>"><?php esc_html_e( 'Services', 'iweb' ); ?></a> ›
-					<span aria-current="page"><?php esc_html_e( 'Get found', 'iweb' ); ?></span>
-				</nav>
-				<p class="eyebrow"><?php esc_html_e( 'Get found', 'iweb' ); ?></p>
-				<h1 class="service-hero__title"><?php esc_html_e( 'Show up on Google', 'iweb' ); ?> <br><?php esc_html_e( 'and in', 'iweb' ); ?> <span class="accent"><?php esc_html_e( 'AI answers.', 'iweb' ); ?></span></h1>
-				<p class="service-hero__lead"><?php esc_html_e( 'We help your business get found on Google, in AI search and across the web. Our SEO and content strategies bring the right traffic, improve visibility and drive real business growth.', 'iweb' ); ?></p>
-				<div class="cta-row">
-					<a class="btn btn--primary" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
-					<a class="btn btn--outline" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
-				</div>
-				<?php /* TODO: confirm the "no long contracts" claim with Imran before publishing. */ ?>
-				<p class="fine-print"><?php esc_html_e( 'No long contracts required to get started.', 'iweb' ); ?></p>
-			</div>
-
-			<div class="service-hero__visual" aria-hidden="true">
-				<div class="serp-card">
-					<p class="serp-card__brand"><span>G</span>oogle</p>
-					<p class="serp-card__query"><?php esc_html_e( 'seo agency for small business', 'iweb' ); ?></p>
-					<p class="serp-card__result-title"><?php esc_html_e( 'Your Business', 'iweb' ); ?></p>
-					<p class="serp-card__result-desc"><?php esc_html_e( 'High-performance websites that help businesses grow.', 'iweb' ); ?></p>
-				</div>
-				<div class="ai-card">
-					<p class="ai-card__title"><?php echo iweb_icon( 'sparkle' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'AI Overview', 'iweb' ); ?></p>
-					<p><?php esc_html_e( 'Your business appears in AI answers with helpful, relevant content.', 'iweb' ); ?></p>
-				</div>
-			</div>
-		</div>
-	</section>
+	<?php
+	get_template_part(
+		'template-parts/service-hero',
+		null,
+		array(
+			'label'       => __( 'Get found', 'iweb' ),
+			'lines'       => array( __( 'Get found.', 'iweb' ), __( 'On Google.', 'iweb' ), __( 'In AI answers.', 'iweb' ) ),
+			'highlight'   => __( 'Where buyers search.', 'iweb' ),
+			'lead'        => __( 'We make your site easy for Google and AI assistants to understand, then publish content that answers what your buyers are asking.', 'iweb' ),
+			'steps'       => array(
+				array( 'search', __( 'Technical SEO audit', 'iweb' ), __( 'Fix what blocks crawling and indexing', 'iweb' ) ),
+				array( 'target', __( 'Keyword and intent research', 'iweb' ), __( 'Find what buyers actually search for', 'iweb' ) ),
+				array( 'pen', __( 'Content built to answer', 'iweb' ), __( 'Clear pages that match real questions', 'iweb' ) ),
+				array( 'code', __( 'Schema and entity markup', 'iweb' ), __( 'Help search and AI read your business', 'iweb' ) ),
+				array( 'pin', __( 'Local and AI visibility', 'iweb' ), __( 'Show up in maps and AI answers', 'iweb' ) ),
+				array( 'chart', __( 'Track rankings and citations', 'iweb' ), __( 'See where you appear and grow', 'iweb' ) ),
+			),
+			'result_icon' => 'trend',
+			'result'      => __( 'More qualified traffic', 'iweb' ),
+		)
+	);
+	?>
 
 	<!-- Benefits strip -->
 	<section class="trust-strip" aria-label="<?php esc_attr_e( 'Benefits', 'iweb' ); ?>">
