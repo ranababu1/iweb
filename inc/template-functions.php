@@ -208,6 +208,10 @@ function iweb_icon( $name ) {
 		'x'         => '<path d="M4 4l16 16M20 4 4 20"/>',
 		'github'    => '<path d="M9 19c-4 1.5-4-2-6-2m12 4v-3.5c0-1 .1-1.4-.5-2 3-.3 6-1.500 6-6.500a5 5 0 0 0-1.400-3.500 4.700 4.700 0 0 0-.1-3.500s-1.100-.3-3.500 1.300a12 12 0 0 0-6.200 0C6.900 2.900 5.800 3.200 5.800 3.200a4.700 4.700 0 0 0-.1 3.500A5 5 0 0 0 4.300 10.200c0 5 3 6.200 6 6.500-.6.600-.6 1.200-.5 2V21"/>',
 		'youtube'   => '<rect x="2.500" y="5" width="19" height="14" rx="4"/><path d="m10 9.500 5 2.500-5 2.500z"/>',
+		'bolt'      => '<path d="M13 2 4 14h7l-1 8 9-12h-7z"/>',
+		'shield'    => '<path d="M12 3 4 6v6c0 5 3.500 8 8 9 4.500-1 8-4 8-9V6z"/>',
+		'puzzle'    => '<path d="M10 4a2 2 0 1 1 4 0v2h4v4h-2a2 2 0 1 0 0 4h2v4h-4v-2a2 2 0 1 0-4 0v2H6v-4h2a2 2 0 1 0 0-4H6V6h4z"/>',
+		'chat'      => '<path d="M4 5h16v11H9l-5 4zM8 9h8M8 12h5"/>',
 		'image'     => '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.500"/><path d="m4 18 5-5 4 4 3-3 4 4"/>',
 	);
 
@@ -249,7 +253,7 @@ function iweb_fallback_menu() {
  * @return bool
  */
 function iweb_is_marketing_view() {
-	return is_page_template( array( 'page-templates/home.php', 'page-templates/service-get-found.php' ) );
+	return is_page_template( array( 'page-templates/home.php', 'page-templates/service-get-found.php', 'page-templates/service-automate.php' ) );
 }
 
 /**

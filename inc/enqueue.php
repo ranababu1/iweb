@@ -159,14 +159,14 @@ function iweb_is_home_view() {
 }
 
 /**
- * Check whether the current view uses the service page template.
+ * Check whether the current view uses a service page template.
  *
  * @since 1.1.0
  *
  * @return bool True on pages using the Service template.
  */
 function iweb_is_service_view() {
-	return is_page_template( 'page-templates/service-get-found.php' );
+	return is_page_template( array( 'page-templates/service-get-found.php', 'page-templates/service-automate.php' ) );
 }
 
 /**
