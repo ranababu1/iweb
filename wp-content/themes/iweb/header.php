@@ -38,14 +38,6 @@
 					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></p>
 					<?php
 				endif;
-
-				$iweb_description = get_bloginfo( 'description', 'display' );
-
-				if ( $iweb_description || is_customize_preview() ) :
-					?>
-					<p class="site-description"><?php echo esc_html( $iweb_description ); ?></p>
-					<?php
-				endif;
 			}
 			?>
 		</div><!-- .site-branding -->
@@ -69,11 +61,15 @@
 					'theme_location' => 'primary',
 					'menu_class'     => 'nav-menu',
 					'container'      => false,
-					'fallback_cb'    => false,
+					'fallback_cb'    => 'iweb_fallback_menu',
 				)
 			);
 			?>
 		</nav><!-- #site-navigation -->
+
+		<a class="btn btn--primary btn--sm header-cta" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">
+			<?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+		</a>
 
 	</div><!-- .site-header-inner -->
 </header><!-- #masthead -->

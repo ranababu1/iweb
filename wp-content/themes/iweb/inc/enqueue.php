@@ -75,6 +75,20 @@ function iweb_scripts() {
 				array( 'iweb-style' ),
 				iweb_asset_version( $iweb_stylesheet['file'] )
 			);
+
+			// Optional script that travels with the stylesheet.
+			if ( ! empty( $iweb_stylesheet['script'] ) ) {
+				wp_enqueue_script(
+					$iweb_handle,
+					get_template_directory_uri() . '/' . $iweb_stylesheet['script'],
+					array(),
+					iweb_asset_version( $iweb_stylesheet['script'] ),
+					array(
+						'strategy'  => 'defer',
+						'in_footer' => true,
+					)
+				);
+			}
 		}
 	}
 
@@ -95,7 +109,7 @@ add_action( 'wp_enqueue_scripts', 'iweb_scripts' );
  *
  * @since 1.0.0
  *
- * @return array<string, array{conditional: callable, file: string}>
+ * @return array<string, array{conditional: callable, file: string, script?: string}>
  */
 function iweb_conditional_stylesheets() {
 	return apply_filters(
@@ -104,6 +118,16 @@ function iweb_conditional_stylesheets() {
 			'iweb-blog' => array(
 				'conditional' => 'iweb_is_blog_view',
 				'file'       => 'assets/css/blog.css',
+			),
+			'iweb-home' => array(
+				'conditional' => 'is_front_page',
+				'file'       => 'assets/css/home.css',
+				'script'     => 'assets/js/home.js',
+			),
+			'iweb-service' => array(
+				'conditional' => 'iweb_is_service_view',
+				'file'       => 'assets/css/service.css',
+				'script'     => 'assets/js/service.js',
 			),
 		)
 	);
@@ -121,6 +145,17 @@ function iweb_conditional_stylesheets() {
  */
 function iweb_is_blog_view() {
 	return is_home() || is_archive() || is_search() || is_singular( 'post' );
+}
+
+/**
+ * Check whether the current view uses the service page template.
+ *
+ * @since 1.1.0
+ *
+ * @return bool True on pages using the Service template.
+ */
+function iweb_is_service_view() {
+	return is_page_template( 'page-templates/service-get-found.php' );
 }
 
 /**
