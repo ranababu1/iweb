@@ -172,7 +172,7 @@ while ( have_posts() ) :
 				<div class="side-block side-block--green">
 					<h2 class="side-block__title"><?php esc_html_e( 'Get a free website speed audit', 'iweb' ); ?></h2>
 					<p><?php esc_html_e( 'We\'ll review your website and share actionable recommendations to improve performance.', 'iweb' ); ?></p>
-					<a class="btn btn--dark" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Book a free audit call', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+					<a class="btn btn--dark" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php esc_html_e( 'Book a free audit call', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
 
 				<?php if ( $iweb_related->have_posts() ) : ?>
@@ -212,7 +212,7 @@ while ( have_posts() ) :
 			</div>
 			<div class="cta-row">
 				<a class="btn btn--light" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
-				<a class="btn btn--ghost-dark" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
+				<a class="btn btn--ghost-dark" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
 			</div>
 		</div>
 	</section>

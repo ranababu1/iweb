@@ -83,6 +83,9 @@ function iweb_setup() {
 			'primary' => __( 'Primary', 'iweb' ),
 			'footer'  => __( 'Footer', 'iweb' ),
 			'social'  => __( 'Social', 'iweb' ),
+			'footer-services'  => __( 'Footer column: Services', 'iweb' ),
+			'footer-company'   => __( 'Footer column: Company', 'iweb' ),
+			'footer-resources' => __( 'Footer column: Resources', 'iweb' ),
 		)
 	);
 }

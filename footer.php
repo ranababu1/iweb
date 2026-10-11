@@ -53,7 +53,7 @@
 						__( 'Turn visitors into customers', 'iweb' ) => home_url( '/services/turn-visitors-into-customers/' ),
 						__( 'Automate the busywork', 'iweb' ) => home_url( '/services/automate-the-busy-work/' ),
 						__( 'Know what\'s working', 'iweb' ) => home_url( '/services/know-whats-working/' ),
-						__( 'Custom development', 'iweb' ) => home_url( '/services/#custom-development' ),
+						__( 'Custom development', 'iweb' ) => home_url( '/services/custom-development/' ),
 					),
 					__( 'Company', 'iweb' )   => array(
 						__( 'How we work', 'iweb' ) => home_url( '/how-we-work/' ),
@@ -65,7 +65,7 @@
 					__( 'Resources', 'iweb' ) => array(
 						__( 'SEO glossary', 'iweb' )      => home_url( '/seo-glossary/' ),
 						__( 'Website cost guide', 'iweb' ) => home_url( '/website-cost-guide/' ),
-						__( 'Free audit call', 'iweb' )   => home_url( '/contact/' ),
+						__( 'Free audit call', 'iweb' )   => iweb_audit_url(),
 					),
 				);
 
@@ -78,7 +78,8 @@
 							if ( '' === $iweb_path || 'blog' === $iweb_path || 'contact' === $iweb_path || false !== strpos( $iweb_url, '#' ) ) {
 								return true;
 							}
-							return (bool) get_page_by_path( $iweb_path );
+							$iweb_page = get_page_by_path( $iweb_path );
+							return $iweb_page && 'publish' === $iweb_page->post_status;
 						}
 					);
 				}
@@ -87,11 +88,25 @@
 					?>
 					<nav class="footer-col" aria-label="<?php echo esc_attr( $iweb_col_title ); ?>">
 						<h2 class="footer-col__title"><?php echo esc_html( $iweb_col_title ); ?></h2>
+						<?php
+						$iweb_col_location = 'footer-' . sanitize_title( $iweb_col_title );
+						if ( has_nav_menu( $iweb_col_location ) ) :
+							wp_nav_menu(
+								array(
+									'theme_location' => $iweb_col_location,
+									'container'      => false,
+									'depth'          => 1,
+									'fallback_cb'    => false,
+								)
+							);
+						else :
+							?>
 						<ul>
 							<?php foreach ( $iweb_col_links as $iweb_link_label => $iweb_link_url ) : ?>
 								<li><a href="<?php echo esc_url( $iweb_link_url ); ?>"><?php echo esc_html( $iweb_link_label ); ?></a></li>
 							<?php endforeach; ?>
 						</ul>
+						<?php endif; ?>
 
 						<?php
 						// The newsletter form only renders once a handler URL is supplied.
@@ -132,7 +147,8 @@
 					<nav class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer', 'iweb' ); ?>">
 						<ul>
 							<?php foreach ( array( 'privacy-policy' => __( 'Privacy Policy', 'iweb' ), 'terms' => __( 'Terms', 'iweb' ), 'cookie-settings' => __( 'Cookie Settings', 'iweb' ) ) as $iweb_slug => $iweb_label ) : ?>
-								<?php if ( get_page_by_path( $iweb_slug ) ) : ?>
+								<?php $iweb_legal = get_page_by_path( $iweb_slug ); ?>
+								<?php if ( $iweb_legal && 'publish' === $iweb_legal->post_status ) : ?>
 									<li><a href="<?php echo esc_url( home_url( '/' . $iweb_slug . '/' ) ); ?>"><?php echo esc_html( $iweb_label ); ?></a></li>
 								<?php endif; ?>
 							<?php endforeach; ?>

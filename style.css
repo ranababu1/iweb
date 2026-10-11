@@ -1081,3 +1081,72 @@ figcaption,
 	}
 }
 
+
+/* Simple content page template (page-templates/simple.php) */
+.simple-hero {
+	padding-block: 3rem 2.5rem;
+	border-block-end: 1px solid var(--color-border);
+}
+
+.simple-hero__inner {
+	max-width: 52rem;
+}
+
+.simple-hero__title {
+	margin-block: 0.5rem 1rem;
+	font-size: clamp(2rem, 5vw, 3.25rem);
+	line-height: 1.1;
+	letter-spacing: -0.03em;
+}
+
+.simple-hero__lead {
+	max-width: 40rem;
+	color: var(--color-muted);
+	font-size: 1.1rem;
+}
+
+.simple-body {
+	max-width: 52rem;
+	padding-block: 2.5rem 4rem;
+	line-height: 1.7;
+}
+
+.simple-body h2 {
+	margin-block-start: 2.25rem;
+	font-size: 1.5rem;
+}
+
+.simple-body h3 {
+	margin-block-start: 1.5rem;
+	font-size: 1.15rem;
+}
+
+.simple-body dl dt {
+	margin-block-start: 1.25rem;
+	font-weight: 700;
+	color: var(--color-heading);
+}
+
+.simple-body dl dd {
+	margin-inline-start: 0;
+	color: var(--color-muted);
+}
+
+.simple-body .simple-note {
+	padding: 1rem 1.25rem;
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-sm);
+	background: var(--color-surface);
+}
+
+.simple-body .wp-block-buttons,
+.simple-body .simple-cta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin-block-start: 1.5rem;
+}
+
+.simple-body a.btn {
+	text-decoration: none;
+}

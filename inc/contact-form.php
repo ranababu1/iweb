@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return string
  */
 function iweb_contact_email() {
-	return sanitize_email( apply_filters( 'iweb_contact_email', get_option( 'admin_email' ) ) );
+	return sanitize_email( apply_filters( 'iweb_contact_email', 'hello@imraan.in' ) );
 }
 
 /**
@@ -188,3 +188,12 @@ function iweb_handle_contact_form() {
 }
 add_action( 'admin_post_nopriv_iweb_contact', 'iweb_handle_contact_form' );
 add_action( 'admin_post_iweb_contact', 'iweb_handle_contact_form' );
+
+/**
+ * Link used by every "Book a free audit call" button (the booking page).
+ *
+ * @return string
+ */
+function iweb_audit_url() {
+	return home_url( '/book-a-call/' );
+}
