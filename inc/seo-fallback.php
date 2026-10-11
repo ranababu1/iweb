@@ -34,6 +34,12 @@ function iweb_seo_fallback_meta() {
 		'about'                         => array( 'About Us | iWebAndSEO', 'iWebAndSEO helps businesses grow with fast WordPress sites, SEO, AI automation and custom development. Learn who we are and how we approach the work.' ),
 		'how-we-work'                   => array( 'How We Work: Our Process from Plan to Launch | iWebAndSEO', 'A clear, simple process: we plan, build, review and launch with you, then keep improving. See what to expect at each step of a project.' ),
 		'our-work'                      => array( 'Our Work | iWebAndSEO', 'WordPress builds, SEO and automation projects from iWebAndSEO. See the kind of work we do and the problems we help businesses solve.' ),
+		'custom-development'            => array( 'Custom .NET and Java Development, APIs and Integrations | iWebAndSEO', 'Custom application development in .NET and Java, API design and integration, and modernization of legacy systems. Built to be secure, maintainable and easy to extend.' ),
+		'terms'                         => array( 'Terms of Service | iWebAndSEO', 'The terms that apply when you use the iWebAndSEO website or work with us on a project.' ),
+		'cookie-settings'               => array( 'Cookie Policy and Settings | iWebAndSEO', 'How iWebAndSEO uses cookies, what each type does and how to change your choices.' ),
+		'website-cost-guide'            => array( 'Website Cost Guide: What Drives the Price | iWebAndSEO', 'What affects the cost of a WordPress website: pages, design, features, content, integrations and ongoing care. Plain explanations to help you plan.' ),
+		'seo-glossary'                  => array( 'SEO Glossary: Plain-English SEO, AEO and GEO Terms | iWebAndSEO', 'Short, plain definitions of common SEO, AEO, GEO and analytics terms, from canonical tags to Core Web Vitals.' ),
+		'book-a-call'                   => array( 'Book a Free Audit Call | iWebAndSEO', 'Online booking is coming soon. Tell us about your project and we will reply with a time for a free audit call.' ),
 		'faq'                           => array( 'FAQs | iWebAndSEO', 'Answers to common questions about our WordPress, SEO, AI automation and analytics services, pricing, timelines and support.' ),
 	);
 

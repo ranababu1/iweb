@@ -47,10 +47,12 @@ $iweb_steps = array(
 );
 
 $iweb_faqs = array(
-	array( __( 'How long does a project take?', 'iweb' ), __( 'It depends on scope. A focused site can take a few weeks, while a larger WooCommerce build takes longer. We\'ll give you a clear timeline after the planning step.', 'iweb' ) ),
-	array( __( 'Do you work with existing themes?', 'iweb' ), __( 'Yes. We can improve and extend your current theme, or build a custom one if that\'s the better fit.', 'iweb' ) ),
-	array( __( 'What platforms do you support?', 'iweb' ), __( 'We specialize in WordPress and WooCommerce, and can integrate with the other tools and platforms your business relies on.', 'iweb' ) ),
-	array( __( 'Do you offer ongoing support?', 'iweb' ), __( 'Yes. We offer ongoing maintenance, optimization and support after launch.', 'iweb' ) ),
+	array( __( 'How much does a WordPress website cost?', 'iweb' ), __( 'It depends on the number of pages, custom features, content and integrations. After a discovery call we send a fixed scope and price, so there are no surprises.', 'iweb' ) ),
+	array( __( 'How long does a new website take?', 'iweb' ), __( 'A typical small business site takes a few weeks. Larger sites and stores take longer. You\'ll get a timeline with milestones in our proposal.', 'iweb' ) ),
+	array( __( 'Will I be able to edit the site myself?', 'iweb' ), __( 'Yes. We build with the WordPress block editor and reusable patterns, and we train your team. Most text, image and page updates need no developer.', 'iweb' ) ),
+	array( __( 'Can you speed up my existing site without rebuilding it?', 'iweb' ), __( 'Often, yes. We start with a speed audit, then fix the biggest issues: heavy images, too many plugins, slow hosting, render-blocking scripts and poor caching.', 'iweb' ) ),
+	array( __( 'Do you build online stores?', 'iweb' ), __( 'Yes, on WooCommerce. We handle product setup, payments, shipping, tax settings and integrations with your other tools.', 'iweb' ) ),
+	array( __( 'Will a redesign hurt my SEO?', 'iweb' ), __( 'It can if it\'s done carelessly. We map old URLs to new ones, keep important content and set up redirects before launch to protect your rankings.', 'iweb' ) ),
 );
 
 get_header();
@@ -72,7 +74,7 @@ get_header();
 				<p class="service-hero__lead"><?php esc_html_e( 'We create high-performing WordPress sites, WooCommerce stores and digital experiences that are fast, user-friendly and built to convert. From design to checkout, we help you turn interest into revenue.', 'iweb' ); ?></p>
 				<div class="cta-row">
 					<a class="btn btn--primary" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
-					<a class="btn btn--outline" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
+					<a class="btn btn--outline" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
 				</div>
 				<?php /* TODO: confirm the "no long contracts" claim with Imran before publishing. */ ?>
 				<p class="fine-print"><?php esc_html_e( 'No long contracts required to get started.', 'iweb' ); ?></p>
@@ -219,7 +221,7 @@ get_header();
 				</div>
 				<div class="cta-row">
 					<a class="btn btn--light" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
-					<a class="btn btn--ghost-dark" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
+					<a class="btn btn--ghost-dark" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
 				</div>
 			</div>
 		</div>

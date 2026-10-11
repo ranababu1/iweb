@@ -136,7 +136,7 @@ get_header();
 				</div>
 				<div class="field field--full">
 					<label for="cf-details"><?php esc_html_e( 'Project details', 'iweb' ); ?> <span aria-hidden="true">*</span></label>
-					<textarea id="cf-details" name="details" rows="5" placeholder="<?php esc_attr_e( 'Tell us about your project, goals, current challenges and any specific requirements...', 'iweb' ); ?>" required></textarea>
+					<textarea id="cf-details" name="details" rows="5" placeholder="<?php esc_attr_e( 'Tell us about your project, goals, current challenges and any specific requirements...', 'iweb' ); ?>" required><?php echo isset( $_GET['audit'] ) ? esc_textarea( __( 'I would like to book a free audit call. Good times to reach me: ', 'iweb' ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended ?></textarea>
 				</div>
 				<div class="field field--full">
 					<label for="cf-files"><?php esc_html_e( 'Attachments (optional)', 'iweb' ); ?></label>
@@ -170,7 +170,7 @@ get_header();
 			<div class="side-card">
 				<h3><?php esc_html_e( 'Not sure what you need?', 'iweb' ); ?></h3>
 				<p><?php esc_html_e( 'No problem. Book a free audit call and we\'ll help you identify the right solution for your business.', 'iweb' ); ?></p>
-				<a class="btn btn--outline btn--sm" href="<?php echo esc_url( $iweb_email ? 'mailto:' . $iweb_email . '?subject=' . rawurlencode( __( 'Free audit call', 'iweb' ) ) : '#enquiry' ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+				<a class="btn btn--outline btn--sm" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 			</div>
 
 			<div class="side-card side-card--row">
@@ -222,7 +222,7 @@ get_header();
 			</div>
 			<div class="cta-row">
 				<a class="btn btn--light" href="#enquiry"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
-				<a class="btn btn--ghost-dark" href="<?php echo esc_url( $iweb_email ? 'mailto:' . $iweb_email : '#enquiry' ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
+				<a class="btn btn--ghost-dark" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
 			</div>
 		</div>
 	</section>

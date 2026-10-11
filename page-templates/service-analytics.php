@@ -52,10 +52,12 @@ $iweb_steps = array(
 );
 
 $iweb_faqs = array(
-	array( __( 'Which tools do you set up?', 'iweb' ), __( 'Mainly GA4 and Google Tag Manager, plus dashboards and reporting tools that fit your stack. We\'ll recommend what makes sense for your business.', 'iweb' ) ),
-	array( __( 'Can you track form submissions and leads?', 'iweb' ), __( 'Yes. We set up conversion tracking for form submissions, calls, purchases and other key actions so you can see which channels produce leads.', 'iweb' ) ),
-	array( __( 'Do you create custom dashboards?', 'iweb' ), __( 'Yes. We build easy-to-read dashboards that show the metrics that matter to you, not every metric available.', 'iweb' ) ),
-	array( __( 'Do you provide ongoing support?', 'iweb' ), __( 'Yes. We monitor your tracking, fix issues and update your setup as your business grows.', 'iweb' ) ),
+	array( __( 'We already have Google Analytics. Why would we need help?', 'iweb' ), __( 'Installed isn\'t the same as set up correctly. Common issues include missing conversions, spam traffic, duplicate events and broken cross-domain tracking. An audit shows what\'s reliable and what isn\'t.', 'iweb' ) ),
+	array( __( 'What\'s the difference between GA4 and Google Tag Manager?', 'iweb' ), __( 'GA4 stores and reports your data. Tag Manager is the tool that sends data to GA4 and other platforms. Using both keeps tracking organised and easier to change.', 'iweb' ) ),
+	array( __( 'Can you track phone calls and form submissions?', 'iweb' ), __( 'Yes. We track form submissions, clicks on phone numbers and email links, bookings and, with call tracking tools, actual phone calls.', 'iweb' ) ),
+	array( __( 'Why don\'t GA4 and my ad platform numbers match?', 'iweb' ), __( 'They count things differently, use different attribution models and are affected by consent choices and ad blockers. We set them up consistently and explain the gaps so you know which numbers to trust for which decision.', 'iweb' ) ),
+	array( __( 'Do you handle cookie consent?', 'iweb' ), __( 'Yes. We set up a consent banner and Google Consent Mode so tracking follows user choices. You should still check legal requirements with your own advisor.', 'iweb' ) ),
+	array( __( 'What will our reports look like?', 'iweb' ), __( 'A short dashboard focused on the numbers you care about, usually leads, sales, cost per lead and top pages, plus a plain-language summary of what changed and what to do next.', 'iweb' ) ),
 );
 
 get_header();
@@ -77,7 +79,7 @@ get_header();
 				<p class="service-hero__lead"><?php esc_html_e( 'We set up reliable tracking, analytics and dashboards so you can see what\'s working, what\'s not and where to focus next.', 'iweb' ); ?></p>
 				<div class="cta-row">
 					<a class="btn btn--primary" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
-					<a class="btn btn--outline" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
+					<a class="btn btn--outline" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
 				</div>
 				<?php /* TODO: confirm the "no long contracts" claim with Imran before publishing. */ ?>
 				<p class="fine-print"><?php esc_html_e( 'No long contracts required to get started.', 'iweb' ); ?></p>
@@ -202,7 +204,7 @@ get_header();
 			<aside class="faq__aside tone-green">
 				<h3><?php esc_html_e( 'Not sure where to start?', 'iweb' ); ?></h3>
 				<p><?php esc_html_e( 'Book a free audit call and we\'ll review your current analytics setup and suggest the best way forward.', 'iweb' ); ?></p>
-				<a class="btn btn--primary" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+				<a class="btn btn--primary" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 			</aside>
 		</div>
 	</section>
@@ -217,7 +219,7 @@ get_header();
 			</div>
 			<div class="cta-row">
 				<a class="btn btn--light" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
-				<a class="btn btn--ghost-dark" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
+				<a class="btn btn--ghost-dark" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
 			</div>
 		</div>
 	</section>

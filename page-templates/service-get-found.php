@@ -46,10 +46,12 @@ $iweb_steps = array(
 );
 
 $iweb_faqs = array(
-	array( __( 'How long does SEO take to show results?', 'iweb' ), __( 'Most sites see early movement within a few months, but meaningful, compounding growth usually takes six months or more. It depends on your competition, your site\'s current health and how quickly changes can ship.', 'iweb' ) ),
-	array( __( 'Do you guarantee #1 rankings?', 'iweb' ), __( 'No, and be wary of anyone who does. Search engines decide rankings. What we do guarantee is a clear strategy, careful execution and transparent reporting.', 'iweb' ) ),
-	array( __( 'What industries do you work with?', 'iweb' ), __( 'We work with startups, small and mid-sized businesses and enterprises across a range of industries. Get in touch and we\'ll tell you honestly whether we are a good fit.', 'iweb' ) ),
-	array( __( 'Do you also manage Google Ads?', 'iweb' ), __( 'Yes. We run Google and social ad campaigns alongside SEO so paid and organic efforts support each other.', 'iweb' ) ),
+	array( __( 'How long does SEO take to work?', 'iweb' ), __( 'It depends on your site, competition and starting point. Technical fixes can show effects within weeks. Content usually takes a few months to build momentum. We\'ll set realistic expectations after the audit.', 'iweb' ) ),
+	array( __( 'Can you guarantee rankings?', 'iweb' ), __( 'No. Anyone who guarantees rankings is guessing or taking shortcuts that can hurt you later. We focus on the things you can control and report progress honestly.', 'iweb' ) ),
+	array( __( 'What\'s the difference between SEO, AEO and GEO?', 'iweb' ), __( 'SEO helps you rank in search results. AEO helps you become the direct answer in search features and voice results. GEO helps AI tools like ChatGPT and Perplexity mention and cite your brand. The foundations overlap a lot.', 'iweb' ) ),
+	array( __( 'Can you get my business mentioned in ChatGPT?', 'iweb' ), __( 'We can\'t control what AI tools say. We can make your brand easier for them to understand and cite: clear facts on your site, consistent business information, structured data and mentions on trusted third-party sites.', 'iweb' ) ),
+	array( __( 'Do you write the content or do we?', 'iweb' ), __( 'Either. We can write it, edit what your team writes, or work from your experts\' notes and interviews. Real expertise from your team makes content stronger.', 'iweb' ) ),
+	array( __( 'Should I do SEO or paid ads?', 'iweb' ), __( 'Often both. Ads bring traffic quickly while SEO builds lasting visibility. We\'ll recommend a mix based on your budget and goals.', 'iweb' ) ),
 );
 
 get_header();
@@ -71,7 +73,7 @@ get_header();
 				<p class="service-hero__lead"><?php esc_html_e( 'We help your business get found on Google, in AI search and across the web. Our SEO and content strategies bring the right traffic, improve visibility and drive real business growth.', 'iweb' ); ?></p>
 				<div class="cta-row">
 					<a class="btn btn--primary" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
-					<a class="btn btn--outline" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
+					<a class="btn btn--outline" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
 				</div>
 				<?php /* TODO: confirm the "no long contracts" claim with Imran before publishing. */ ?>
 				<p class="fine-print"><?php esc_html_e( 'No long contracts required to get started.', 'iweb' ); ?></p>
@@ -217,7 +219,7 @@ get_header();
 				<div>
 					<div class="cta-row">
 						<a class="btn btn--light" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
-						<a class="btn btn--ghost-dark" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
+						<a class="btn btn--ghost-dark" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
 					</div>
 					<p class="fine-print"><?php esc_html_e( 'No long contracts required to get started.', 'iweb' ); ?></p>
 				</div>

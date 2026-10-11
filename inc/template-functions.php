@@ -274,7 +274,7 @@ function iweb_fallback_menu() {
  * @return bool
  */
 function iweb_is_marketing_view() {
-	return is_page_template( array( 'page-templates/home.php', 'page-templates/service-get-found.php', 'page-templates/service-automate.php', 'page-templates/service-convert.php', 'page-templates/services.php', 'page-templates/service-analytics.php', 'page-templates/how-we-work.php', 'page-templates/our-work.php', 'page-templates/about.php', 'page-templates/start-project.php', 'page-templates/faq.php' ) );
+	return is_page_template( array( 'page-templates/home.php', 'page-templates/service-get-found.php', 'page-templates/service-automate.php', 'page-templates/service-convert.php', 'page-templates/services.php', 'page-templates/service-analytics.php', 'page-templates/how-we-work.php', 'page-templates/our-work.php', 'page-templates/about.php', 'page-templates/start-project.php', 'page-templates/faq.php', 'page-templates/simple.php' ) );
 }
 
 /**

@@ -54,11 +54,12 @@ $iweb_steps = array(
 );
 
 $iweb_faqs = array(
-	array( __( 'What kind of tasks can be automated?', 'iweb' ), __( 'Anything repetitive and rule-based: lead handling, data entry between tools, reporting, content workflows, customer support triage and more. We\'ll help you find the tasks where automation pays off fastest.', 'iweb' ) ),
-	array( __( 'Which tools do you integrate with?', 'iweb' ), __( 'We work with WordPress, HubSpot, Google Workspace, Slack and most tools that offer an API or a connector. If you\'re unsure about a specific tool, ask us.', 'iweb' ) ),
-	array( __( 'Do I need technical knowledge to use the solution?', 'iweb' ), __( 'No. We build it so your team can use it day to day without technical skills, and we walk you through how it works.', 'iweb' ) ),
-	array( __( 'How long does it take to set up an automation?', 'iweb' ), __( 'Simple automations can be live in days. Larger or custom solutions take longer. We\'ll give you a clear timeline after the planning step.', 'iweb' ) ),
-	array( __( 'Do you provide ongoing support?', 'iweb' ), __( 'Yes. We monitor results after launch and keep improving the solution as your needs change.', 'iweb' ) ),
+	array( __( 'What can a website chatbot actually do?', 'iweb' ), __( 'Answer common questions from your own content, collect contact details, qualify leads, book calls and pass complex conversations to your team. It works around the clock.', 'iweb' ) ),
+	array( __( 'Will the chatbot make things up?', 'iweb' ), __( 'We reduce that risk by limiting answers to your approved content, setting clear rules and testing before launch. For anything uncertain, it hands over to a person.', 'iweb' ) ),
+	array( __( 'Which tools do you use for automation?', 'iweb' ), __( 'It depends on your stack and budget. Often Zapier, Make or n8n, connected to AI models through their APIs. For complex or high-volume needs we write custom integrations.', 'iweb' ) ),
+	array( __( 'Is my data safe?', 'iweb' ), __( 'We agree on what data the AI can access before we build. We use providers\' business and API terms, keep access limited and avoid sending sensitive data where it isn\'t needed.', 'iweb' ) ),
+	array( __( 'Do I need a big budget to start?', 'iweb' ), __( 'No. Many useful automations are small. We usually start with one or two quick wins and build from there.', 'iweb' ) ),
+	array( __( 'Can you add AI to our existing app or website?', 'iweb' ), __( 'Yes. We can add features like smart search, summaries or content drafting through APIs, whether your site runs on WordPress, .NET, Java or something else.', 'iweb' ) ),
 );
 
 get_header();
@@ -80,7 +81,7 @@ get_header();
 				<p class="service-hero__lead"><?php esc_html_e( 'We build practical AI and automation solutions that handle repetitive tasks, streamline workflows and integrate with your existing tools – so your team can focus on higher-value work.', 'iweb' ); ?></p>
 				<div class="cta-row">
 					<a class="btn btn--primary" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
-					<a class="btn btn--outline" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
+					<a class="btn btn--outline" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
 				</div>
 				<?php /* TODO: confirm the "no long contracts" claim with Imran before publishing. */ ?>
 				<p class="fine-print"><?php esc_html_e( 'No long contracts required to get started.', 'iweb' ); ?></p>
@@ -207,7 +208,7 @@ get_header();
 			<aside class="faq__aside tone-green">
 				<h3><?php esc_html_e( 'Not sure where to start?', 'iweb' ); ?></h3>
 				<p><?php esc_html_e( 'Book a free audit call and we\'ll help you identify the best opportunities to automate your business workflows.', 'iweb' ); ?></p>
-				<a class="btn btn--primary" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+				<a class="btn btn--primary" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 			</aside>
 		</div>
 	</section>
@@ -221,7 +222,7 @@ get_header();
 			</div>
 			<div class="cta-row">
 				<a class="btn btn--light" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
-				<a class="btn btn--ghost-dark" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
+				<a class="btn btn--ghost-dark" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
 			</div>
 		</div>
 	</section>
