@@ -34,8 +34,8 @@ $iweb_board = array(
 );
 
 $iweb_tools = array(
-	'WordPress',
-	'WooCommerce',
+	'CMS platforms',
+	'Ecommerce',
 	'PHP',
 	'.NET',
 	'Node.js',

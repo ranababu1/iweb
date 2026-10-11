@@ -32,7 +32,7 @@ $iweb_groups = array(
 		'title' => __( 'Services', 'iweb' ),
 		'blurb' => __( 'Questions about our website, SEO, automation and development services.', 'iweb' ),
 		'items' => array(
-			array( 'what-services-do-you-offer', __( 'What services do you offer?', 'iweb' ), __( 'Four areas: getting found (SEO, AEO, GEO and paid ads), turning visitors into customers (WordPress, WooCommerce, speed, UX and CRO), automating the busywork (AI and workflow automation) and knowing what\'s working (analytics and tracking). We also build custom software.', 'iweb' ) ),
+			array( 'what-services-do-you-offer', __( 'What services do you offer?', 'iweb' ), __( 'Four areas: getting found (SEO, AEO, GEO and paid ads), turning visitors into customers (CMS and ecommerce builds, speed, UX and CRO), automating the busywork (AI and workflow automation) and knowing what\'s working (analytics and tracking). We also build custom software.', 'iweb' ) ),
 			array( 'new-website-and-seo', __( 'Can you help with both a new website and SEO?', 'iweb' ), __( 'Yes. Building the site with SEO in mind from the start is usually faster and cheaper than fixing it later.', 'iweb' ) ),
 			array( 'ai-automation', __( 'Do you offer AI automation services?', 'iweb' ), __( 'Yes. We build AI chatbots, workflow automations and integrations that remove repetitive manual work.', 'iweb' ) ),
 			array( 'existing-website', __( 'Can you work with our existing website or platform?', 'iweb' ), __( 'Absolutely. We can audit, optimize or extend your existing website or application.', 'iweb' ) ),
@@ -72,8 +72,8 @@ $iweb_groups = array(
 		'title' => __( 'Technology', 'iweb' ),
 		'blurb' => __( 'The tools and platforms we use.', 'iweb' ),
 		'items' => array(
-			array( 'which-platforms', __( 'Which platforms do you work with?', 'iweb' ), __( 'We specialize in WordPress and WooCommerce, and also build on .NET, PHP, Node.js and Python.', 'iweb' ) ),
-			array( 'custom-theme', __( 'Do you build custom themes and plugins?', 'iweb' ), __( 'Yes. We build custom WordPress themes and plugins when they\'re the better fit.', 'iweb' ) ),
+			array( 'which-platforms', __( 'Which platforms do you work with?', 'iweb' ), __( 'We work with popular CMS and ecommerce platforms, and also build on .NET, PHP, Node.js and Python.', 'iweb' ) ),
+			array( 'custom-theme', __( 'Do you build custom themes and plugins?', 'iweb' ), __( 'Yes. We build custom CMS themes and plugins when they\'re the better fit.', 'iweb' ) ),
 			array( 'hosting', __( 'Can you help with hosting and deployment?', 'iweb' ), __( 'Yes. We can advise on hosting, set up deployment and take care of performance and security.', 'iweb' ) ),
 			array( 'integrate-existing-tools', __( 'Can you integrate with our existing tools?', 'iweb' ), __( 'Usually, yes. If a tool has an API or a connector, we can integrate it.', 'iweb' ) ),
 			array( 'security', __( 'How do you handle security?', 'iweb' ), __( 'We follow security best practices, keep software updated and can provide ongoing monitoring.', 'iweb' ) ),

@@ -35,7 +35,7 @@ $iweb_quote = apply_filters( 'iweb_work_quote', array() );
 
 $iweb_points = array(
 	array( 'chart', __( 'Diverse industries', 'iweb' ), __( 'Startups, SMEs and enterprise brands.', 'iweb' ) ),
-	array( 'code', __( 'End-to-end delivery', 'iweb' ), __( 'Strategy, design, development and growth.', 'iweb' ) ),
+	array( 'code', __( 'Strategy to launch', 'iweb' ), __( 'Strategy, design, development and growth.', 'iweb' ) ),
 	array( 'users', __( 'Long-term partnerships', 'iweb' ), __( 'Many clients work with us for years.', 'iweb' ) ),
 	array( 'rocket', __( 'Measurable results', 'iweb' ), __( 'Focused on real business outcomes.', 'iweb' ) ),
 );

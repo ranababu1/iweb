@@ -19,7 +19,7 @@ $iweb_parts   = 'stack' === $iweb_variant ? array( 'seo', 'dashboard', 'code' ) 
 				<div class="ui-search"><?php echo iweb_icon( 'search' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <span>seo agency for small business</span></div>
 				<div class="ui-result ui-result--top">
 					<small>yourbusiness.com</small>
-					<strong>Your Business | Fast WordPress, SEO and growth</strong>
+					<strong>Your Business | Helpful answers, fast service</strong>
 					<p>High-performance websites that get found and turn visitors into customers.</p>
 				</div>
 				<div class="ui-result ui-result--ai">
@@ -43,14 +43,14 @@ $iweb_parts   = 'stack' === $iweb_variant ? array( 'seo', 'dashboard', 'code' ) 
 			</div>
 		<?php elseif ( 'code' === $iweb_part ) : ?>
 			<div class="ui-frame ui-frame--code">
-				<div class="ui-frame__bar"><span></span><span></span><span></span><em>functions.php</em></div>
-<pre class="ui-code"><b>add_action</b>( <s>'init'</s>, <b>function</b> () {
-  <i>// Clean, fast, no bloat.</i>
-  register_block_pattern( <s>'iws/hero'</s> );
-  <b>if</b> ( is_lead( $form ) ) {
-    send_to_crm( $form );
-  }
-} );</pre>
+				<div class="ui-frame__bar"><span></span><span></span><span></span><em>lead-flow.js</em></div>
+<pre class="ui-code"><i>// New enquiry comes in</i>
+<b>const</b> lead = <b>await</b> ai.classify( form );
+<b>if</b> ( lead.qualified ) {
+  <b>await</b> crm.create( lead );
+  <b>await</b> notify( <s>'sales'</s>, lead );
+}
+<b>await</b> reply.draft( lead );</pre>
 			</div>
 		<?php elseif ( 'form' === $iweb_part ) : ?>
 			<div class="ui-frame ui-frame--form">

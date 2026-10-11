@@ -31,7 +31,7 @@
 
 				<div class="footer-brand">
 					<p class="footer-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo wp_kses( iweb_wordmark(), array( 'span' => array( 'class' => array() ) ) ); ?></a></p>
-					<p class="footer-blurb"><?php esc_html_e( 'We build fast WordPress sites and grow them with technical SEO, CRO and AI-ready content.', 'iweb' ); ?></p>
+					<p class="footer-blurb"><?php esc_html_e( 'We deploy AI to automate the busywork, improve how your business runs and grow your results online.', 'iweb' ); ?></p>
 
 					<?php
 					$iweb_profiles = iweb_get_social_profiles();
