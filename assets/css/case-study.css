@@ -1,0 +1,389 @@
+/**
+ * Single case study styles. Loaded only on case_study posts
+ * (see inc/enqueue.php). Shared components live in style.css.
+ */
+
+.cs > .container {
+	margin-block-start: 1.25rem;
+}
+
+/* Hero */
+.cs-hero__inner {
+	display: grid;
+	gap: 2rem;
+	padding-block: 1.5rem clamp(2rem, 5vw, 3rem);
+}
+
+.cs .breadcrumb {
+	margin-block-end: 1.5rem;
+	color: var(--color-muted);
+	font-size: 0.8rem;
+}
+
+.cs .breadcrumb a {
+	color: var(--color-muted);
+	text-decoration: none;
+}
+
+.cs-hero__title {
+	margin-block-end: 1rem;
+	font-size: clamp(2.5rem, 6vw, 4rem);
+	font-weight: 800;
+	line-height: 1.02;
+	letter-spacing: -0.04em;
+}
+
+.cs-hero__lead {
+	max-width: 32rem;
+	margin-block-end: 1.5rem;
+	color: var(--color-muted);
+}
+
+.cs-hero__stats {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	margin: 0 0 1.75rem;
+	padding: 0;
+	list-style: none;
+	font-size: 0.9rem;
+}
+
+.cs-hero__stats li {
+	display: flex;
+	flex-direction: column;
+}
+
+.cs-hero__stats strong {
+	color: var(--color-brand);
+	font-size: 1.75rem;
+	font-weight: 800;
+	letter-spacing: -0.03em;
+}
+
+.cs-hero__visual img {
+	width: 100%;
+	border-radius: var(--radius-lg);
+	box-shadow: var(--shadow-card);
+}
+
+@media (min-width: 56rem) {
+
+	.cs-hero__inner {
+		grid-template-columns: 1fr 1.2fr;
+		align-items: center;
+	}
+}
+
+/* Facts */
+.cs-facts {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1rem;
+	margin: 0;
+	padding: 1rem 1.25rem;
+	list-style: none;
+	border-radius: var(--radius-md);
+	background-color: #f1f4ea;
+	font-size: 0.8rem;
+}
+
+.cs-facts li {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	color: var(--color-muted);
+}
+
+.cs-facts strong {
+	display: block;
+	color: var(--color-heading);
+}
+
+.cs-facts .icon {
+	flex: none;
+	width: 1.5rem;
+	height: 1.5rem;
+	color: var(--color-heading);
+}
+
+@media (min-width: 56rem) {
+
+	.cs-facts {
+		grid-template-columns: repeat(5, minmax(0, 1fr));
+	}
+}
+
+/* Challenge / solution */
+.cs-pair {
+	display: grid;
+	gap: 1rem;
+}
+
+.cs-panel {
+	display: flex;
+	gap: 1.25rem;
+	padding: 1.75rem;
+	border-radius: var(--radius-md);
+	background-color: #f1f4ea;
+}
+
+.cs-panel h2 {
+	margin-block-end: 0.4rem;
+	font-size: 1.3rem;
+	font-weight: 800;
+}
+
+.cs-panel p {
+	color: var(--color-muted);
+	font-size: 0.9rem;
+}
+
+.cs-panel__icon {
+	display: inline-grid;
+	place-items: center;
+	flex: none;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	background-color: #a3e635;
+	color: var(--color-dark);
+	font-size: 1.4rem;
+	font-weight: 800;
+}
+
+.cs-panel__icon .icon {
+	width: 1.4rem;
+	height: 1.4rem;
+}
+
+@media (min-width: 56rem) {
+
+	.cs-pair {
+		grid-template-columns: 1fr 1.2fr;
+	}
+}
+
+/* Results */
+.cs-results {
+	padding: 1.5rem;
+	border-radius: var(--radius-md);
+	background-color: #eef6e8;
+}
+
+.cs-results h2 {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	font-size: 1.3rem;
+	font-weight: 800;
+}
+
+.cs-results ul {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1.25rem;
+	margin: 1.25rem 0 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+.cs-results li {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+}
+
+.cs-results strong {
+	font-size: clamp(1.75rem, 4vw, 2.5rem);
+	font-weight: 800;
+	letter-spacing: -0.03em;
+}
+
+.cs-results span {
+	color: var(--color-muted);
+	font-size: 0.9rem;
+}
+
+@media (min-width: 56rem) {
+
+	.cs-results ul {
+		grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+	}
+
+	.cs-results li + li {
+		border-inline-start: 1px solid var(--color-border);
+	}
+}
+
+/* Delivered and gallery */
+.cs-delivered {
+	display: grid;
+	gap: 2rem;
+	align-items: start;
+	padding-block: 1.5rem;
+}
+
+.cs-delivered h2 {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	margin-block-end: 1rem;
+	font-size: 1.3rem;
+	font-weight: 800;
+}
+
+.cs-delivered h2 .icon {
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.cs-delivered .check-list {
+	display: grid;
+	gap: 0.6rem;
+	margin: 0 0 1.5rem;
+	padding: 0;
+	list-style: none;
+}
+
+.cs-delivered .check-list li {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	font-size: 0.95rem;
+}
+
+.cs-delivered .check-list .icon {
+	width: 1rem;
+	height: 1rem;
+	color: var(--color-brand);
+}
+
+.cs-gallery img {
+	border-radius: var(--radius-sm);
+}
+
+@media (min-width: 56rem) {
+
+	.cs-delivered {
+		grid-template-columns: 1fr 1.5fr;
+	}
+}
+
+/* Quote */
+.cs-quote {
+	display: grid;
+	gap: 1rem;
+	align-items: center;
+	margin: 0;
+	padding: 1.75rem;
+	border-radius: var(--radius-md);
+	background-color: #eef6e8;
+}
+
+.cs-quote blockquote {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: clamp(1.05rem, 2vw, 1.3rem);
+	font-weight: 600;
+	line-height: 1.4;
+}
+
+.cs-quote figcaption {
+	margin: 0;
+	color: var(--color-muted);
+	font-size: 0.85rem;
+}
+
+.cs-quote figcaption strong {
+	color: var(--color-heading);
+}
+
+@media (min-width: 56rem) {
+
+	.cs-quote {
+		grid-template-columns: 2fr 1fr;
+	}
+}
+
+/* Related */
+.cs-related {
+	padding-block: 2rem;
+}
+
+.cs-related__head {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-block-end: 1.25rem;
+}
+
+.cs-related__head h2 {
+	font-size: 1.4rem;
+	font-weight: 800;
+}
+
+.cs-related__list {
+	display: grid;
+	gap: 1rem;
+}
+
+.cs-related__item {
+	display: flex;
+	gap: 1rem;
+	padding: 1rem;
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-md);
+	background: var(--color-surface);
+}
+
+.cs-related__item img {
+	width: 6rem;
+	height: 5rem;
+	border-radius: var(--radius-sm);
+	object-fit: cover;
+}
+
+.cs-related__item h3 {
+	font-size: 1rem;
+}
+
+.cs-related__item p {
+	margin-block: 0.25rem 0.5rem;
+	color: var(--color-muted);
+	font-size: 0.8rem;
+}
+
+@media (min-width: 56rem) {
+
+	.cs-related__list {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+/* Closing CTA */
+.cs-cta {
+	padding-block: 2.25rem;
+}
+
+.cs-cta__inner {
+	display: grid;
+	gap: 1.25rem;
+	align-items: center;
+}
+
+.cs-cta h2 {
+	font-size: clamp(1.6rem, 3.5vw, 2.25rem);
+	font-weight: 800;
+}
+
+@media (min-width: 56rem) {
+
+	.cs-cta__inner {
+		grid-template-columns: 1fr auto;
+	}
+}

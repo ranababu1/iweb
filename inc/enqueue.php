@@ -124,6 +124,18 @@ function iweb_conditional_stylesheets() {
 				'file'       => 'assets/css/home.css',
 				'script'     => 'assets/js/home.js',
 			),
+			'iweb-case-study' => array(
+				'conditional' => 'iweb_is_case_study_view',
+				'file'       => 'assets/css/case-study.css',
+			),
+			'iweb-our-work' => array(
+				'conditional' => 'iweb_is_our_work_view',
+				'file'       => 'assets/css/our-work.css',
+			),
+			'iweb-how-we-work' => array(
+				'conditional' => 'iweb_is_how_we_work_view',
+				'file'       => 'assets/css/how-we-work.css',
+			),
 			'iweb-services' => array(
 				'conditional' => 'iweb_is_services_view',
 				'file'       => 'assets/css/services.css',
@@ -163,6 +175,28 @@ function iweb_is_home_view() {
 }
 
 /**
+ * Check whether the current view uses the Our work template.
+ *
+ * @since 1.7.0
+ *
+ * @return bool True on pages using the Our work template.
+ */
+function iweb_is_our_work_view() {
+	return is_page_template( 'page-templates/our-work.php' );
+}
+
+/**
+ * Check whether the current view uses the How we work template.
+ *
+ * @since 1.6.0
+ *
+ * @return bool True on pages using the How we work template.
+ */
+function iweb_is_how_we_work_view() {
+	return is_page_template( 'page-templates/how-we-work.php' );
+}
+
+/**
  * Check whether the current view uses the Services overview template.
  *
  * @since 1.4.0
@@ -181,7 +215,7 @@ function iweb_is_services_view() {
  * @return bool True on pages using the Service template.
  */
 function iweb_is_service_view() {
-	return is_page_template( array( 'page-templates/service-get-found.php', 'page-templates/service-automate.php', 'page-templates/service-convert.php' ) );
+	return is_page_template( array( 'page-templates/service-get-found.php', 'page-templates/service-automate.php', 'page-templates/service-convert.php', 'page-templates/service-analytics.php' ) );
 }
 
 /**

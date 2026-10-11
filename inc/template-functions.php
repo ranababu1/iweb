@@ -217,6 +217,10 @@ function iweb_icon( $name ) {
 		'gauge'     => '<path d="M4 17a9 9 0 1 1 16 0M12 13l4-5"/>',
 		'user'      => '<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.500 3.600-7 8-7s8 2.500 8 7z"/>',
 		'chevron'   => '<path d="m9 6 6 6-6 6"/>',
+		'tag'       => '<path d="M3 12V4h8l10 10-8 8zM7.500 8.500h.01"/>',
+		'target'    => '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>',
+		'rocket'    => '<path d="M5 19c0-3 1-4 3-5m-3 5c3 0 4-1 5-3M14 10l-4 4 2 2 4-4M20 4c-6 0-10 4-11 9l2 2c5-1 9-5 9-11z"/>',
+		'database'  => '<ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.700 3.600 3 8 3s8-1.300 8-3V6M4 12c0 1.700 3.600 3 8 3s8-1.300 8-3"/>',
 		'image'     => '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.500"/><path d="m4 18 5-5 4 4 3-3 4 4"/>',
 	);
 
@@ -258,7 +262,7 @@ function iweb_fallback_menu() {
  * @return bool
  */
 function iweb_is_marketing_view() {
-	return is_page_template( array( 'page-templates/home.php', 'page-templates/service-get-found.php', 'page-templates/service-automate.php', 'page-templates/service-convert.php', 'page-templates/services.php' ) );
+	return is_page_template( array( 'page-templates/home.php', 'page-templates/service-get-found.php', 'page-templates/service-automate.php', 'page-templates/service-convert.php', 'page-templates/services.php', 'page-templates/service-analytics.php', 'page-templates/how-we-work.php', 'page-templates/our-work.php' ) );
 }
 
 /**
@@ -270,7 +274,7 @@ function iweb_is_marketing_view() {
  * @return string[]
  */
 function iweb_marketing_body_class( $classes ) {
-	if ( iweb_is_marketing_view() ) {
+	if ( iweb_is_marketing_view() || is_singular( 'case_study' ) ) {
 		$classes[] = 'is-marketing';
 	}
 

@@ -1,0 +1,273 @@
+/**
+ * How we work styles. Loaded only on pages using the "How We Work"
+ * template (see inc/enqueue.php). Shared components live in style.css.
+ */
+
+/* Hero */
+.hww-hero__inner {
+	display: grid;
+	gap: 2rem;
+	padding-block: 1.5rem clamp(2rem, 5vw, 3.5rem);
+}
+
+.breadcrumb {
+	margin-block-end: 1.5rem;
+	color: var(--color-muted);
+	font-size: 0.8rem;
+}
+
+.breadcrumb a {
+	color: var(--color-muted);
+	text-decoration: none;
+}
+
+.hww-hero__title {
+	margin-block-end: 1.25rem;
+	font-size: clamp(2.25rem, 5vw, 3.4rem);
+	font-weight: 800;
+	line-height: 1.08;
+	letter-spacing: -0.035em;
+}
+
+.hww-hero__lead {
+	max-width: 32rem;
+	margin-block-end: 1.75rem;
+	color: var(--color-muted);
+}
+
+.hww-hero__visual {
+	padding: 1rem;
+	border-radius: var(--radius-lg);
+	background: linear-gradient(135deg, #f3e9d2, #e1ecd8);
+}
+
+.board {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0.6rem;
+	padding: 0.9rem;
+	border: 6px solid #2a2f2c;
+	border-radius: var(--radius-sm);
+	background: #fff;
+	box-shadow: 0 24px 48px rgba(15, 26, 20, 0.22);
+}
+
+.board__title {
+	margin-block-end: 0.4rem;
+	font-size: 0.8rem;
+	font-weight: 700;
+}
+
+.board__card {
+	margin-block-end: 0.4rem;
+	padding: 0.5rem 0.6rem;
+	border-radius: 6px;
+	background: #dff0dc;
+	font-size: 0.7rem;
+	font-weight: 600;
+}
+
+.board__col:nth-child(2) .board__card { background: #dbe8fb; }
+.board__col:nth-child(3) .board__card { background: #fde9d3; }
+.board__col:nth-child(4) .board__card { background: #d6efec; }
+
+@media (min-width: 40rem) {
+
+	.board {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 56rem) {
+
+	.hww-hero__inner {
+		grid-template-columns: 1fr 1.1fr;
+		align-items: center;
+	}
+}
+
+/* Process */
+.hww-sub {
+	margin-block-start: 0.5rem;
+	color: var(--color-muted);
+}
+
+.hww-steps {
+	display: grid;
+	gap: 1.5rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.hww-step .process-step {
+	grid-template-columns: auto 1fr;
+	align-items: start;
+}
+
+.hww-step .process-step p {
+	grid-column: 2;
+}
+
+.hww-output {
+	margin-block-start: 1.25rem;
+	padding: 1rem;
+	border-radius: var(--radius-sm);
+	background-color: var(--card-bg);
+	font-size: 0.85rem;
+}
+
+.hww-output__label {
+	margin-block-end: 0.2rem;
+	font-weight: 700;
+}
+
+@media (min-width: 40rem) {
+
+	.hww-steps {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 64rem) {
+
+	.hww-steps {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 1.5rem;
+	}
+}
+
+/* Tools */
+.hww-tools__box {
+	padding: clamp(1.25rem, 3vw, 2rem);
+	border-radius: var(--radius-lg);
+	background-color: #eef6e8;
+}
+
+.hww-tools__head {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-block-end: 1.5rem;
+}
+
+.hww-tools__head p:not(.eyebrow) {
+	max-width: 30rem;
+	margin-block-start: 0.5rem;
+	color: var(--color-muted);
+}
+
+.tool-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0.75rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.tool-grid li {
+	display: grid;
+	place-items: center;
+	min-height: 4rem;
+	padding: 0.5rem;
+	border-radius: var(--radius-sm);
+	background: #fff;
+	font-size: 0.85rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+@media (min-width: 40rem) {
+
+	.tool-grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 64rem) {
+
+	.tool-grid {
+		grid-template-columns: repeat(11, minmax(0, 1fr));
+		gap: 0.5rem;
+	}
+
+	.tool-grid li {
+		font-size: 0.7rem;
+	}
+}
+
+/* What to expect */
+.hww-expect {
+	display: grid;
+	gap: 2rem;
+	align-items: stretch;
+}
+
+.hww-expect__copy > p:not(.eyebrow) {
+	margin-block-start: 0.75rem;
+	color: var(--color-muted);
+}
+
+.check-list {
+	display: grid;
+	gap: 0.75rem;
+	margin: 1.5rem 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.check-list li {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	font-size: 0.95rem;
+}
+
+.check-list__icon {
+	display: inline-grid;
+	place-items: center;
+	flex: none;
+	width: 1.4rem;
+	height: 1.4rem;
+	border-radius: 50%;
+	background-color: var(--color-brand);
+	color: #fff;
+}
+
+.check-list__icon .icon {
+	width: 0.8rem;
+	height: 0.8rem;
+}
+
+.hww-expect__visual {
+	min-height: 16rem;
+}
+
+.hww-expect__cta {
+	display: grid;
+	align-content: center;
+	gap: 0.9rem;
+	padding: 1.75rem;
+	border-radius: var(--radius-lg);
+	background-color: #eef6e8;
+}
+
+.hww-expect__cta h3 {
+	font-size: 1.6rem;
+	font-weight: 800;
+	line-height: 1.15;
+}
+
+.hww-expect__cta p:not(.eyebrow) {
+	color: var(--color-muted);
+}
+
+@media (min-width: 64rem) {
+
+	.hww-expect {
+		grid-template-columns: 1.1fr 1.2fr 0.9fr;
+	}
+}

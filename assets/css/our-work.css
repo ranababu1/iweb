@@ -1,0 +1,246 @@
+/**
+ * Our work styles. Loaded only on pages using the "Our Work" template
+ * (see inc/enqueue.php). Shared components live in style.css.
+ */
+
+/* Hero */
+.work-hero__inner {
+	display: grid;
+	gap: 2rem;
+	padding-block: clamp(2rem, 5vw, 3.5rem);
+}
+
+.work-hero__title {
+	margin-block-end: 1.25rem;
+	font-size: clamp(2.5rem, 6vw, 3.75rem);
+	font-weight: 800;
+	line-height: 1.05;
+	letter-spacing: -0.035em;
+}
+
+.work-hero__lead {
+	max-width: 32rem;
+	margin-block-end: 1.75rem;
+	color: var(--color-muted);
+}
+
+.work-hero__visual {
+	position: relative;
+	min-height: 18rem;
+	border-radius: var(--radius-lg);
+	background: linear-gradient(135deg, #f3e9d2, #e1ecd8);
+}
+
+.work-screen {
+	position: absolute;
+	inset: 14% 14% 16% 18%;
+	padding: 1.25rem;
+	border: 6px solid #2a2f2c;
+	border-radius: var(--radius-sm);
+	background: #fff;
+	box-shadow: 0 24px 48px rgba(15, 26, 20, 0.25);
+	transform: rotate(-3deg);
+}
+
+.work-screen p {
+	max-width: 8rem;
+	font-size: 1.1rem;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.work-note {
+	position: absolute;
+	z-index: 1;
+	font-size: 1rem;
+	font-style: italic;
+	font-weight: 600;
+}
+
+.work-note--a { inset: 4% auto auto 4%; }
+.work-note--b { inset: auto auto 6% 2%; }
+.work-note--c { inset: 8% 3% auto auto; }
+.work-note--d { inset: auto 6% 8% auto; }
+
+@media (min-width: 56rem) {
+
+	.work-hero__inner {
+		grid-template-columns: 1fr 1.1fr;
+		align-items: center;
+	}
+
+	.work-hero__visual {
+		min-height: 24rem;
+	}
+}
+
+/* Projects */
+.project-cards {
+	display: grid;
+	gap: 1.25rem;
+}
+
+.project-card {
+	overflow: hidden;
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-md);
+	background: var(--color-surface);
+}
+
+.project-card__media {
+	display: block;
+	aspect-ratio: 16 / 9;
+	background: linear-gradient(135deg, #dcebd5, #f3ead6);
+}
+
+.project-card__media img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.project-card__body {
+	padding: 1rem 3rem 1.25rem 1.25rem;
+}
+
+.project-card__cat {
+	color: var(--color-brand);
+	font-size: 0.7rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+.project-card h3 {
+	margin-block: 0.35rem;
+	font-size: 1.15rem;
+}
+
+.project-card h3 a {
+	color: var(--color-heading);
+	text-decoration: none;
+}
+
+.project-card h3 a::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+}
+
+.project-card__body > p:last-of-type {
+	color: var(--color-muted);
+	font-size: 0.85rem;
+}
+
+.project-card__arrow {
+	position: absolute;
+	inset: auto 1.25rem 1.25rem auto;
+}
+
+.project-card__arrow .icon {
+	width: 1.1rem;
+	height: 1.1rem;
+}
+
+.project-card {
+	position: relative;
+}
+
+@media (min-width: 40rem) {
+
+	.project-cards {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 64rem) {
+
+	.project-cards {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+.work-empty {
+	flex-direction: column;
+	gap: 1rem;
+	padding: 3rem 1.5rem;
+	text-align: center;
+	align-content: center;
+	justify-items: center;
+}
+
+/* Client quote */
+.work-quote {
+	display: grid;
+	gap: 1.5rem;
+	align-items: center;
+	margin: 0 auto;
+	padding: clamp(1.5rem, 4vw, 2.25rem);
+	border-radius: var(--radius-lg);
+	background-color: #eef6e8;
+}
+
+.work-quote blockquote {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	color: var(--color-heading);
+	font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+.work-quote figcaption {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin: 0;
+	color: var(--color-muted);
+	font-size: 0.85rem;
+}
+
+.work-quote figcaption strong {
+	color: var(--color-heading);
+	font-size: 1rem;
+}
+
+.work-quote img {
+	width: 4.5rem;
+	height: 4.5rem;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+@media (min-width: 56rem) {
+
+	.work-quote {
+		grid-template-columns: 1.6fr 1fr;
+	}
+}
+
+.work-quote-wrap {
+	margin-block-end: clamp(2rem, 5vw, 3.5rem);
+}
+
+/* Closing CTA */
+.work-cta {
+	padding-block: 2.25rem;
+}
+
+.work-cta__inner {
+	display: grid;
+	gap: 1.25rem;
+	align-items: center;
+}
+
+.work-cta h2 {
+	font-size: clamp(1.6rem, 3.5vw, 2.25rem);
+	font-weight: 800;
+}
+
+@media (min-width: 56rem) {
+
+	.work-cta__inner {
+		grid-template-columns: 1fr auto;
+	}
+}
