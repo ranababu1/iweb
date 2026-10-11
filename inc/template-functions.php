@@ -223,6 +223,8 @@ function iweb_icon( $name ) {
 		'database'  => '<ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.700 3.600 3 8 3s8-1.300 8-3V6M4 12c0 1.700 3.600 3 8 3s8-1.300 8-3"/>',
 		'cloud'     => '<path d="M7 18a4 4 0 0 1-.5-8 5.500 5.500 0 0 1 10.600 1A3.500 3.500 0 0 1 17 18z"/>',
 		'trophy'    => '<path d="M8 4h8v6a4 4 0 0 1-8 0zM8 6H4c0 3 1.500 4 4 4M16 6h4c0 3-1.500 4-4 4M12 14v4M8 21h8M9 18h6"/>',
+		'mail'      => '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+		'clip'      => '<path d="m20 11-8.500 8.500a5 5 0 0 1-7-7L13 4a3.500 3.500 0 0 1 5 5l-8.500 8.500a2 2 0 0 1-3-3L14 7"/>',
 		'image'     => '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.500"/><path d="m4 18 5-5 4 4 3-3 4 4"/>',
 	);
 
@@ -264,7 +266,7 @@ function iweb_fallback_menu() {
  * @return bool
  */
 function iweb_is_marketing_view() {
-	return is_page_template( array( 'page-templates/home.php', 'page-templates/service-get-found.php', 'page-templates/service-automate.php', 'page-templates/service-convert.php', 'page-templates/services.php', 'page-templates/service-analytics.php', 'page-templates/how-we-work.php', 'page-templates/our-work.php', 'page-templates/about.php' ) );
+	return is_page_template( array( 'page-templates/home.php', 'page-templates/service-get-found.php', 'page-templates/service-automate.php', 'page-templates/service-convert.php', 'page-templates/services.php', 'page-templates/service-analytics.php', 'page-templates/how-we-work.php', 'page-templates/our-work.php', 'page-templates/about.php', 'page-templates/start-project.php' ) );
 }
 
 /**
