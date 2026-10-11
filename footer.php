@@ -169,8 +169,8 @@
 				<?php endif; ?>
 			</div>
 
-			<p class="footer-wordmark" aria-hidden="true">IWS</p>
 			<p class="footer-email"><a href="mailto:hello@imraan.in">hello@imraan.in</a></p>
+			<p class="footer-wordmark" aria-hidden="true">IWS</p>
 		</div><!-- .site-footer-inner -->
 	</footer><!-- #colophon -->
 

@@ -16,7 +16,7 @@
 	--iws-glow: #eaffd0;
 	--iws-display: "Sora", "Inter", system-ui, sans-serif;
 	--iws-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-	--iws-hero: clamp(3.25rem, 7.6vw, 7rem);
+	--iws-hero: clamp(3rem, 5.6vw, 5.5rem);
 	--iws-h2: clamp(2.25rem, 3.9vw, 3.5rem);
 	--iws-h3: clamp(1.25rem, 1.6vw, 1.5rem);
 	--iws-pad: clamp(4.5rem, 8.5vw, 7.5rem);
@@ -358,7 +358,7 @@ a { color: var(--iws-ink); text-underline-offset: 0.18em; }
 		gap: 3.5rem !important;
 		align-items: center;
 	}
-	.home-hero__title { font-size: clamp(4rem, 6.6vw, 7rem) !important; }
+	.home-hero__title { font-size: clamp(3.5rem, 5.4vw, 5.75rem) !important; }
 }
 
 /* Hero visuals: glassy frames. */
@@ -576,3 +576,13 @@ details[open] { border-color: var(--iws-ink) !important; }
 	.service-card .link-arrow .icon, .core-card .core-card__cta .icon { width: 2.5rem; height: 2.5rem; padding: 0.65rem; }
 	.service-cta, .cta-band { text-align: left; }
 }
+
+/* Follow-up polish */
+.trust-strip { padding-block: 0 !important; }
+.trust-strip__list { padding-block: 2rem !important; }
+.trust-item span { min-width: 0; }
+.trust-item strong { overflow-wrap: anywhere; }
+@media (max-width: 47.99rem) { .trust-item strong { font-size: 1.05rem; } }
+.ui-mock--form, .ui-mock--dashboard, .ui-mock--code, .ui-mock--seo { width: 100%; max-width: 30rem; margin-inline: auto; }
+.footer-email { margin-top: 2rem; }
+.footer-wordmark { margin-top: 1.5rem; }
