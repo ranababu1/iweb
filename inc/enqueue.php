@@ -124,6 +124,10 @@ function iweb_conditional_stylesheets() {
 				'file'       => 'assets/css/home.css',
 				'script'     => 'assets/js/home.js',
 			),
+			'iweb-services' => array(
+				'conditional' => 'iweb_is_services_view',
+				'file'       => 'assets/css/services.css',
+			),
 			'iweb-service' => array(
 				'conditional' => 'iweb_is_service_view',
 				'file'       => 'assets/css/service.css',
@@ -159,14 +163,25 @@ function iweb_is_home_view() {
 }
 
 /**
- * Check whether the current view uses the service page template.
+ * Check whether the current view uses the Services overview template.
+ *
+ * @since 1.4.0
+ *
+ * @return bool True on pages using the Services template.
+ */
+function iweb_is_services_view() {
+	return is_page_template( 'page-templates/services.php' );
+}
+
+/**
+ * Check whether the current view uses a service page template.
  *
  * @since 1.1.0
  *
  * @return bool True on pages using the Service template.
  */
 function iweb_is_service_view() {
-	return is_page_template( 'page-templates/service-get-found.php' );
+	return is_page_template( array( 'page-templates/service-get-found.php', 'page-templates/service-automate.php', 'page-templates/service-convert.php' ) );
 }
 
 /**
