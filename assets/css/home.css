@@ -380,7 +380,7 @@
 	.home-hero h1.home-hero__title { white-space: nowrap; }
 	.home-hero .home-hero__visual { position: relative; padding: 0 !important; min-height: 0 !important; }
 	.home-hero .home-hero__visual .ui-mock { position: absolute; inset: 0; overflow: hidden; align-content: start; }
-	.home-hero .talk-disc { left: -1.75rem; bottom: -1.25rem; width: 6.5rem; height: 6.5rem; font-size: 0.8rem; }
+	.home-hero .talk-disc { left: auto; right: -1.5rem; bottom: -1.25rem; width: 6.5rem; height: 6.5rem; font-size: 0.8rem; }
 }
 @media (max-width: 63.99rem) {
 	.home-hero .home-hero__visual { padding: 0 !important; min-height: 0 !important; }
