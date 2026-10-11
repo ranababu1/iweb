@@ -100,7 +100,6 @@
 }
 
 .project-card__body {
-	position: relative;
 	padding: 1rem 3rem 1.25rem 1.25rem;
 }
 
@@ -125,7 +124,7 @@
 .project-card h3 a::after {
 	content: "";
 	position: absolute;
-	inset: -20rem 0 0 0;
+	inset: 0;
 }
 
 .project-card__body > p:last-of-type {
@@ -135,7 +134,7 @@
 
 .project-card__arrow {
 	position: absolute;
-	inset: 1.25rem 1.25rem auto auto;
+	inset: auto 1.25rem 1.25rem auto;
 }
 
 .project-card__arrow .icon {
