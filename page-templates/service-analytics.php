@@ -73,7 +73,7 @@ get_header();
 		array(
 			'label'       => __( 'Know what\'s working', 'iweb' ),
 			'lines'       => array( __( 'Clean data.', 'iweb' ), __( 'Clear reports.', 'iweb' ), __( 'Better decisions.', 'iweb' ) ),
-			'highlight'   => __( 'Know what drives growth.', 'iweb' ),
+			'highlight'   => __( 'Know what grows.', 'iweb' ),
 			'lead'        => __( 'We set up tracking you can trust and dashboards that use AI to point out what changed, so you can see where your leads and sales come from.', 'iweb' ),
 			'steps'       => array(
 				array( 'search', __( 'Tracking audit', 'iweb' ), __( 'Find gaps and broken tags', 'iweb' ) ),
