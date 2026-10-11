@@ -95,3 +95,41 @@ function iweb_seo_fallback_description() {
 	}
 }
 add_action( 'wp_head', 'iweb_seo_fallback_description', 1 );
+
+/**
+ * Yoast: keep the brand name consistent in schema and drop leftover demo
+ * images (from the old demo import) from Open Graph and Twitter tags.
+ */
+function iweb_yoast_schema_name( $data ) {
+	if ( is_array( $data ) ) {
+		$data['name'] = 'IWS';
+		if ( isset( $data['alternateName'] ) ) {
+			unset( $data['alternateName'] );
+		}
+	}
+	return $data;
+}
+add_filter( 'wpseo_schema_website', 'iweb_yoast_schema_name' );
+add_filter( 'wpseo_schema_organization', 'iweb_yoast_schema_name' );
+
+/**
+ * Drop demo-import images from social tags.
+ *
+ * @param string $url Image URL.
+ * @return string
+ */
+function iweb_yoast_drop_demo_image( $url ) {
+	return ( is_string( $url ) && false !== stripos( $url, 'layerdrops.com' ) ) ? '' : $url;
+}
+add_filter( 'wpseo_opengraph_image', 'iweb_yoast_drop_demo_image' );
+add_filter( 'wpseo_twitter_image', 'iweb_yoast_drop_demo_image' );
+
+/**
+ * Yoast site name used in og:site_name and titles.
+ *
+ * @return string
+ */
+function iweb_yoast_site_name() {
+	return 'IWS';
+}
+add_filter( 'wpseo_opengraph_site_name', 'iweb_yoast_site_name' );
