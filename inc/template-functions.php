@@ -249,7 +249,7 @@ function iweb_fallback_menu() {
  * @return bool
  */
 function iweb_is_marketing_view() {
-	return is_front_page() || is_page_template( 'page-templates/service-get-found.php' );
+	return is_page_template( array( 'page-templates/home.php', 'page-templates/service-get-found.php' ) );
 }
 
 /**

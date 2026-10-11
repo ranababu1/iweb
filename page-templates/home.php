@@ -1,9 +1,10 @@
 <?php
 /**
- * The front page template.
+ * Template Name: Home
+ * Template Post Type: page
  *
  * All homepage copy lives in this file. Layout and styling live in
- * assets/css/home.css, which is only loaded on the front page.
+ * assets/css/home.css, which is only loaded for this template.
  *
  * @package iweb
  * @since 1.1.0
