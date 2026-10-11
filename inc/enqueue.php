@@ -297,3 +297,31 @@ function iweb_asset_version( $file ) {
  * }
  * add_action( 'admin_enqueue_scripts', 'iweb_admin_scripts' );
  */
+/**
+ * Editorial premium layer: fonts, the editorial stylesheet and the reveal
+ * script. Runs late so it loads after every view-specific stylesheet.
+ *
+ * @return void
+ */
+function iweb_editorial_assets() {
+	wp_enqueue_style( 'iweb-fonts', 'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;450;500;600&display=swap', array(), null );
+	wp_enqueue_style( 'iweb-editorial', get_template_directory_uri() . '/assets/css/editorial.css', array(), iweb_asset_version( 'assets/css/editorial.css' ) );
+	wp_enqueue_script( 'iweb-editorial', get_template_directory_uri() . '/assets/js/editorial.js', array(), iweb_asset_version( 'assets/js/editorial.js' ), array( 'in_footer' => true, 'strategy' => 'defer' ) );
+}
+add_action( 'wp_enqueue_scripts', 'iweb_editorial_assets', 100 );
+
+/**
+ * Preconnect to Google Fonts.
+ *
+ * @param array  $urls          URLs.
+ * @param string $relation_type Relation.
+ * @return array
+ */
+function iweb_editorial_resource_hints( $urls, $relation_type ) {
+	if ( 'preconnect' === $relation_type ) {
+		$urls[] = array( 'href' => 'https://fonts.gstatic.com', 'crossorigin' );
+		$urls[] = 'https://fonts.googleapis.com';
+	}
+	return $urls;
+}
+add_filter( 'wp_resource_hints', 'iweb_editorial_resource_hints', 10, 2 );
