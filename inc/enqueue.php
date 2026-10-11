@@ -120,7 +120,7 @@ function iweb_conditional_stylesheets() {
 				'file'       => 'assets/css/blog.css',
 			),
 			'iweb-home' => array(
-				'conditional' => 'is_front_page',
+				'conditional' => 'iweb_is_home_view',
 				'file'       => 'assets/css/home.css',
 				'script'     => 'assets/js/home.js',
 			),
@@ -145,6 +145,17 @@ function iweb_conditional_stylesheets() {
  */
 function iweb_is_blog_view() {
 	return is_home() || is_archive() || is_search() || is_singular( 'post' );
+}
+
+/**
+ * Check whether the current view uses the Home page template.
+ *
+ * @since 1.1.0
+ *
+ * @return bool True on pages using the Home template.
+ */
+function iweb_is_home_view() {
+	return is_page_template( 'page-templates/home.php' );
 }
 
 /**
