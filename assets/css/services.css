@@ -83,10 +83,14 @@
 	font-size: 1.1rem;
 	font-style: italic;
 	font-weight: 600;
+	padding: 0.3rem 0.8rem;
+	border-radius: 999px;
+	background: #fff;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
 .hero-note--a { inset: 2% auto auto 6%; }
-.hero-note--b { inset: 4% 4% auto auto; color: #fff; }
+.hero-note--b { inset: 4% 0 auto auto; }
 .hero-note--c { inset: auto 2% 6% auto; }
 
 @media (min-width: 56rem) {

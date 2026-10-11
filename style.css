@@ -339,8 +339,20 @@ body {
 	height: auto;
 }
 
-.header-cta {
-	display: none;
+.site-header .header-cta {
+	display: inline-flex;
+}
+
+/* On mobile the header CTA shows only inside the open menu. */
+@media (max-width: 47.99rem) {
+
+	html.js .primary-navigation.is-collapsed + .header-cta {
+		display: none;
+	}
+
+	.site-header .header-cta {
+		margin-block-end: var(--space-sm);
+	}
 }
 
 /*
@@ -438,10 +450,6 @@ html.js .primary-navigation.is-collapsed .nav-menu {
 		display: flex;
 		flex-wrap: wrap;
 		column-gap: 1.75rem;
-	}
-
-	.header-cta {
-		display: inline-flex;
 	}
 
 	/* The menu is never collapsed on desktop. */
