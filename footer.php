@@ -17,11 +17,11 @@
 
 			<section class="footer-cta" aria-label="<?php esc_attr_e( 'Start a project', 'iweb' ); ?>">
 				<div class="footer-cta__main">
-					<p class="footer-cta__eyebrow"><span class="footer-cta__line" aria-hidden="true"></span><?php esc_html_e( 'Ready to improve your website?', 'iweb' ); ?></p>
+					<p class="footer-cta__eyebrow"><span class="footer-cta__line" aria-hidden="true"></span><?php esc_html_e( 'Ready to scale smarter?', 'iweb' ); ?></p>
 					<p class="footer-cta__title"><?php esc_html_e( 'Let’s build', 'iweb' ); ?><br><?php esc_html_e( 'something', 'iweb' ); ?> <span class="footer-cta__accent"><?php esc_html_e( 'great.', 'iweb' ); ?></span></p>
 				</div>
 				<div class="footer-cta__side">
-					<p class="footer-cta__text"><?php esc_html_e( 'We use AI, automation and fast websites to fix real business problems and help your business grow.', 'iweb' ); ?></p>
+					<p class="footer-cta__text"><?php esc_html_e( 'We implement AI-driven automation that streamlines your operations, slashes overhead costs, and drives measurable revenue growth.', 'iweb' ); ?></p>
 					<div class="footer-cta__actions">
 						<a class="fbtn fbtn--lime" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <span class="fbtn__disc" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
 						<a class="fbtn fbtn--outline" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
