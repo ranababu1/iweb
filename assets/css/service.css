@@ -698,7 +698,7 @@
 }
 
 /* ---------- Service hub hero (template-parts/service-hero.php) ---------- */
-.svc-hero { background: #fff; padding-block: clamp(1rem, 2vw, 1.5rem) clamp(3rem, 6vw, 5rem); overflow: hidden; }
+.svc-hero { background: #fff !important; padding-block: clamp(1rem, 2vw, 1.5rem) clamp(3rem, 6vw, 5rem) !important; overflow: hidden; }
 .svc-hero__inner { display: grid; gap: 2.5rem; align-items: center; }
 .svc-hero__copy { min-width: 0; }
 .svc-hero__crumbs { font-size: 0.85rem; color: var(--iws-muted); margin-bottom: 2rem; }
@@ -706,10 +706,10 @@
 .svc-hero__crumbs a:hover { color: var(--iws-ink); }
 .svc-hero__eyebrow { display: flex; align-items: center; gap: 0.9rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--iws-ink); margin: 0 0 1.25rem; }
 .svc-hero__eyebrow::before { content: ""; width: 2.25rem; height: 2px; background: var(--iws-ink); }
-.svc-hero__title { font-family: var(--iws-display); font-weight: 800; text-transform: uppercase; color: var(--iws-ink); font-size: clamp(2.1rem, 3.2vw, 3.1rem); line-height: 1.02; letter-spacing: -0.02em; margin: 0 0 1.5rem; }
+.svc-hero__title { font-family: var(--iws-display); font-weight: 800; text-transform: uppercase; color: var(--iws-ink); font-size: clamp(2.1rem, 3.2vw, 3.1rem) !important; line-height: 1.02 !important; letter-spacing: -0.02em !important; margin: 0 0 1.5rem; }
 .svc-hero__line { display: block; }
 .svc-hero__line--hl { display: inline; background: var(--iws-lime); padding: 0.02em 0.12em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
-.svc-hero__lead { font-size: clamp(1.05rem, 0.5vw + 0.95rem, 1.25rem); color: var(--iws-muted); max-width: 34rem; margin: 0 0 2rem; line-height: 1.5; }
+.svc-hero__lead { font-size: clamp(1.05rem, 0.5vw + 0.95rem, 1.2rem) !important; color: var(--iws-muted) !important; max-width: 34rem; margin: 0 0 2rem; line-height: 1.5; }
 .svc-hero__ctas { display: flex; flex-wrap: wrap; gap: 0.9rem; }
 .svc-btn { display: inline-flex; align-items: center; gap: 0.75rem; border-radius: 999px; font-weight: 600; text-decoration: none; padding: 0.7rem 0.7rem 0.7rem 1.6rem; min-height: 3.5rem; font-size: 1.05rem; }
 .svc-btn svg { width: 1.3rem; height: 1.3rem; }
@@ -750,6 +750,7 @@
 	.svc-hero__line:not(.svc-hero__line--hl) { white-space: nowrap; }
 }
 @media (max-width: 40rem) {
+	.svc-hero__title { font-size: clamp(1.9rem, 9.5vw, 2.6rem) !important; }
 	.svc-flow { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
 	.svc-flow__link { display: none; }
 	.svc-result { margin-left: 1.4rem; }
