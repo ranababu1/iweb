@@ -110,7 +110,7 @@ get_header();
 					<?php esc_html_e( 'Win customers.', 'iweb' ); ?><br>
 					<span class="accent"><?php esc_html_e( 'Scale without the busywork.', 'iweb' ); ?></span>
 				</h1>
-				<p class="home-hero__lead"><?php esc_html_e( 'iWebAndSEO builds high-performance WordPress sites and grows them with technical SEO, CRO and AI-ready content. Then we automate the repetitive work and show you what\'s actually driving results.', 'iweb' ); ?></p>
+				<p class="home-hero__lead"><?php esc_html_e( 'IWS builds high-performance WordPress sites and grows them with technical SEO, CRO and AI-ready content. Then we automate the repetitive work and show you what\'s actually driving results.', 'iweb' ); ?></p>
 				<div class="cta-row">
 					<a class="btn btn--primary" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 					<a class="btn btn--outline" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>

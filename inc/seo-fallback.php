@@ -24,27 +24,27 @@ function iweb_seo_plugin_active() {
  */
 function iweb_seo_fallback_meta() {
 	$map = array(
-		'home'                          => array( 'iWebAndSEO | WordPress, SEO and AI Automation for Growing Businesses', 'We build fast WordPress sites, get them found on Google and AI search, turn visitors into customers and automate the busywork. Start with a free audit call.' ),
-		'services'                      => array( 'Services: WordPress, SEO, CRO, Automation and Analytics | iWebAndSEO', 'Four ways we help you grow: get found on Google and AI search, turn visitors into customers, automate the busywork and know what\'s working. Plus custom .NET builds.' ),
-		'get-found'                     => array( 'SEO, AEO and GEO Services: Get Found on Google and AI | iWebAndSEO', 'Technical SEO, content, answer engine optimization and AI search visibility for growing businesses. Show up on Google, in AI answers and in paid search.' ),
-		'turn-visitors-into-customers'  => array( 'WordPress and WooCommerce Development, Speed and CRO | iWebAndSEO', 'Fast WordPress and WooCommerce sites built to convert. Custom design, site speed optimization, UX and conversion rate optimization for growing businesses.' ),
-		'automate-the-busy-work'        => array( 'AI Chatbots, Workflow Automation and AI Integration | iWebAndSEO', 'Practical AI for small and mid-size businesses. Website chatbots, workflow automation and AI integrations that cut repetitive work and respond to leads faster.' ),
-		'know-whats-working'            => array( 'GA4, Tag Manager and Conversion Tracking Setup | iWebAndSEO', 'Accurate GA4, Google Tag Manager and conversion tracking, plus clear dashboards and reports. Know which pages, channels and campaigns bring in leads and sales.' ),
-		'contact'                       => array( 'Start a Project | iWebAndSEO', 'Tell us about your website, SEO, AI automation or development project. We\'ll reply with next steps and a time for a free audit call.' ),
-		'about'                         => array( 'About Us | iWebAndSEO', 'iWebAndSEO helps businesses grow with fast WordPress sites, SEO, AI automation and custom development. Learn who we are and how we approach the work.' ),
-		'how-we-work'                   => array( 'How We Work: Our Process from Plan to Launch | iWebAndSEO', 'A clear, simple process: we plan, build, review and launch with you, then keep improving. See what to expect at each step of a project.' ),
-		'our-work'                      => array( 'Our Work | iWebAndSEO', 'WordPress builds, SEO and automation projects from iWebAndSEO. See the kind of work we do and the problems we help businesses solve.' ),
-		'custom-development'            => array( 'Custom .NET and Java Development, APIs and Integrations | iWebAndSEO', 'Custom application development in .NET and Java, API design and integration, and modernization of legacy systems. Built to be secure, maintainable and easy to extend.' ),
-		'terms'                         => array( 'Terms of Service | iWebAndSEO', 'The terms that apply when you use the iWebAndSEO website or work with us on a project.' ),
-		'cookie-settings'               => array( 'Cookie Policy and Settings | iWebAndSEO', 'How iWebAndSEO uses cookies, what each type does and how to change your choices.' ),
-		'website-cost-guide'            => array( 'Website Cost Guide: What Drives the Price | iWebAndSEO', 'What affects the cost of a WordPress website: pages, design, features, content, integrations and ongoing care. Plain explanations to help you plan.' ),
-		'seo-glossary'                  => array( 'SEO Glossary: Plain-English SEO, AEO and GEO Terms | iWebAndSEO', 'Short, plain definitions of common SEO, AEO, GEO and analytics terms, from canonical tags to Core Web Vitals.' ),
-		'book-a-call'                   => array( 'Book a Free Audit Call | iWebAndSEO', 'Online booking is coming soon. Tell us about your project and we will reply with a time for a free audit call.' ),
-		'faq'                           => array( 'FAQs | iWebAndSEO', 'Answers to common questions about our WordPress, SEO, AI automation and analytics services, pricing, timelines and support.' ),
+		'home'                          => array( 'IWS | WordPress, SEO and AI Automation for Growing Businesses', 'We build fast WordPress sites, get them found on Google and AI search, turn visitors into customers and automate the busywork. Start with a free audit call.' ),
+		'services'                      => array( 'Services: WordPress, SEO, CRO, Automation and Analytics | IWS', 'Four ways we help you grow: get found on Google and AI search, turn visitors into customers, automate the busywork and know what\'s working. Plus custom .NET builds.' ),
+		'get-found'                     => array( 'SEO, AEO and GEO Services: Get Found on Google and AI | IWS', 'Technical SEO, content, answer engine optimization and AI search visibility for growing businesses. Show up on Google, in AI answers and in paid search.' ),
+		'turn-visitors-into-customers'  => array( 'WordPress and WooCommerce Development, Speed and CRO | IWS', 'Fast WordPress and WooCommerce sites built to convert. Custom design, site speed optimization, UX and conversion rate optimization for growing businesses.' ),
+		'automate-the-busy-work'        => array( 'AI Chatbots, Workflow Automation and AI Integration | IWS', 'Practical AI for small and mid-size businesses. Website chatbots, workflow automation and AI integrations that cut repetitive work and respond to leads faster.' ),
+		'know-whats-working'            => array( 'GA4, Tag Manager and Conversion Tracking Setup | IWS', 'Accurate GA4, Google Tag Manager and conversion tracking, plus clear dashboards and reports. Know which pages, channels and campaigns bring in leads and sales.' ),
+		'contact'                       => array( 'Start a Project | IWS', 'Tell us about your website, SEO, AI automation or development project. We\'ll reply with next steps and a time for a free audit call.' ),
+		'about'                         => array( 'About Us | IWS', 'IWS helps businesses grow with fast WordPress sites, SEO, AI automation and custom development. Learn who we are and how we approach the work.' ),
+		'how-we-work'                   => array( 'How We Work: Our Process from Plan to Launch | IWS', 'A clear, simple process: we plan, build, review and launch with you, then keep improving. See what to expect at each step of a project.' ),
+		'our-work'                      => array( 'Our Work | IWS', 'WordPress builds, SEO and automation projects from IWS. See the kind of work we do and the problems we help businesses solve.' ),
+		'custom-development'            => array( 'Custom .NET and Java Development, APIs and Integrations | IWS', 'Custom application development in .NET and Java, API design and integration, and modernization of legacy systems. Built to be secure, maintainable and easy to extend.' ),
+		'terms'                         => array( 'Terms of Service | IWS', 'The terms that apply when you use the IWS website or work with us on a project.' ),
+		'cookie-settings'               => array( 'Cookie Policy and Settings | IWS', 'How IWS uses cookies, what each type does and how to change your choices.' ),
+		'website-cost-guide'            => array( 'Website Cost Guide: What Drives the Price | IWS', 'What affects the cost of a WordPress website: pages, design, features, content, integrations and ongoing care. Plain explanations to help you plan.' ),
+		'seo-glossary'                  => array( 'SEO Glossary: Plain-English SEO, AEO and GEO Terms | IWS', 'Short, plain definitions of common SEO, AEO, GEO and analytics terms, from canonical tags to Core Web Vitals.' ),
+		'book-a-call'                   => array( 'Book a Free Audit Call | IWS', 'Online booking is coming soon. Tell us about your project and we will reply with a time for a free audit call.' ),
+		'faq'                           => array( 'FAQs | IWS', 'Answers to common questions about our WordPress, SEO, AI automation and analytics services, pricing, timelines and support.' ),
 	);
 
 	if ( is_home() && ! is_front_page() ) {
-		return array( 'Insights: WordPress, SEO and AI Automation Tips | iWebAndSEO', 'Practical guides on WordPress, SEO, AI search, conversion and automation. Plain advice you can use to grow your business online.' );
+		return array( 'Insights: WordPress, SEO and AI Automation Tips | IWS', 'Practical guides on WordPress, SEO, AI search, conversion and automation. Plain advice you can use to grow your business online.' );
 	}
 
 	if ( is_front_page() ) {

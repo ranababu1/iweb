@@ -17,12 +17,12 @@ $iweb_groups = array(
 	'general'    => array(
 		'icon'  => 'chat',
 		'title' => __( 'General', 'iweb' ),
-		'blurb' => __( 'Common questions about iWebAndSEO, our approach and how we work.', 'iweb' ),
+		'blurb' => __( 'Common questions about IWS, our approach and how we work.', 'iweb' ),
 		'items' => array(
-			array( 'what-does-iwebandseo-do', __( 'What does iWebAndSEO do?', 'iweb' ), __( 'We help businesses grow with high-performance websites, SEO (including AEO and GEO), AI automation and custom development. Our focus is on practical solutions that bring measurable results, combining strategy, design, technology and ongoing support.', 'iweb' ) ),
+			array( 'what-does-iwebandseo-do', __( 'What does IWS do?', 'iweb' ), __( 'We help businesses grow with high-performance websites, SEO (including AEO and GEO), AI automation and custom development. Our focus is on practical solutions that bring measurable results, combining strategy, design, technology and ongoing support.', 'iweb' ) ),
 			array( 'who-do-you-work-with', __( 'Who do you work with?', 'iweb' ), __( 'We work with startups, small and mid-sized businesses and enterprise teams across a range of industries.', 'iweb' ) ),
 			array( 'international-clients', __( 'Do you work with international clients?', 'iweb' ), __( 'Yes. We work with clients across the globe and are fully remote-friendly.', 'iweb' ) ),
-			array( 'what-makes-us-different', __( 'What makes iWebAndSEO different?', 'iweb' ), __( 'We combine hands-on technical expertise with an understanding of business goals. You work directly with people who build and optimize, and we measure success by your results.', 'iweb' ) ),
+			array( 'what-makes-us-different', __( 'What makes IWS different?', 'iweb' ), __( 'We combine hands-on technical expertise with an understanding of business goals. You work directly with people who build and optimize, and we measure success by your results.', 'iweb' ) ),
 			array( 'how-do-we-get-started', __( 'How do we get started?', 'iweb' ), __( 'Tell us about your project through the Start a project form. We\'ll review it, set up a short discovery call and follow up with a clear proposal.', 'iweb' ) ),
 			array( 'ongoing-support-general', __( 'Do you offer ongoing support?', 'iweb' ), __( 'Yes. We offer ongoing maintenance, optimization and support after launch.', 'iweb' ) ),
 		),

@@ -302,5 +302,5 @@ add_filter( 'body_class', 'iweb_marketing_body_class' );
  * @return string Markup using span.logo-i; pass through wp_kses().
  */
 function iweb_wordmark() {
-	return '<span class="logo-i">i</span>WebAndSEO';
+	return '<span class="logo-i">I</span>WS';
 }

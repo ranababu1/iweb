@@ -57,7 +57,7 @@ get_header();
 	<section class="about-hero">
 		<div class="container about-hero__inner">
 			<div>
-				<p class="eyebrow"><?php esc_html_e( 'About iWebAndSEO', 'iweb' ); ?></p>
+				<p class="eyebrow"><?php esc_html_e( 'About IWS', 'iweb' ); ?></p>
 				<h1 class="about-hero__title"><?php esc_html_e( 'Building digital experiences that', 'iweb' ); ?> <span class="accent"><?php esc_html_e( 'create real value.', 'iweb' ); ?></span></h1>
 				<p class="about-hero__lead"><?php esc_html_e( 'We help businesses grow with high-performance websites, SEO, AI automation and custom development, combining strategy, technology and practical execution.', 'iweb' ); ?></p>
 				<div class="cta-row">
@@ -100,8 +100,8 @@ get_header();
 			<div>
 				<p class="eyebrow"><?php esc_html_e( 'My story', 'iweb' ); ?></p>
 				<h2 class="section-title"><?php esc_html_e( 'From developer to digital growth partner.', 'iweb' ); ?></h2>
-				<p><?php esc_html_e( 'I\'m Imran, the founder of iWebAndSEO. With 14+ years of experience in web development, SEO and digital solutions, I\'ve had the chance to work with startups, SMEs and enterprise brands across industries.', 'iweb' ); ?></p>
-				<p><?php esc_html_e( 'iWebAndSEO started with a simple idea, to help businesses use technology in a practical way to get found, win customers and operate more efficiently.', 'iweb' ); ?></p>
+				<p><?php esc_html_e( 'I\'m Imran, the founder of IWS. With 14+ years of experience in web development, SEO and digital solutions, I\'ve had the chance to work with startups, SMEs and enterprise brands across industries.', 'iweb' ); ?></p>
+				<p><?php esc_html_e( 'IWS started with a simple idea, to help businesses use technology in a practical way to get found, win customers and operate more efficiently.', 'iweb' ); ?></p>
 				<p><?php esc_html_e( 'Today, we work with clients globally, combining technical expertise with a deep understanding of business goals to deliver measurable results.', 'iweb' ); ?></p>
 			</div>
 			<div class="about-story__visual visual-placeholder" aria-hidden="true"><?php echo iweb_icon( 'image' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
@@ -152,7 +152,7 @@ get_header();
 		<div class="container">
 			<div class="section-head section-head--split">
 				<div>
-					<p class="eyebrow"><?php esc_html_e( 'Why choose iWebAndSEO', 'iweb' ); ?></p>
+					<p class="eyebrow"><?php esc_html_e( 'Why choose IWS', 'iweb' ); ?></p>
 					<h2 class="section-title"><?php esc_html_e( 'More than just a service provider.', 'iweb' ); ?></h2>
 				</div>
 				<p><?php esc_html_e( 'We combine technical expertise with business understanding to deliver solutions that actually make a difference.', 'iweb' ); ?></p>

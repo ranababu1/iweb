@@ -26,8 +26,8 @@
 	<div class="site-header-inner">
 
 		<div class="site-branding">
-			<?php // Text wordmark keeps the brand consistent ("iWebAndSEO") with the footer. ?>
-			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="<?php esc_attr_e( 'iWebAndSEO home', 'iweb' ); ?>"><?php echo wp_kses( iweb_wordmark(), array( 'span' => array( 'class' => array() ) ) ); ?></a></p>
+			<?php // Text wordmark keeps the brand consistent ("IWS") with the footer. ?>
+			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="<?php esc_attr_e( 'IWS home', 'iweb' ); ?>"><?php echo wp_kses( iweb_wordmark(), array( 'span' => array( 'class' => array() ) ) ); ?></a></p>
 		</div><!-- .site-branding -->
 
 		<button id="iweb-menu-toggle" class="menu-toggle" aria-expanded="true" aria-controls="site-navigation">
