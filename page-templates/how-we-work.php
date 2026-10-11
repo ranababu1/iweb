@@ -37,7 +37,6 @@ $iweb_tools = array(
 	'WordPress',
 	'WooCommerce',
 	'PHP',
-	'Java',
 	'.NET',
 	'Node.js',
 	'Python',

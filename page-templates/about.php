@@ -30,7 +30,7 @@ $iweb_values = array(
 $iweb_skills = array(
 	array( 'wordpress', __( 'WordPress', 'iweb' ), __( 'Custom development and optimization', 'iweb' ) ),
 	array( 'search', __( 'SEO', 'iweb' ), __( 'Technical SEO, content and strategy', 'iweb' ) ),
-	array( 'code', __( 'Custom Development', 'iweb' ), __( '.NET, Java, APIs and integrations', 'iweb' ) ),
+	array( 'code', __( 'Custom Development', 'iweb' ), __( '.NET, APIs and integrations', 'iweb' ) ),
 	array( 'gear', __( 'AI & Automation', 'iweb' ), __( 'AI chatbots, workflow automation and integrations', 'iweb' ) ),
 	array( 'chart', __( 'Analytics & CRO', 'iweb' ), __( 'Tracking, reporting and conversion optimization', 'iweb' ) ),
 	array( 'cloud', __( 'Cloud & DevOps', 'iweb' ), __( 'Deployment, performance and security', 'iweb' ) ),
@@ -59,7 +59,7 @@ get_header();
 			<div>
 				<p class="eyebrow"><?php esc_html_e( 'About iWebAndSEO', 'iweb' ); ?></p>
 				<h1 class="about-hero__title"><?php esc_html_e( 'Building digital experiences that', 'iweb' ); ?> <span class="accent"><?php esc_html_e( 'create real value.', 'iweb' ); ?></span></h1>
-				<p class="about-hero__lead"><?php esc_html_e( 'We help businesses grow with high-performance websites, SEO, AI automation and custom development — combining strategy, technology and practical execution.', 'iweb' ); ?></p>
+				<p class="about-hero__lead"><?php esc_html_e( 'We help businesses grow with high-performance websites, SEO, AI automation and custom development, combining strategy, technology and practical execution.', 'iweb' ); ?></p>
 				<div class="cta-row">
 					<a class="btn btn--light" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 					<a class="btn btn--outline" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
@@ -101,7 +101,7 @@ get_header();
 				<p class="eyebrow"><?php esc_html_e( 'My story', 'iweb' ); ?></p>
 				<h2 class="section-title"><?php esc_html_e( 'From developer to digital growth partner.', 'iweb' ); ?></h2>
 				<p><?php esc_html_e( 'I\'m Imran, the founder of iWebAndSEO. With 14+ years of experience in web development, SEO and digital solutions, I\'ve had the chance to work with startups, SMEs and enterprise brands across industries.', 'iweb' ); ?></p>
-				<p><?php esc_html_e( 'iWebAndSEO started with a simple idea — to help businesses use technology in a practical way to get found, win customers and operate more efficiently.', 'iweb' ); ?></p>
+				<p><?php esc_html_e( 'iWebAndSEO started with a simple idea, to help businesses use technology in a practical way to get found, win customers and operate more efficiently.', 'iweb' ); ?></p>
 				<p><?php esc_html_e( 'Today, we work with clients globally, combining technical expertise with a deep understanding of business goals to deliver measurable results.', 'iweb' ); ?></p>
 			</div>
 			<div class="about-story__visual visual-placeholder" aria-hidden="true"><?php echo iweb_icon( 'image' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>

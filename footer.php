@@ -51,14 +51,14 @@
 					__( 'Services', 'iweb' )  => array(
 						__( 'Get found (SEO, AEO, GEO)', 'iweb' ) => home_url( '/services/get-found/' ),
 						__( 'Turn visitors into customers', 'iweb' ) => home_url( '/services/turn-visitors-into-customers/' ),
-						__( 'Automate the busywork', 'iweb' ) => home_url( '/services/automate-the-busywork/' ),
+						__( 'Automate the busywork', 'iweb' ) => home_url( '/services/automate-the-busy-work/' ),
 						__( 'Know what\'s working', 'iweb' ) => home_url( '/services/know-whats-working/' ),
-						__( 'Custom development', 'iweb' ) => home_url( '/services/custom-development/' ),
+						__( 'Custom development', 'iweb' ) => home_url( '/services/#custom-development' ),
 					),
 					__( 'Company', 'iweb' )   => array(
-						__( 'How we work', 'iweb' ) => home_url( '/#process' ),
+						__( 'How we work', 'iweb' ) => home_url( '/how-we-work/' ),
 						__( 'About', 'iweb' )       => home_url( '/about/' ),
-						__( 'Work', 'iweb' )        => home_url( '/work/' ),
+						__( 'Work', 'iweb' )        => home_url( '/our-work/' ),
 						__( 'Insights', 'iweb' )    => home_url( '/blog/' ),
 						__( 'Contact', 'iweb' )     => home_url( '/contact/' ),
 					),
@@ -68,6 +68,20 @@
 						__( 'Free audit call', 'iweb' )   => home_url( '/contact/' ),
 					),
 				);
+
+				// Drop links to pages that do not exist yet (anchors and the blog are kept).
+				foreach ( $iweb_footer_cols as $iweb_k => $iweb_links ) {
+					$iweb_footer_cols[ $iweb_k ] = array_filter(
+						$iweb_links,
+						static function ( $iweb_url ) {
+							$iweb_path = trim( (string) wp_parse_url( $iweb_url, PHP_URL_PATH ), '/' );
+							if ( '' === $iweb_path || 'blog' === $iweb_path || 'contact' === $iweb_path || false !== strpos( $iweb_url, '#' ) ) {
+								return true;
+							}
+							return (bool) get_page_by_path( $iweb_path );
+						}
+					);
+				}
 
 				foreach ( $iweb_footer_cols as $iweb_col_title => $iweb_col_links ) :
 					?>
@@ -117,9 +131,11 @@
 				<?php else : ?>
 					<nav class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer', 'iweb' ); ?>">
 						<ul>
-							<li><a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>"><?php esc_html_e( 'Privacy Policy', 'iweb' ); ?></a></li>
-							<li><a href="<?php echo esc_url( home_url( '/terms/' ) ); ?>"><?php esc_html_e( 'Terms', 'iweb' ); ?></a></li>
-							<li><a href="<?php echo esc_url( home_url( '/cookie-settings/' ) ); ?>"><?php esc_html_e( 'Cookie Settings', 'iweb' ); ?></a></li>
+							<?php foreach ( array( 'privacy-policy' => __( 'Privacy Policy', 'iweb' ), 'terms' => __( 'Terms', 'iweb' ), 'cookie-settings' => __( 'Cookie Settings', 'iweb' ) ) as $iweb_slug => $iweb_label ) : ?>
+								<?php if ( get_page_by_path( $iweb_slug ) ) : ?>
+									<li><a href="<?php echo esc_url( home_url( '/' . $iweb_slug . '/' ) ); ?>"><?php echo esc_html( $iweb_label ); ?></a></li>
+								<?php endif; ?>
+							<?php endforeach; ?>
 						</ul>
 					</nav>
 				<?php endif; ?>
