@@ -274,7 +274,7 @@ function iweb_is_marketing_view() {
  * @return string[]
  */
 function iweb_marketing_body_class( $classes ) {
-	if ( iweb_is_marketing_view() ) {
+	if ( iweb_is_marketing_view() || is_singular( 'case_study' ) ) {
 		$classes[] = 'is-marketing';
 	}
 

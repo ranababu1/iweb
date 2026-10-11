@@ -124,6 +124,10 @@ function iweb_conditional_stylesheets() {
 				'file'       => 'assets/css/home.css',
 				'script'     => 'assets/js/home.js',
 			),
+			'iweb-case-study' => array(
+				'conditional' => 'iweb_is_case_study_view',
+				'file'       => 'assets/css/case-study.css',
+			),
 			'iweb-our-work' => array(
 				'conditional' => 'iweb_is_our_work_view',
 				'file'       => 'assets/css/our-work.css',
