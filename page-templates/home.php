@@ -106,7 +106,7 @@ get_header();
 			<div class="home-hero__copy">
 				<p class="eyebrow"><?php esc_html_e( 'AI for real business problems', 'iweb' ); ?></p>
 				<h1 class="home-hero__title">
-					<?php esc_html_e( 'Put', 'iweb' ); ?> <span class="hl"><?php esc_html_e( 'AI', 'iweb' ); ?></span> <?php esc_html_e( 'to work', 'iweb' ); ?><br>
+					<?php esc_html_e( 'Put', 'iweb' ); ?> <span class="hl"><?php esc_html_e( 'AI', 'iweb' ); ?></span> <?php esc_html_e( 'to work', 'iweb' ); ?><br class="home-hero__br">
 					<?php esc_html_e( 'on your business.', 'iweb' ); ?>
 				</h1>
 				<p class="home-hero__lead"><?php esc_html_e( 'IWS finds the slow, manual and leaky parts of your business and fixes them with AI. We automate repetitive work, improve how you serve customers, and help you grow with better search visibility, conversions and reporting.', 'iweb' ); ?></p>
@@ -154,7 +154,7 @@ get_header();
 			<div class="section-head section-head--split">
 				<div>
 					<p class="eyebrow"><?php esc_html_e( 'What we do', 'iweb' ); ?></p>
-					<h2 class="section-title"><?php esc_html_e( 'Business problems,', 'iweb' ); ?><br><?php esc_html_e( 'solved with', 'iweb' ); ?> <span class="accent"><?php esc_html_e( 'AI', 'iweb' ); ?></span></h2>
+					<h2 class="section-title"><?php esc_html_e( 'Business problems,', 'iweb' ); ?><br class="home-hero__br"><?php esc_html_e( 'solved with', 'iweb' ); ?> <span class="accent"><?php esc_html_e( 'AI', 'iweb' ); ?></span></h2>
 				</div>
 				<div>
 					<p><?php esc_html_e( 'Tell us the problem you want fixed. We pick the right mix of AI, automation, search and analytics to fix it, and keep the tech in the background.', 'iweb' ); ?></p>
@@ -195,7 +195,7 @@ get_header();
 			<div class="container featured-work__inner">
 				<div>
 					<p class="eyebrow"><?php esc_html_e( 'Featured work', 'iweb' ); ?></p>
-					<h2 class="section-title"><?php esc_html_e( 'Real Projects.', 'iweb' ); ?><br><?php esc_html_e( 'Real Results.', 'iweb' ); ?></h2>
+					<h2 class="section-title"><?php esc_html_e( 'Real Projects.', 'iweb' ); ?><br class="home-hero__br"><?php esc_html_e( 'Real Results.', 'iweb' ); ?></h2>
 					<p class="featured-work__lead"><?php esc_html_e( 'We help businesses turn ideas into digital products that drive measurable growth.', 'iweb' ); ?></p>
 					<a class="btn btn--light" href="<?php echo esc_url( home_url( '/our-work/' ) ); ?>"><?php esc_html_e( 'View Our Work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
@@ -210,7 +210,7 @@ get_header();
 			<div class="process__head">
 				<div>
 					<p class="eyebrow"><?php esc_html_e( 'How we work', 'iweb' ); ?></p>
-					<h2 class="section-title"><?php esc_html_e( 'A Simple Process.', 'iweb' ); ?><br><?php esc_html_e( 'Real Partnership.', 'iweb' ); ?></h2>
+					<h2 class="section-title"><?php esc_html_e( 'A Simple Process.', 'iweb' ); ?><br class="home-hero__br"><?php esc_html_e( 'Real Partnership.', 'iweb' ); ?></h2>
 					<p><?php esc_html_e( 'We keep things clear, collaborative and focused on results. From strategy to support, you\'ll always know what\'s happening.', 'iweb' ); ?></p>
 					<a class="btn btn--primary" href="<?php echo esc_url( home_url( '/how-we-work/' ) ); ?>"><?php esc_html_e( 'See how we work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
