@@ -124,6 +124,10 @@ function iweb_conditional_stylesheets() {
 				'file'       => 'assets/css/home.css',
 				'script'     => 'assets/js/home.js',
 			),
+			'iweb-about' => array(
+				'conditional' => 'iweb_is_about_view',
+				'file'       => 'assets/css/about.css',
+			),
 			'iweb-case-study' => array(
 				'conditional' => 'iweb_is_case_study_view',
 				'file'       => 'assets/css/case-study.css',
@@ -172,6 +176,17 @@ function iweb_is_blog_view() {
  */
 function iweb_is_home_view() {
 	return is_page_template( 'page-templates/home.php' );
+}
+
+/**
+ * Check whether the current view uses the About template.
+ *
+ * @since 1.9.0
+ *
+ * @return bool True on pages using the About template.
+ */
+function iweb_is_about_view() {
+	return is_page_template( 'page-templates/about.php' );
 }
 
 /**
