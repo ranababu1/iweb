@@ -411,3 +411,8 @@
 	.home-hero .ui-result { margin: 0 0.9rem 0.8rem; padding: 0.7rem 0.8rem; }
 	.home-hero .ui-dash { padding: 0.9rem; gap: 0.7rem; }
 }
+@media (min-width: 64rem) {
+	.home-hero .ui-frame--dash { flex: none; }
+	.home-hero .ui-chart { display: none; }
+	.home-hero .home-hero__visual .ui-mock--stack { justify-content: center; }
+}
