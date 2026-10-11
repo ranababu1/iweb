@@ -22,10 +22,23 @@ $iweb_contact_url = home_url( '/contact/' );
 
 $iweb_services = array(
 	array(
+		'tone'  => 'blue',
+		'icon'  => 'gear',
+		'title' => __( 'Automate the busywork', 'iweb' ),
+		'blurb' => __( 'AI agents and workflows that take repetitive work off your team.', 'iweb' ),
+		'url'   => home_url( '/services/automate-the-busy-work/' ),
+		'items' => array(
+			__( 'AI Chatbots', 'iweb' ),
+			__( 'Workflow Automation', 'iweb' ),
+			__( 'AI Integrations', 'iweb' ),
+			__( 'Custom AI Solutions', 'iweb' ),
+		),
+	),
+	array(
 		'tone'  => 'green',
 		'icon'  => 'search',
 		'title' => __( 'Get found', 'iweb' ),
-		'blurb' => __( 'Show up on Google and in AI answers.', 'iweb' ),
+		'blurb' => __( 'AI-aware SEO so customers find you on Google and in AI answers.', 'iweb' ),
 		'url'   => home_url( '/services/get-found/' ),
 		'items' => array(
 			__( 'SEO Services', 'iweb' ),
@@ -39,34 +52,21 @@ $iweb_services = array(
 		'tone'  => 'orange',
 		'icon'  => 'cursor',
 		'title' => __( 'Turn visitors into customers', 'iweb' ),
-		'blurb' => __( 'Fast sites built to convert.', 'iweb' ),
+		'blurb' => __( 'Faster sites and smarter testing that turn more visits into leads.', 'iweb' ),
 		'url'   => home_url( '/services/turn-visitors-into-customers/' ),
 		'items' => array(
-			__( 'WordPress Development', 'iweb' ),
-			__( 'WooCommerce', 'iweb' ),
+			__( 'CMS Development', 'iweb' ),
+			__( 'Ecommerce', 'iweb' ),
 			__( 'Site Speed Optimization', 'iweb' ),
 			__( 'UX & UI Design', 'iweb' ),
 			__( 'Conversion Rate Optimization', 'iweb' ),
 		),
 	),
 	array(
-		'tone'  => 'blue',
-		'icon'  => 'gear',
-		'title' => __( 'Automate the busywork', 'iweb' ),
-		'blurb' => __( 'AI that saves your team hours.', 'iweb' ),
-		'url'   => home_url( '/services/automate-the-busy-work/' ),
-		'items' => array(
-			__( 'AI Chatbots', 'iweb' ),
-			__( 'Workflow Automation', 'iweb' ),
-			__( 'AI Integrations', 'iweb' ),
-			__( 'Custom AI Solutions', 'iweb' ),
-		),
-	),
-	array(
 		'tone'  => 'purple',
 		'icon'  => 'chart',
 		'title' => __( 'Know what\'s working', 'iweb' ),
-		'blurb' => __( 'Tracking and reports you can trust.', 'iweb' ),
+		'blurb' => __( 'Clean tracking and AI-assisted reports that show what drives results.', 'iweb' ),
 		'url'   => home_url( '/services/know-whats-working/' ),
 		'items' => array(
 			__( 'GA4 Setup & Reporting', 'iweb' ),
@@ -79,10 +79,10 @@ $iweb_services = array(
 );
 
 $iweb_trust = array(
-	array( 'layers', __( 'WordPress', 'iweb' ), __( 'Fast, custom builds', 'iweb' ) ),
-	array( 'globe', __( 'SEO, AEO, GEO', 'iweb' ), __( 'Google and AI search', 'iweb' ) ),
-	array( 'clock', __( 'Automation', 'iweb' ), __( 'Less manual work', 'iweb' ) ),
-	array( 'layers', __( 'Reporting', 'iweb' ), __( 'GA4 and clear dashboards', 'iweb' ) ),
+	array( 'gear', __( 'Automate', 'iweb' ), __( 'Less manual work for your team', 'iweb' ) ),
+	array( 'users', __( 'Improve', 'iweb' ), __( 'Faster answers for customers', 'iweb' ) ),
+	array( 'globe', __( 'Get found', 'iweb' ), __( 'On Google and in AI answers', 'iweb' ) ),
+	array( 'chart', __( 'Optimize', 'iweb' ), __( 'More leads, clearer reports', 'iweb' ) ),
 );
 
 $iweb_steps = array(
@@ -104,13 +104,12 @@ get_header();
 	<section class="home-hero">
 		<div class="container home-hero__inner">
 			<div class="home-hero__copy">
-				<p class="eyebrow"><?php esc_html_e( 'Grow. Optimize. Scale.', 'iweb' ); ?></p>
+				<p class="eyebrow"><?php esc_html_e( 'AI for real business problems', 'iweb' ); ?></p>
 				<h1 class="home-hero__title">
-					<span class="hl"><?php esc_html_e( 'Get found.', 'iweb' ); ?></span><br>
-					<?php esc_html_e( 'Win customers.', 'iweb' ); ?><br>
-					<span class="accent"><?php esc_html_e( 'Scale without the busywork.', 'iweb' ); ?></span>
+					<?php esc_html_e( 'Put', 'iweb' ); ?> <span class="hl"><?php esc_html_e( 'AI', 'iweb' ); ?></span> <?php esc_html_e( 'to work', 'iweb' ); ?><br>
+					<?php esc_html_e( 'on your business.', 'iweb' ); ?>
 				</h1>
-				<p class="home-hero__lead"><?php esc_html_e( 'IWS builds high-performance WordPress sites and grows them with technical SEO, CRO and AI-ready content. Then we automate the repetitive work and show you what\'s actually driving results.', 'iweb' ); ?></p>
+				<p class="home-hero__lead"><?php esc_html_e( 'IWS finds the slow, manual and leaky parts of your business and fixes them with AI. We automate repetitive work, improve how you serve customers, and help you grow with better search visibility, conversions and reporting.', 'iweb' ); ?></p>
 				<div class="cta-row">
 					<a class="btn btn--primary" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 					<a class="btn btn--outline" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
@@ -130,7 +129,7 @@ get_header();
 	<div class="marquee" aria-hidden="true">
 		<div class="marquee__track">
 			<?php for ( $iweb_m = 0; $iweb_m < 2; $iweb_m++ ) : ?>
-				<?php foreach ( array( 'WordPress development', 'Technical SEO', 'AEO and GEO', 'Conversion optimization', 'Site speed', 'AI automation', 'GA4 and tracking', 'Custom .NET builds' ) as $iweb_word ) : ?>
+				<?php foreach ( array( 'AI automation', 'AI chatbots', 'Workflow automation', 'AI search visibility', 'Conversion optimization', 'Customer experience', 'Reporting and dashboards', 'Custom integrations' ) as $iweb_word ) : ?>
 					<span><?php echo esc_html( $iweb_word ); ?></span>
 				<?php endforeach; ?>
 			<?php endfor; ?>
@@ -154,11 +153,11 @@ get_header();
 		<div class="container">
 			<div class="section-head section-head--split">
 				<div>
-					<p class="eyebrow"><?php esc_html_e( 'Our services', 'iweb' ); ?></p>
-					<h2 class="section-title"><?php esc_html_e( 'Digital Solutions', 'iweb' ); ?><br><?php esc_html_e( 'Built Around', 'iweb' ); ?> <span class="accent"><?php esc_html_e( 'Your Goals', 'iweb' ); ?></span></h2>
+					<p class="eyebrow"><?php esc_html_e( 'What we do', 'iweb' ); ?></p>
+					<h2 class="section-title"><?php esc_html_e( 'Business problems,', 'iweb' ); ?><br><?php esc_html_e( 'solved with', 'iweb' ); ?> <span class="accent"><?php esc_html_e( 'AI', 'iweb' ); ?></span></h2>
 				</div>
 				<div>
-					<p><?php esc_html_e( 'From high-converting websites to AI automation, we deliver solutions that help you attract visitors, win customers and grow – without the complexity.', 'iweb' ); ?></p>
+					<p><?php esc_html_e( 'Tell us the problem you want fixed. We pick the right mix of AI, automation, search and analytics to fix it, and keep the tech in the background.', 'iweb' ); ?></p>
 					<a class="link-arrow" href="<?php echo esc_url( home_url( '/services/' ) ); ?>"><?php esc_html_e( 'Explore All Services', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
 			</div>
@@ -241,9 +240,9 @@ get_header();
 	<section class="home-cta section section--dark cta-band">
 		<div class="container home-cta__inner">
 			<div>
-				<p class="eyebrow"><?php esc_html_e( 'Let\'s build together', 'iweb' ); ?></p>
-				<h2><?php esc_html_e( 'Ready to Grow Your Business?', 'iweb' ); ?></h2>
-				<p><?php esc_html_e( 'Whether it\'s a website, SEO, AI automation or custom software, let\'s turn your ideas into real results.', 'iweb' ); ?></p>
+				<p class="eyebrow"><?php esc_html_e( 'Let\'s talk', 'iweb' ); ?></p>
+				<h2><?php esc_html_e( 'Got a problem AI could fix?', 'iweb' ); ?></h2>
+				<p><?php esc_html_e( 'Tell us what slows your team down or where customers drop off. We\'ll tell you honestly whether AI can help and what it would take.', 'iweb' ); ?></p>
 				<div class="cta-row">
 					<a class="btn btn--light" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 					<a class="btn btn--ghost-dark" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
@@ -269,8 +268,8 @@ get_header();
 				<div class="section-head section-head--split">
 					<div>
 						<p class="eyebrow"><?php esc_html_e( 'Latest insights', 'iweb' ); ?></p>
-						<h2 class="section-title"><?php esc_html_e( 'Tips, Guides and Ideas for Growth', 'iweb' ); ?></h2>
-						<p><?php esc_html_e( 'Stay updated with practical insights on web development, SEO, AI and more.', 'iweb' ); ?></p>
+						<h2 class="section-title"><?php esc_html_e( 'Practical ideas for using AI and growing online', 'iweb' ); ?></h2>
+						<p><?php esc_html_e( 'Plain guides on automation, search visibility, conversion and reporting.', 'iweb' ); ?></p>
 					</div>
 					<a class="link-arrow" href="<?php echo esc_url( home_url( '/blog/' ) ); ?>"><?php esc_html_e( 'View All Articles', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>

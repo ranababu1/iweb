@@ -116,7 +116,7 @@ while ( have_posts() ) :
 					<span class="inline-cta__icon"><?php echo iweb_icon( 'gear' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></span>
 					<div>
 						<h2><?php esc_html_e( 'Need help with your website?', 'iweb' ); ?></h2>
-						<p><?php esc_html_e( 'We build fast, SEO-friendly WordPress websites with a focus on performance, security and business growth.', 'iweb' ); ?></p>
+						<p><?php esc_html_e( 'We put AI to work on the slow, manual parts of your business and help you grow online.', 'iweb' ); ?></p>
 					</div>
 					<a class="btn btn--light btn--sm" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</aside>

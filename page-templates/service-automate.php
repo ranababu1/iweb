@@ -33,7 +33,7 @@ $iweb_benefits = array(
 $iweb_offers = array(
 	array( 'blue', 'chat', __( 'AI Chatbots', 'iweb' ), __( 'Intelligent chatbots for customer support, lead generation and internal use.', 'iweb' ) ),
 	array( 'green', 'gear', __( 'Workflow Automation', 'iweb' ), __( 'Automate repetitive tasks across your marketing, sales and operations.', 'iweb' ) ),
-	array( 'orange', 'puzzle', __( 'AI Integrations', 'iweb' ), __( 'Connect AI with your existing tools like WordPress, HubSpot, Google Workspace and more.', 'iweb' ) ),
+	array( 'orange', 'puzzle', __( 'AI Integrations', 'iweb' ), __( 'Connect AI with your existing tools like your CMS, HubSpot, Google Workspace and more.', 'iweb' ) ),
 	array( 'purple', 'code', __( 'Custom AI Solutions', 'iweb' ), __( 'Build custom solutions for your unique business processes and requirements.', 'iweb' ) ),
 );
 
@@ -59,7 +59,7 @@ $iweb_faqs = array(
 	array( __( 'Which tools do you use for automation?', 'iweb' ), __( 'It depends on your stack and budget. Often Zapier, Make or n8n, connected to AI models through their APIs. For complex or high-volume needs we write custom integrations.', 'iweb' ) ),
 	array( __( 'Is my data safe?', 'iweb' ), __( 'We agree on what data the AI can access before we build. We use providers\' business and API terms, keep access limited and avoid sending sensitive data where it isn\'t needed.', 'iweb' ) ),
 	array( __( 'Do I need a big budget to start?', 'iweb' ), __( 'No. Many useful automations are small. We usually start with one or two quick wins and build from there.', 'iweb' ) ),
-	array( __( 'Can you add AI to our existing app or website?', 'iweb' ), __( 'Yes. We can add features like smart search, summaries or content drafting through APIs, whether your site runs on WordPress, .NET, Java or something else.', 'iweb' ) ),
+	array( __( 'Can you add AI to our existing app or website?', 'iweb' ), __( 'Yes. We can add features like smart search, summaries or content drafting through APIs, whether your site runs on a CMS, .NET, Java or something else.', 'iweb' ) ),
 );
 
 get_header();

@@ -28,7 +28,7 @@ $iweb_values = array(
 );
 
 $iweb_skills = array(
-	array( 'wordpress', __( 'WordPress', 'iweb' ), __( 'Custom development and optimization', 'iweb' ) ),
+	array( 'layers', __( 'CMS and websites', 'iweb' ), __( 'Custom builds and optimization', 'iweb' ) ),
 	array( 'search', __( 'SEO', 'iweb' ), __( 'Technical SEO, content and strategy', 'iweb' ) ),
 	array( 'code', __( 'Custom Development', 'iweb' ), __( '.NET, APIs and integrations', 'iweb' ) ),
 	array( 'gear', __( 'AI & Automation', 'iweb' ), __( 'AI chatbots, workflow automation and integrations', 'iweb' ) ),
@@ -38,9 +38,9 @@ $iweb_skills = array(
 
 $iweb_reasons = array(
 	array( 'trophy', __( 'Real-world experience', 'iweb' ), __( '14+ years working on complex digital projects across industries.', 'iweb' ) ),
-	array( 'users', __( 'End-to-end support', 'iweb' ), __( 'From strategy and development to SEO, automation and ongoing optimization.', 'iweb' ) ),
+	array( 'users', __( 'Support from start to finish', 'iweb' ), __( 'From strategy and development to SEO, automation and ongoing optimization.', 'iweb' ) ),
 	array( 'target', __( 'Focused on results', 'iweb' ), __( 'We measure success by your business growth and real outcomes.', 'iweb' ) ),
-	array( 'check', __( 'A long-term partner', 'iweb' ), __( 'We\'re here to support your journey, not just deliver a one-time project.', 'iweb' ) ),
+	array( 'check', __( 'A long-term partner', 'iweb' ), __( 'We stick around after launch, not just for a one-time project.', 'iweb' ) ),
 );
 
 get_header();
