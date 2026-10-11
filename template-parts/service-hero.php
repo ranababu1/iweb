@@ -93,7 +93,7 @@ if ( ! function_exists( 'iweb_svc_icon' ) ) {
 						<li class="svc-step">
 							<span class="svc-step__icon"><?php echo iweb_svc_icon( $iweb_s[0] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></span>
 							<span class="svc-step__text"><strong><?php echo esc_html( $iweb_s[1] ); ?></strong><small><?php echo esc_html( $iweb_s[2] ); ?></small></span>
-							<span class="svc-step__num"><?php echo esc_html( $iweb_i + 1 ); ?></span>
+							<span class="svc-step__badge"><?php echo esc_html( $iweb_i + 1 ); ?></span>
 						</li>
 					<?php endforeach; ?>
 				</ol>
