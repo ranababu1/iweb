@@ -66,30 +66,8 @@ get_header();
 				</div>
 			</div>
 
-			<div class="about-hero__visual">
-				<div class="about-hero__photo">
-					<?php
-					if ( has_post_thumbnail() ) {
-						the_post_thumbnail( 'large' );
-					} else {
-						echo '<div class="visual-placeholder" aria-hidden="true">' . iweb_icon( 'users' ) . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-					}
-					?>
-				</div>
-				<ul class="about-facts">
-					<?php foreach ( $iweb_facts as $iweb_fact ) : ?>
-						<li>
-							<?php echo iweb_icon( $iweb_fact[0] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-							<span>
-								<?php if ( '' !== $iweb_fact[2] ) : ?>
-									<strong><?php echo esc_html( $iweb_fact[1] ); ?></strong> <?php echo esc_html( $iweb_fact[2] ); ?>
-								<?php else : ?>
-									<?php echo esc_html( $iweb_fact[1] ); ?>
-								<?php endif; ?>
-							</span>
-						</li>
-					<?php endforeach; ?>
-				</ul>
+			<div class="about-hero__visual has-mock">
+				<?php get_template_part( 'template-parts/ui-mock', null, array( 'variant' => 'stack' ) ); ?>
 			</div>
 		</div>
 	</section>
@@ -104,7 +82,7 @@ get_header();
 				<p><?php esc_html_e( 'IWS started with a simple idea, to help businesses use technology in a practical way to get found, win customers and operate more efficiently.', 'iweb' ); ?></p>
 				<p><?php esc_html_e( 'Today, we work with clients globally, combining technical expertise with a deep understanding of business goals to deliver measurable results.', 'iweb' ); ?></p>
 			</div>
-			<div class="about-story__visual visual-placeholder" aria-hidden="true"><?php echo iweb_icon( 'image' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
+			<div class="about-story__visual has-mock"><?php get_template_part( 'template-parts/ui-mock', null, array( 'variant' => 'code' ) ); ?></div>
 		</div>
 	</section>
 

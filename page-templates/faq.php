@@ -144,7 +144,9 @@ get_header();
 				<h1 class="faq-hero__title"><?php esc_html_e( 'Your questions,', 'iweb' ); ?> <span class="accent"><?php esc_html_e( 'answered.', 'iweb' ); ?></span></h1>
 				<p class="faq-hero__lead"><?php esc_html_e( 'Find clear answers about our services, process, pricing, technology and support. If you don\'t see your question here, feel free to reach out, we\'re happy to help.', 'iweb' ); ?></p>
 			</div>
-			<div class="faq-hero__visual" aria-hidden="true"><span><?php esc_html_e( 'Questions', 'iweb' ); ?></span><span><?php esc_html_e( 'Ideas', 'iweb' ); ?></span><span><?php esc_html_e( 'Answers', 'iweb' ); ?></span></div>
+			<div class="faq-hero__visual has-mock">
+				<?php get_template_part( 'template-parts/ui-mock', null, array( 'variant' => 'form' ) ); ?>
+			</div>
 		</div>
 	</section>
 

@@ -58,14 +58,8 @@ get_header();
 				</div>
 			</div>
 
-			<div class="work-hero__visual" aria-hidden="true">
-				<span class="work-note work-note--a"><?php esc_html_e( 'Strategy', 'iweb' ); ?></span>
-				<span class="work-note work-note--b"><?php esc_html_e( 'Design & Build', 'iweb' ); ?></span>
-				<span class="work-note work-note--c"><?php esc_html_e( 'Optimize', 'iweb' ); ?></span>
-				<span class="work-note work-note--d"><?php esc_html_e( 'Scale', 'iweb' ); ?></span>
-				<div class="work-screen">
-					<p><?php esc_html_e( 'Better Ideas for a Brighter Future', 'iweb' ); ?></p>
-				</div>
+			<div class="work-hero__visual has-mock">
+				<?php get_template_part( 'template-parts/ui-mock', null, array( 'variant' => 'stack' ) ); ?>
 			</div>
 		</div>
 	</section>

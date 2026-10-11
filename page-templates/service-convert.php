@@ -146,7 +146,7 @@ get_header();
 					<p><?php esc_html_e( 'We build WordPress and WooCommerce sites that are fast, beautiful and designed to convert.', 'iweb' ); ?></p>
 					<a class="btn btn--outline" href="<?php echo esc_url( home_url( '/our-work/' ) ); ?>"><?php esc_html_e( 'View Our Work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
-				<div class="visual-placeholder" aria-hidden="true"><?php echo iweb_icon( 'image' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
+				<div class=" has-mock"><?php get_template_part( 'template-parts/ui-mock', null, array( 'variant' => 'dashboard' ) ); ?></div>
 			</div>
 		</section>
 	<?php endif; ?>

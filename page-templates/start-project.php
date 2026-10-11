@@ -73,8 +73,8 @@ get_header();
 				</ul>
 			</div>
 
-			<div class="contact-hero__visual" aria-hidden="true">
-				<div class="contact-hero__screen"><p><?php esc_html_e( 'Your Project Starts Here', 'iweb' ); ?></p></div>
+			<div class="contact-hero__visual has-mock">
+				<?php get_template_part( 'template-parts/ui-mock', null, array( 'variant' => 'form' ) ); ?>
 			</div>
 		</div>
 	</section>

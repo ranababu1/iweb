@@ -12,6 +12,18 @@
 
 	</div><!-- #content .site-content -->
 
+	<?php if ( ! iweb_has_cta_band() ) : ?>
+		<section class="big-cta" aria-label="<?php esc_attr_e( 'Start a project', 'iweb' ); ?>">
+			<div class="container big-cta__inner">
+				<p class="big-cta__title"><?php esc_html_e( 'Project in mind?', 'iweb' ); ?></p>
+				<div class="big-cta__actions">
+					<a class="btn btn--primary" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+					<a class="btn btn--outline" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
+				</div>
+			</div>
+		</section>
+	<?php endif; ?>
+
 	<footer id="colophon" class="site-footer">
 		<div class="site-footer-inner">
 
@@ -157,6 +169,8 @@
 				<?php endif; ?>
 			</div>
 
+			<p class="footer-wordmark" aria-hidden="true">IWS</p>
+			<p class="footer-email"><a href="mailto:hello@imraan.in">hello@imraan.in</a></p>
 		</div><!-- .site-footer-inner -->
 	</footer><!-- #colophon -->
 

@@ -106,7 +106,7 @@ get_header();
 			<div class="home-hero__copy">
 				<p class="eyebrow"><?php esc_html_e( 'Grow. Optimize. Scale.', 'iweb' ); ?></p>
 				<h1 class="home-hero__title">
-					<?php esc_html_e( 'Get found.', 'iweb' ); ?><br>
+					<span class="hl"><?php esc_html_e( 'Get found.', 'iweb' ); ?></span><br>
 					<?php esc_html_e( 'Win customers.', 'iweb' ); ?><br>
 					<span class="accent"><?php esc_html_e( 'Scale without the busywork.', 'iweb' ); ?></span>
 				</h1>
@@ -119,23 +119,23 @@ get_header();
 				<p class="fine-print"><?php esc_html_e( 'No long contracts required to get started.', 'iweb' ); ?></p>
 			</div>
 
-			<div class="home-hero__visual" aria-hidden="true">
-				<div class="hero-browser">
-					<div class="hero-browser__bar"><span></span><span></span><span></span></div>
-					<div class="hero-browser__body">
-						<p class="hero-browser__kicker"><?php esc_html_e( 'Ideas into', 'iweb' ); ?></p>
-						<p class="hero-browser__title"><?php esc_html_e( 'Real Business Growth', 'iweb' ); ?></p>
-						<div class="hero-browser__scene"></div>
-					</div>
-				</div>
-				<ul class="hero-checks">
-					<li><?php echo iweb_icon( 'check' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Better visibility', 'iweb' ); ?></li>
-					<li><?php echo iweb_icon( 'check' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'More customers', 'iweb' ); ?></li>
-					<li><?php echo iweb_icon( 'check' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Less manual work', 'iweb' ); ?></li>
-				</ul>
+			<div class="home-hero__visual">
+				<?php get_template_part( 'template-parts/ui-mock', null, array( 'variant' => 'stack' ) ); ?>
+				<a class="talk-disc" href="<?php echo esc_url( iweb_audit_url() ); ?>"><span><?php esc_html_e( 'Let\'s talk', 'iweb' ); ?></span> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 			</div>
 		</div>
 	</section>
+
+	<!-- Service marquee -->
+	<div class="marquee" aria-hidden="true">
+		<div class="marquee__track">
+			<?php for ( $iweb_m = 0; $iweb_m < 2; $iweb_m++ ) : ?>
+				<?php foreach ( array( 'WordPress development', 'Technical SEO', 'AEO and GEO', 'Conversion optimization', 'Site speed', 'AI automation', 'GA4 and tracking', 'Custom .NET builds' ) as $iweb_word ) : ?>
+					<span><?php echo esc_html( $iweb_word ); ?></span>
+				<?php endforeach; ?>
+			<?php endfor; ?>
+		</div>
+	</div>
 
 	<!-- Trust strip -->
 	<section class="trust-strip" aria-label="<?php esc_attr_e( 'At a glance', 'iweb' ); ?>">

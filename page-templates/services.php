@@ -91,18 +91,8 @@ get_header();
 				</div>
 			</div>
 
-			<div class="services-hero__visual" aria-hidden="true">
-				<span class="hero-note hero-note--a"><?php esc_html_e( 'More Visibility', 'iweb' ); ?></span>
-				<span class="hero-note hero-note--b"><?php esc_html_e( 'More Customers', 'iweb' ); ?></span>
-				<span class="hero-note hero-note--c"><?php esc_html_e( 'Less Busywork', 'iweb' ); ?></span>
-				<div class="hero-screen">
-					<ul>
-						<li><?php esc_html_e( 'Strategy', 'iweb' ); ?></li>
-						<li><?php esc_html_e( 'Build', 'iweb' ); ?></li>
-						<li><?php esc_html_e( 'Optimize', 'iweb' ); ?></li>
-						<li><?php esc_html_e( 'Grow', 'iweb' ); ?></li>
-					</ul>
-				</div>
+			<div class="services-hero__visual has-mock">
+				<?php get_template_part( 'template-parts/ui-mock', null, array( 'variant' => 'stack' ) ); ?>
 			</div>
 		</div>
 	</section>
