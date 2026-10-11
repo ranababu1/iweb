@@ -611,8 +611,8 @@ details[open] { border-color: var(--iws-ink) !important; }
 .footer-cols { display: grid; grid-template-columns: 1.6fr 1.2fr 0.9fr 0.9fr; gap: 2.5rem; margin-top: 1.5rem; padding: 3rem 0 2.75rem; border-top: 1px solid #1f1f21; }
 .site-footer--v2 .footer-logo { margin: 0 0 1.25rem; font-family: var(--iws-display); font-weight: 800; font-size: 1.6rem; }
 .site-footer--v2 .footer-logo a { color: #fff; text-decoration: none; }
-.site-footer--v2 .footer-blurb { margin: 0 0 1.75rem; max-width: 19rem; color: #a3a3a3; font-size: 0.95rem; line-height: 1.6; }
-.footer-social { display: flex; gap: 1.25rem; list-style: none; margin: 0; padding: 0; }
+.site-footer--v2 .footer-blurb { margin: 0; max-width: 19rem; color: #a3a3a3; font-size: 0.95rem; line-height: 1.6; }
+.footer-social { display: flex; gap: 1.25rem; list-style: none; margin: 1.75rem 0 0; padding: 0; }
 .footer-social a { color: #fff; display: inline-flex; }
 .footer-social svg { width: 1.2rem; height: 1.2rem; }
 .site-footer--v2 .footer-col__title { margin: 0 0 1.1rem; color: #8a8a8a !important; font-size: 0.75rem !important; font-weight: 500; letter-spacing: 0.14em; }

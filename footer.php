@@ -3,7 +3,7 @@
  * The template for displaying the footer.
  *
  * Closes the content div opened in header.php, then displays the footer
- * widget areas, the footer menu, the social links, and the copyright text.
+ * widget areas, the footer menu, optional social links, and the copyright text.
  *
  * @package iweb
  * @since 1.0.0
@@ -34,24 +34,18 @@
 					<p class="footer-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo wp_kses( iweb_wordmark(), array( 'span' => array( 'class' => array() ) ) ); ?></a></p>
 					<p class="footer-blurb"><?php esc_html_e( 'We deploy AI to automate the busywork, improve how your business runs and grow your results online.', 'iweb' ); ?></p>
 					<?php
-					// Profiles set in the Customizer win; otherwise placeholders are shown.
-					// TODO: add real social profile URLs in Customizer > Social.
-					$iweb_set   = array();
-					foreach ( iweb_get_social_profiles() as $iweb_profile ) {
-						$iweb_set[ $iweb_profile['network'] ] = $iweb_profile['url'];
-					}
-					$iweb_socials = array(
-						'linkedin'  => __( 'LinkedIn', 'iweb' ),
-						'x'         => __( 'X', 'iweb' ),
-						'instagram' => __( 'Instagram', 'iweb' ),
-						'youtube'   => __( 'YouTube', 'iweb' ),
-					);
+					// Only render social icons when real profile URLs are set in Customizer > Social.
+					$iweb_profiles = iweb_get_social_profiles();
+					if ( ! empty( $iweb_profiles ) ) :
+						?>
+						<ul class="footer-social">
+							<?php foreach ( $iweb_profiles as $iweb_profile ) : ?>
+								<li><a href="<?php echo esc_url( $iweb_profile['url'] ); ?>" aria-label="<?php echo esc_attr( $iweb_profile['label'] ); ?>"><?php echo iweb_icon( $iweb_profile['network'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a></li>
+							<?php endforeach; ?>
+						</ul>
+						<?php
+					endif;
 					?>
-					<ul class="footer-social">
-						<?php foreach ( $iweb_socials as $iweb_net => $iweb_label ) : ?>
-							<li><a href="<?php echo esc_url( isset( $iweb_set[ $iweb_net ] ) ? $iweb_set[ $iweb_net ] : '#' ); ?>" aria-label="<?php echo esc_attr( $iweb_label ); ?>"><?php echo iweb_icon( $iweb_net ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a></li>
-						<?php endforeach; ?>
-					</ul>
 				</div>
 
 				<?php
