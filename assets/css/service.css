@@ -482,3 +482,133 @@
 		grid-template-columns: 1fr auto;
 	}
 }
+
+/* Turn visitors into customers template */
+.service-hero__visual--devices {
+	background: linear-gradient(135deg, #f3e9d2, #e4efd9);
+}
+
+.device-laptop,
+.device-phone {
+	position: absolute;
+	padding: 1rem;
+	border: 5px solid #2a2f2c;
+	background: #fff;
+	box-shadow: 0 20px 40px rgba(15, 26, 20, 0.22);
+}
+
+.device-laptop {
+	inset: 14% auto auto 8%;
+	width: 68%;
+	min-height: 9rem;
+	border-radius: var(--radius-sm);
+}
+
+.device-phone {
+	inset: auto 8% 10% auto;
+	width: 28%;
+	min-height: 9rem;
+	border-radius: var(--radius-md);
+}
+
+.device__kicker {
+	font-size: 0.8rem;
+	font-weight: 700;
+}
+
+.device__title {
+	color: var(--color-brand);
+	font-size: 1.1rem;
+	font-weight: 800;
+	line-height: 1.1;
+}
+
+.device-note {
+	position: absolute;
+	color: var(--color-muted);
+	font-size: 0.8rem;
+	font-style: italic;
+}
+
+.device-note--a {
+	inset: 4% auto auto 6%;
+}
+
+.device-note--b {
+	inset: auto 4% 2% auto;
+}
+
+@media (min-width: 64rem) {
+
+	.offer-cards--five {
+		grid-template-columns: repeat(5, minmax(0, 1fr));
+	}
+}
+
+.service-featured__box {
+	display: grid;
+	gap: 2rem;
+	align-items: center;
+	padding: clamp(1.5rem, 4vw, 2.5rem);
+	border-radius: var(--radius-lg);
+	background-color: var(--color-dark);
+	color: var(--color-on-dark);
+}
+
+.service-featured__box p:not(.eyebrow) {
+	max-width: 26rem;
+	margin-block: 0.75rem 1.5rem;
+	color: var(--color-on-dark-muted);
+}
+
+@media (min-width: 56rem) {
+
+	.service-featured__box {
+		grid-template-columns: 1fr 1.4fr;
+	}
+}
+
+.service-process-split {
+	display: grid;
+	gap: 2rem;
+	align-items: center;
+}
+
+.service-process-split p:not(.eyebrow) {
+	margin-block: 0.75rem 1rem;
+	color: var(--color-muted);
+}
+
+@media (min-width: 64rem) {
+
+	.service-process-split {
+		grid-template-columns: 1fr 1.8fr;
+	}
+
+	.service-process-split .process-step {
+		grid-template-columns: 1fr;
+		justify-items: start;
+	}
+
+	.service-process-split .process-step .icon-tile {
+		grid-row: auto;
+	}
+}
+
+.client-stories__inner {
+	display: grid;
+	gap: 2rem;
+	align-items: center;
+}
+
+.client-stories p:not(.eyebrow) {
+	margin-block: 0.75rem 1.25rem;
+	color: var(--color-muted);
+}
+
+@media (min-width: 56rem) {
+
+	.client-stories__inner {
+		grid-template-columns: 1fr 1.4fr;
+	}
+}
