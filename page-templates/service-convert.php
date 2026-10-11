@@ -61,39 +61,28 @@ get_header();
 <main id="primary" class="site-main service service--convert" tabindex="-1">
 
 	<!-- Hero -->
-	<section class="service-hero">
-		<div class="container service-hero__inner">
-			<div class="service-hero__copy">
-				<nav class="breadcrumb" aria-label="<?php esc_attr_e( 'Breadcrumb', 'iweb' ); ?>">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'iweb' ); ?></a> ›
-					<a href="<?php echo esc_url( home_url( '/services/' ) ); ?>"><?php esc_html_e( 'Services', 'iweb' ); ?></a> ›
-					<span aria-current="page"><?php esc_html_e( 'Turn visitors into customers', 'iweb' ); ?></span>
-				</nav>
-				<p class="eyebrow"><?php esc_html_e( 'Turn visitors into customers', 'iweb' ); ?></p>
-				<h1 class="service-hero__title"><?php esc_html_e( 'Build better websites. Turn more visitors', 'iweb' ); ?> <span class="accent"><?php esc_html_e( 'into customers.', 'iweb' ); ?></span></h1>
-				<p class="service-hero__lead"><?php esc_html_e( 'We create high-performing WordPress sites, WooCommerce stores and digital experiences that are fast, user-friendly and built to convert. From design to checkout, we help you turn interest into revenue.', 'iweb' ); ?></p>
-				<div class="cta-row">
-					<a class="btn btn--primary" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
-					<a class="btn btn--outline" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
-				</div>
-				<?php /* TODO: confirm the "no long contracts" claim with Imran before publishing. */ ?>
-				<p class="fine-print"><?php esc_html_e( 'No long contracts required to get started.', 'iweb' ); ?></p>
-			</div>
-
-			<div class="service-hero__visual service-hero__visual--devices" aria-hidden="true">
-				<div class="device-laptop">
-					<p class="device__kicker"><?php esc_html_e( 'Healthy Food.', 'iweb' ); ?></p>
-					<p class="device__title"><?php esc_html_e( 'Happier You.', 'iweb' ); ?></p>
-				</div>
-				<div class="device-phone">
-					<p class="device__kicker"><?php esc_html_e( 'Good Food', 'iweb' ); ?></p>
-					<p class="device__title"><?php esc_html_e( 'Good Vibes', 'iweb' ); ?></p>
-				</div>
-				<p class="device-note device-note--a"><?php esc_html_e( 'Fast & reliable', 'iweb' ); ?></p>
-				<p class="device-note device-note--b"><?php esc_html_e( 'Higher conversions', 'iweb' ); ?></p>
-			</div>
-		</div>
-	</section>
+	<?php
+	get_template_part(
+		'template-parts/service-hero',
+		null,
+		array(
+			'label'       => __( 'Turn visitors into customers', 'iweb' ),
+			'lines'       => array( __( 'More visitors.', 'iweb' ), __( 'More enquiries.', 'iweb' ), __( 'Fewer drop-offs.', 'iweb' ) ),
+			'highlight'   => __( 'More customers.', 'iweb' ),
+			'lead'        => __( 'We build fast WordPress sites and stores with clear pages, simple forms and AI-assisted testing, so more of your visitors take the next step.', 'iweb' ),
+			'steps'       => array(
+				array( 'bolt', __( 'Fast, mobile-first build', 'iweb' ), __( 'Quick pages on every device', 'iweb' ) ),
+				array( 'layout', __( 'Clear page structure', 'iweb' ), __( 'Guide visitors to the next step', 'iweb' ) ),
+				array( 'pen', __( 'Conversion-focused copy', 'iweb' ), __( 'Words that answer and persuade', 'iweb' ) ),
+				array( 'form', __( 'Friction-free forms', 'iweb' ), __( 'Fewer fields, fewer drop-offs', 'iweb' ) ),
+				array( 'split', __( 'A/B tests', 'iweb' ), __( 'Try ideas against real visitors', 'iweb' ) ),
+				array( 'refresh', __( 'Ongoing optimization', 'iweb' ), __( 'Keep improving month by month', 'iweb' ) ),
+			),
+			'result_icon' => 'users',
+			'result'      => __( 'More enquiries from the same traffic', 'iweb' ),
+		)
+	);
+	?>
 
 	<!-- Benefits strip -->
 	<section class="trust-strip trust-strip--five" aria-label="<?php esc_attr_e( 'Benefits', 'iweb' ); ?>">

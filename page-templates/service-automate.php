@@ -37,15 +37,6 @@ $iweb_offers = array(
 	array( 'purple', 'code', __( 'Custom AI Solutions', 'iweb' ), __( 'Build custom solutions for your unique business processes and requirements.', 'iweb' ) ),
 );
 
-$iweb_workflow = array(
-	array( 'blue', 'doc', __( 'New form submission', 'iweb' ) ),
-	array( 'orange', 'sparkle', __( 'Extract information (AI)', 'iweb' ) ),
-	array( 'orange', 'users', __( 'Update CRM', 'iweb' ) ),
-	array( 'blue', 'chat', __( 'Send personalized email', 'iweb' ) ),
-	array( 'purple', 'check', __( 'Create task', 'iweb' ) ),
-	array( 'purple', 'megaphone', __( 'Notify team on Slack', 'iweb' ) ),
-);
-
 $iweb_steps = array(
 	array( 'green', 'search', __( 'Understand', 'iweb' ), __( 'We learn about your goals, current workflows and tools.', 'iweb' ) ),
 	array( 'orange', 'doc', __( 'Plan', 'iweb' ), __( 'We identify the right opportunities and create a roadmap.', 'iweb' ) ),
@@ -68,44 +59,28 @@ get_header();
 <main id="primary" class="site-main service service--automate" tabindex="-1">
 
 	<!-- Hero -->
-	<section class="service-hero">
-		<div class="container service-hero__inner">
-			<div class="service-hero__copy">
-				<nav class="breadcrumb" aria-label="<?php esc_attr_e( 'Breadcrumb', 'iweb' ); ?>">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'iweb' ); ?></a> ›
-					<a href="<?php echo esc_url( home_url( '/services/' ) ); ?>"><?php esc_html_e( 'Services', 'iweb' ); ?></a> ›
-					<span aria-current="page"><?php esc_html_e( 'Automate the busywork', 'iweb' ); ?></span>
-				</nav>
-				<p class="eyebrow"><?php esc_html_e( 'Automate the busywork', 'iweb' ); ?></p>
-				<h1 class="service-hero__title"><?php esc_html_e( 'Save time. Reduce manual work. Focus', 'iweb' ); ?> <span class="accent"><?php esc_html_e( 'on what grows your business.', 'iweb' ); ?></span></h1>
-				<p class="service-hero__lead"><?php esc_html_e( 'We build practical AI and automation solutions that handle repetitive tasks, streamline workflows and integrate with your existing tools – so your team can focus on higher-value work.', 'iweb' ); ?></p>
-				<div class="cta-row">
-					<a class="btn btn--primary" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
-					<a class="btn btn--outline" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
-				</div>
-				<?php /* TODO: confirm the "no long contracts" claim with Imran before publishing. */ ?>
-				<p class="fine-print"><?php esc_html_e( 'No long contracts required to get started.', 'iweb' ); ?></p>
-			</div>
-
-			<div class="service-hero__visual service-hero__visual--workflow" aria-hidden="true">
-				<div class="workflow-card">
-					<p class="workflow-card__title"><?php esc_html_e( 'AI Workflow', 'iweb' ); ?></p>
-					<ol class="workflow-card__steps">
-						<?php foreach ( $iweb_workflow as $iweb_w ) : ?>
-							<li class="tone-<?php echo esc_attr( $iweb_w[0] ); ?>">
-								<span class="icon-tile"><?php echo iweb_icon( $iweb_w[1] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></span>
-								<?php echo esc_html( $iweb_w[2] ); ?>
-							</li>
-						<?php endforeach; ?>
-					</ol>
-				</div>
-				<div class="hours-card">
-					<?php echo iweb_icon( 'clock' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-					<p><?php esc_html_e( 'Save hours every week', 'iweb' ); ?></p>
-				</div>
-			</div>
-		</div>
-	</section>
+	<?php
+	get_template_part(
+		'template-parts/service-hero',
+		null,
+		array(
+			'label'       => __( 'Automate the busywork', 'iweb' ),
+			'lines'       => array( __( 'Save time.', 'iweb' ), __( 'Reduce manual work.', 'iweb' ), __( 'Focus on what', 'iweb' ) ),
+			'highlight'   => __( 'Grows your business.', 'iweb' ),
+			'lead'        => __( 'We build practical AI and automation solutions that handle repetitive tasks, streamline workflows and connect the tools your team already uses.', 'iweb' ),
+			'steps'       => array(
+				array( 'doc', __( 'New form submission', 'iweb' ), __( 'Capture leads from your website', 'iweb' ) ),
+				array( 'sparkle', __( 'Extract information with AI', 'iweb' ), __( 'Automatically read and organize data', 'iweb' ) ),
+				array( 'database', __( 'Update CRM', 'iweb' ), __( 'Add or update contact records', 'iweb' ) ),
+				array( 'mail', __( 'Send personalized email', 'iweb' ), __( 'Engage your leads automatically', 'iweb' ) ),
+				array( 'check', __( 'Create task', 'iweb' ), __( 'Assign follow-ups to your team', 'iweb' ) ),
+				array( 'slack', __( 'Notify team on Slack', 'iweb' ), __( 'Keep everyone in the loop', 'iweb' ) ),
+			),
+			'result_icon' => 'clock',
+			'result'      => __( 'Hours back every week', 'iweb' ),
+		)
+	);
+	?>
 
 	<!-- Benefits strip -->
 	<section class="trust-strip trust-strip--five" aria-label="<?php esc_attr_e( 'Benefits', 'iweb' ); ?>">
