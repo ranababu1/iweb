@@ -649,3 +649,4 @@ details[open] { border-color: var(--iws-ink) !important; }
 	.footer-cta__actions { flex-wrap: nowrap; }
 	.fbtn { white-space: nowrap; }
 }
+.fbtn svg, .fbtn .icon { flex-shrink: 0; width: 1.1rem !important; height: 1.1rem !important; } .fbtn__disc svg { width: 14px !important; height: 14px !important; }
