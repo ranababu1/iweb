@@ -304,3 +304,15 @@ add_filter( 'body_class', 'iweb_marketing_body_class' );
 function iweb_wordmark() {
 	return '<span class="logo-i">I</span>WS';
 }
+
+/**
+ * Whether the current template already ends with its own dark CTA band.
+ *
+ * @return bool
+ */
+function iweb_has_cta_band() {
+	if ( is_home() || is_singular( array( 'post', 'case_study' ) ) ) {
+		return true;
+	}
+	return is_page_template( array( 'page-templates/home.php', 'page-templates/about.php', 'page-templates/faq.php', 'page-templates/our-work.php', 'page-templates/service-analytics.php', 'page-templates/service-automate.php', 'page-templates/service-convert.php', 'page-templates/service-get-found.php', 'page-templates/services.php', 'page-templates/start-project.php' ) );
+}

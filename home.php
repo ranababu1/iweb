@@ -56,7 +56,9 @@ get_header();
 				<h1 class="blog-hero__title"><?php esc_html_e( 'Practical ideas for', 'iweb' ); ?> <span class="accent"><?php esc_html_e( 'real business growth.', 'iweb' ); ?></span></h1>
 				<p class="blog-hero__lead"><?php esc_html_e( 'Guides, tutorials and insights on WordPress, SEO, AI automation, web development and digital growth.', 'iweb' ); ?></p>
 			</div>
-			<div class="blog-hero__visual" aria-hidden="true"><span><?php esc_html_e( 'Learn', 'iweb' ); ?></span><span><?php esc_html_e( 'Apply', 'iweb' ); ?></span><span><?php esc_html_e( 'Grow', 'iweb' ); ?></span></div>
+			<div class="blog-hero__visual has-mock">
+				<?php get_template_part( 'template-parts/ui-mock', null, array( 'variant' => 'dashboard' ) ); ?>
+			</div>
 		</div>
 	</section>
 

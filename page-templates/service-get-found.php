@@ -183,7 +183,7 @@ get_header();
 					<p><?php esc_html_e( 'We\'ve helped startups, SMBs and enterprises improve visibility, traffic and conversions.', 'iweb' ); ?></p>
 					<a class="btn btn--primary" href="<?php echo esc_url( home_url( '/our-work/' ) ); ?>"><?php esc_html_e( 'View Our Work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
-				<div class="visual-placeholder" aria-hidden="true"><?php echo iweb_icon( 'image' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
+				<div class=" has-mock"><?php get_template_part( 'template-parts/ui-mock', null, array( 'variant' => 'seo' ) ); ?></div>
 			</div>
 		</section>
 	<?php endif; ?>

@@ -297,3 +297,31 @@ function iweb_asset_version( $file ) {
  * }
  * add_action( 'admin_enqueue_scripts', 'iweb_admin_scripts' );
  */
+/**
+ * Sitewide visual layer: fonts, stylesheet and motion script. Runs late so
+ * it loads after every view-specific stylesheet.
+ *
+ * @return void
+ */
+function iweb_site_layer_assets() {
+	wp_enqueue_style( 'iweb-fonts', 'https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap', array(), null );
+	wp_enqueue_style( 'iweb-site', get_template_directory_uri() . '/assets/css/site.css', array(), iweb_asset_version( 'assets/css/site.css' ) );
+	wp_enqueue_script( 'iweb-site', get_template_directory_uri() . '/assets/js/site.js', array(), iweb_asset_version( 'assets/js/site.js' ), array( 'in_footer' => true, 'strategy' => 'defer' ) );
+}
+add_action( 'wp_enqueue_scripts', 'iweb_site_layer_assets', 100 );
+
+/**
+ * Preconnect to Google Fonts.
+ *
+ * @param array  $urls          URLs.
+ * @param string $relation_type Relation.
+ * @return array
+ */
+function iweb_site_layer_hints( $urls, $relation_type ) {
+	if ( 'preconnect' === $relation_type ) {
+		$urls[] = array( 'href' => 'https://fonts.gstatic.com', 'crossorigin' );
+		$urls[] = 'https://fonts.googleapis.com';
+	}
+	return $urls;
+}
+add_filter( 'wp_resource_hints', 'iweb_site_layer_hints', 10, 2 );

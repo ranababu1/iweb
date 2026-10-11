@@ -79,17 +79,8 @@ get_header();
 				<p class="fine-print"><?php esc_html_e( 'No long contracts required to get started.', 'iweb' ); ?></p>
 			</div>
 
-			<div class="hww-hero__visual" aria-hidden="true">
-				<div class="board">
-					<?php foreach ( $iweb_board as $iweb_col => $iweb_cards ) : ?>
-						<div class="board__col">
-							<p class="board__title"><?php echo esc_html( $iweb_col ); ?></p>
-							<?php foreach ( $iweb_cards as $iweb_card ) : ?>
-								<p class="board__card"><?php echo esc_html( $iweb_card ); ?></p>
-							<?php endforeach; ?>
-						</div>
-					<?php endforeach; ?>
-				</div>
+			<div class="hww-hero__visual has-mock">
+				<?php get_template_part( 'template-parts/ui-mock', null, array( 'variant' => 'code' ) ); ?>
 			</div>
 		</div>
 	</section>
@@ -171,7 +162,7 @@ get_header();
 				</ul>
 			</div>
 
-			<div class="hww-expect__visual visual-placeholder" aria-hidden="true"><?php echo iweb_icon( 'users' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
+			<div class="hww-expect__visual has-mock"><?php get_template_part( 'template-parts/ui-mock', null, array( 'variant' => 'dashboard' ) ); ?></div>
 
 			<aside class="hww-expect__cta">
 				<p class="eyebrow"><?php esc_html_e( 'Let\'s work together', 'iweb' ); ?></p>
