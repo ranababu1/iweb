@@ -216,6 +216,7 @@ function iweb_icon( $name ) {
 		'cart'      => '<path d="M3 4h2l2.500 11h10L20 7H6.500"/><circle cx="9" cy="19" r="1.300"/><circle cx="17" cy="19" r="1.300"/>',
 		'gauge'     => '<path d="M4 17a9 9 0 1 1 16 0M12 13l4-5"/>',
 		'user'      => '<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.500 3.600-7 8-7s8 2.500 8 7z"/>',
+		'chevron'   => '<path d="m9 6 6 6-6 6"/>',
 		'image'     => '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.500"/><path d="m4 18 5-5 4 4 3-3 4 4"/>',
 	);
 
@@ -257,7 +258,7 @@ function iweb_fallback_menu() {
  * @return bool
  */
 function iweb_is_marketing_view() {
-	return is_page_template( array( 'page-templates/home.php', 'page-templates/service-get-found.php', 'page-templates/service-automate.php', 'page-templates/service-convert.php' ) );
+	return is_page_template( array( 'page-templates/home.php', 'page-templates/service-get-found.php', 'page-templates/service-automate.php', 'page-templates/service-convert.php', 'page-templates/services.php' ) );
 }
 
 /**
