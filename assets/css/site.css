@@ -701,3 +701,8 @@ h1, [class*="-hero__title"], [class*="-hero"] h1, .simple-hero__title { line-hei
 	[class*="-hero__visual"] { margin-top: 0.5rem; }
 }
 html, body { overflow-x: clip; }
+.site-main > section.simple-hero { padding-bottom: clamp(1rem, 2vw, 1.5rem) !important; }
+.archive-header, .search-header { margin-block: clamp(1.75rem, 3vw, 2.5rem) clamp(1.5rem, 3vw, 2rem) !important; }
+.blog-filters { margin-top: clamp(1.5rem, 3vw, 2rem); }
+.site-main > section.blog-hero { padding-bottom: clamp(1.5rem, 3vw, 2.5rem) !important; }
+.error-404 .page-header, .error404 .page-header { margin-top: clamp(2.5rem, 5vw, 4.5rem); }
