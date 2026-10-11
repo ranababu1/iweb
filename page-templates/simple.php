@@ -18,6 +18,30 @@ get_header();
 		the_post();
 		$iweb_parent = wp_get_post_parent_id( get_the_ID() );
 		?>
+		<?php if ( 'custom-development' === get_post_field( 'post_name', get_the_ID() ) ) : ?>
+			<?php
+			get_template_part(
+				'template-parts/service-hero',
+				null,
+				array(
+					'label'       => __( 'Custom development', 'iweb' ),
+					'lines'       => array( __( 'Built for', 'iweb' ), __( 'how you work.', 'iweb' ), __( 'Connected to', 'iweb' ) ),
+					'highlight'   => __( 'everything you use.', 'iweb' ),
+					'lead'        => __( 'We build custom .NET and Java applications, APIs and integrations that fit the way your business runs, including AI features where they save real time.', 'iweb' ),
+					'steps'       => array(
+						array( 'search', __( 'Discovery and scoping', 'iweb' ), __( 'Agree goals, users and limits', 'iweb' ) ),
+						array( 'layout', __( 'System design', 'iweb' ), __( 'Plan data, screens and services', 'iweb' ) ),
+						array( 'code', __( '.NET or Java build', 'iweb' ), __( 'Clean code in short cycles', 'iweb' ) ),
+						array( 'link', __( 'API and data integration', 'iweb' ), __( 'Connect your CRM, ERP and tools', 'iweb' ) ),
+						array( 'check', __( 'Testing and security', 'iweb' ), __( 'Check every release before launch', 'iweb' ) ),
+						array( 'refresh', __( 'Launch and support', 'iweb' ), __( 'Go live and keep improving', 'iweb' ) ),
+					),
+					'result_icon' => 'bolt',
+					'result'      => __( 'Software that fits your business', 'iweb' ),
+				)
+			);
+			?>
+		<?php else : ?>
 		<section class="simple-hero">
 			<div class="container simple-hero__inner">
 				<nav class="breadcrumb" aria-label="<?php esc_attr_e( 'Breadcrumb', 'iweb' ); ?>">
@@ -40,6 +64,7 @@ get_header();
 				<?php endif; ?>
 			</div>
 		</section>
+		<?php endif; ?>
 
 		<div class="container simple-body entry-content">
 			<?php the_content(); ?>

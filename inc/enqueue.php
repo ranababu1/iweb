@@ -263,7 +263,7 @@ function iweb_is_services_view() {
  * @return bool True on pages using the Service template.
  */
 function iweb_is_service_view() {
-	return is_page_template( array( 'page-templates/service-get-found.php', 'page-templates/service-automate.php', 'page-templates/service-convert.php', 'page-templates/service-analytics.php' ) );
+	return is_page_template( array( 'page-templates/service-get-found.php', 'page-templates/service-automate.php', 'page-templates/service-convert.php', 'page-templates/service-analytics.php' ) ) || is_page( 'custom-development' );
 }
 
 /**

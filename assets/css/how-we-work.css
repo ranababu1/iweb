@@ -271,3 +271,15 @@
 		grid-template-columns: 1.1fr 1.2fr 0.9fr;
 	}
 }
+
+/* Hero panel: process timeline plus code card */
+.hww-panel { display: grid; gap: 1rem; padding: clamp(1rem, 2.5vw, 1.5rem); border-radius: 24px; background-color: #0b0b0c; background-image: radial-gradient(rgba(255,255,255,0.09) 1px, transparent 1.2px); background-size: 18px 18px; box-shadow: 0 30px 60px -25px rgba(11,11,12,0.45); }
+.hww-panel__steps { list-style: none; margin: 0; padding: 0 0 0 1.4rem; display: grid; gap: 0.6rem; position: relative; }
+.hww-panel__steps::before { content: ""; position: absolute; left: 0.3rem; top: 1.2rem; bottom: 1.2rem; width: 2px; background: var(--iws-lime); }
+.hww-panel__steps li { position: relative; display: grid; grid-template-columns: 1.6rem minmax(0, 1fr); column-gap: 0.7rem; align-items: center; background: #fff; border-radius: 12px; padding: 0.6rem 0.8rem; }
+.hww-panel__steps li::before { content: ""; position: absolute; left: -1.1rem; top: 50%; width: 1.1rem; height: 2px; background: var(--iws-lime); }
+.hww-panel__steps span { grid-row: span 2; display: grid; place-items: center; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: var(--iws-lime); color: var(--iws-ink); font-size: 0.75rem; font-weight: 700; }
+.hww-panel__steps strong { font-size: 0.88rem; color: var(--iws-ink); }
+.hww-panel__steps small { font-size: 0.74rem; color: var(--iws-muted); }
+.hww-hero__visual .hww-panel .ui-mock { max-width: none !important; padding: 0 !important; background: none !important; margin: 0 !important; }
+.hww-hero__visual .hww-panel .ui-code { font-size: 0.7rem; padding: 0.7rem 0.9rem; }

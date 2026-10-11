@@ -80,7 +80,15 @@ get_header();
 			</div>
 
 			<div class="hww-hero__visual has-mock">
-				<?php get_template_part( 'template-parts/ui-mock', null, array( 'variant' => 'code' ) ); ?>
+				<div class="hww-panel" aria-hidden="true">
+					<ol class="hww-panel__steps">
+						<li><span>1</span><strong><?php esc_html_e( 'Discover', 'iweb' ); ?></strong><small><?php esc_html_e( 'Goals, tools and where time is lost', 'iweb' ); ?></small></li>
+						<li><span>2</span><strong><?php esc_html_e( 'Plan', 'iweb' ); ?></strong><small><?php esc_html_e( 'A clear scope, timeline and price', 'iweb' ); ?></small></li>
+						<li><span>3</span><strong><?php esc_html_e( 'Build', 'iweb' ); ?></strong><small><?php esc_html_e( 'Short cycles with regular updates', 'iweb' ); ?></small></li>
+						<li><span>4</span><strong><?php esc_html_e( 'Launch and improve', 'iweb' ); ?></strong><small><?php esc_html_e( 'Measure results and keep refining', 'iweb' ); ?></small></li>
+					</ol>
+					<?php get_template_part( 'template-parts/ui-mock', null, array( 'variant' => 'code' ) ); ?>
+				</div>
 			</div>
 		</div>
 	</section>
