@@ -125,6 +125,11 @@ function iweb_conditional_stylesheets() {
 				'file'       => 'assets/css/home.css',
 				'script'     => 'assets/js/home.js',
 			),
+			'iweb-faq' => array(
+				'conditional' => 'iweb_is_faq_view',
+				'file'       => 'assets/css/faq.css',
+				'script'     => 'assets/js/faq.js',
+			),
 			'iweb-contact' => array(
 				'conditional' => 'iweb_is_contact_view',
 				'file'       => 'assets/css/contact.css',
@@ -182,6 +187,17 @@ function iweb_is_blog_view() {
  */
 function iweb_is_home_view() {
 	return is_page_template( 'page-templates/home.php' );
+}
+
+/**
+ * Check whether the current view uses the FAQ template.
+ *
+ * @since 1.12.0
+ *
+ * @return bool True on pages using the FAQ template.
+ */
+function iweb_is_faq_view() {
+	return is_page_template( 'page-templates/faq.php' );
 }
 
 /**

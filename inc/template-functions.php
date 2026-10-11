@@ -229,6 +229,10 @@ function iweb_icon( $name ) {
 		'link'      => '<path d="M10 14a4 4 0 0 0 5.700 0l3-3a4 4 0 0 0-5.700-5.700l-1 1M14 10a4 4 0 0 0-5.700 0l-3 3a4 4 0 0 0 5.700 5.700l1-1"/>',
 		'folder'    => '<path d="M3 6h6l2 2h10v11H3z"/>',
 		'copy'      => '<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/>',
+		'coins'     => '<ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.700 3.100 3 7 3s7-1.300 7-3V6M5 12v6c0 1.700 3.100 3 7 3s7-1.300 7-3v-6"/>',
+		'headset'   => '<path d="M4 14v-2a8 8 0 0 1 16 0v2M4 14h3v5H4zM17 14h3v5h-3zM20 19c0 2-2 3-5 3"/>',
+		'book'      => '<path d="M3 5c3-1 6-1 9 1 3-2 6-2 9-1v14c-3-1-6-1-9 1-3-2-6-2-9-1z"/><path d="M12 6v14"/>',
+		'question'  => '<circle cx="12" cy="12" r="9"/><path d="M9.500 9.500a2.500 2.500 0 1 1 3.500 2.300c-.7.400-1 1-1 1.700M12 17v.01"/>',
 		'image'     => '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.500"/><path d="m4 18 5-5 4 4 3-3 4 4"/>',
 	);
 
@@ -270,7 +274,7 @@ function iweb_fallback_menu() {
  * @return bool
  */
 function iweb_is_marketing_view() {
-	return is_page_template( array( 'page-templates/home.php', 'page-templates/service-get-found.php', 'page-templates/service-automate.php', 'page-templates/service-convert.php', 'page-templates/services.php', 'page-templates/service-analytics.php', 'page-templates/how-we-work.php', 'page-templates/our-work.php', 'page-templates/about.php', 'page-templates/start-project.php' ) );
+	return is_page_template( array( 'page-templates/home.php', 'page-templates/service-get-found.php', 'page-templates/service-automate.php', 'page-templates/service-convert.php', 'page-templates/services.php', 'page-templates/service-analytics.php', 'page-templates/how-we-work.php', 'page-templates/our-work.php', 'page-templates/about.php', 'page-templates/start-project.php', 'page-templates/faq.php' ) );
 }
 
 /**
