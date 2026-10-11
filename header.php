@@ -25,21 +25,8 @@
 	<div class="site-header-inner">
 
 		<div class="site-branding">
-			<?php
-			if ( has_custom_logo() ) {
-				the_custom_logo();
-			} else {
-				if ( is_front_page() && is_home() ) :
-					?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></h1>
-					<?php
-				else :
-					?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></p>
-					<?php
-				endif;
-			}
-			?>
+			<?php // Text wordmark keeps the brand consistent ("iWebAndSEO") with the footer. ?>
+			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="<?php esc_attr_e( 'iWebAndSEO home', 'iweb' ); ?>"><?php echo wp_kses( iweb_wordmark(), array( 'span' => array( 'class' => array() ) ) ); ?></a></p>
 		</div><!-- .site-branding -->
 
 		<button id="iweb-menu-toggle" class="menu-toggle" aria-expanded="true" aria-controls="site-navigation">
