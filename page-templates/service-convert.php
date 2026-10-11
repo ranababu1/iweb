@@ -142,7 +142,7 @@ get_header();
 					<p class="eyebrow"><?php esc_html_e( 'Featured work', 'iweb' ); ?></p>
 					<h2 class="section-title"><?php esc_html_e( 'Real Websites.', 'iweb' ); ?><br><?php esc_html_e( 'Real Business Impact.', 'iweb' ); ?></h2>
 					<p><?php esc_html_e( 'We build WordPress and WooCommerce sites that are fast, beautiful and designed to convert.', 'iweb' ); ?></p>
-					<a class="btn btn--outline" href="<?php echo esc_url( home_url( '/work/' ) ); ?>"><?php esc_html_e( 'View Our Work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+					<a class="btn btn--outline" href="<?php echo esc_url( home_url( '/our-work/' ) ); ?>"><?php esc_html_e( 'View Our Work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
 				<div class="visual-placeholder" aria-hidden="true"><?php echo iweb_icon( 'image' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 			</div>
@@ -156,7 +156,7 @@ get_header();
 				<p class="eyebrow"><?php esc_html_e( 'Our process', 'iweb' ); ?></p>
 				<h2 class="section-title"><?php esc_html_e( 'A Focused, Collaborative Process', 'iweb' ); ?></h2>
 				<p><?php esc_html_e( 'We keep things simple, transparent and focused on your goals.', 'iweb' ); ?></p>
-				<a class="link-arrow" href="<?php echo esc_url( home_url( '/#process' ) ); ?>"><?php esc_html_e( 'How we work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+				<a class="link-arrow" href="<?php echo esc_url( home_url( '/how-we-work/' ) ); ?>"><?php esc_html_e( 'How we work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 			</div>
 			<ol class="process-steps">
 				<?php foreach ( $iweb_steps as $iweb_i => $iweb_step ) : ?>
@@ -179,7 +179,7 @@ get_header();
 					<p class="eyebrow"><?php esc_html_e( 'Client stories', 'iweb' ); ?></p>
 					<h2 class="section-title"><?php esc_html_e( 'Trusted by Businesses Like Yours', 'iweb' ); ?></h2>
 					<p><?php esc_html_e( 'Long-term partnerships and real results are at the heart of what we do.', 'iweb' ); ?></p>
-					<a class="btn btn--outline" href="<?php echo esc_url( home_url( '/work/' ) ); ?>"><?php esc_html_e( 'View More Stories', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+					<a class="btn btn--outline" href="<?php echo esc_url( home_url( '/our-work/' ) ); ?>"><?php esc_html_e( 'View More Stories', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
 				<?php /* Replace with a real client testimonial before enabling. */ ?>
 				<blockquote class="testimonial visual-placeholder"><?php esc_html_e( 'Add a real client testimonial here.', 'iweb' ); ?></blockquote>
@@ -194,7 +194,9 @@ get_header();
 				<p class="eyebrow"><?php esc_html_e( 'Frequently asked questions', 'iweb' ); ?></p>
 				<h2 class="section-title"><?php esc_html_e( 'Your Questions, Answered.', 'iweb' ); ?></h2>
 				<p><?php esc_html_e( 'Quick answers to common questions about our WordPress, WooCommerce and CRO services.', 'iweb' ); ?></p>
+				<?php if ( get_page_by_path( 'faq' ) ) : ?>
 				<a class="link-arrow" href="<?php echo esc_url( home_url( '/faq/' ) ); ?>"><?php esc_html_e( 'View All FAQs', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+				<?php endif; ?>
 			</div>
 			<div class="faq__list" data-faq>
 				<?php foreach ( $iweb_faqs as $iweb_faq ) : ?>

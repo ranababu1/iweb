@@ -67,7 +67,7 @@ get_header();
 					<span aria-current="page"><?php esc_html_e( 'Get found', 'iweb' ); ?></span>
 				</nav>
 				<p class="eyebrow"><?php esc_html_e( 'Get found', 'iweb' ); ?></p>
-				<h1 class="service-hero__title"><?php esc_html_e( 'Show up on Google', 'iweb' ); ?><br><?php esc_html_e( 'and in', 'iweb' ); ?> <span class="accent"><?php esc_html_e( 'AI answers.', 'iweb' ); ?></span></h1>
+				<h1 class="service-hero__title"><?php esc_html_e( 'Show up on Google', 'iweb' ); ?> <br><?php esc_html_e( 'and in', 'iweb' ); ?> <span class="accent"><?php esc_html_e( 'AI answers.', 'iweb' ); ?></span></h1>
 				<p class="service-hero__lead"><?php esc_html_e( 'We help your business get found on Google, in AI search and across the web. Our SEO and content strategies bring the right traffic, improve visibility and drive real business growth.', 'iweb' ); ?></p>
 				<div class="cta-row">
 					<a class="btn btn--primary" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
@@ -80,7 +80,7 @@ get_header();
 			<div class="service-hero__visual" aria-hidden="true">
 				<div class="serp-card">
 					<p class="serp-card__brand"><span>G</span>oogle</p>
-					<p class="serp-card__query"><?php esc_html_e( 'best wordpress development company', 'iweb' ); ?></p>
+					<p class="serp-card__query"><?php esc_html_e( 'seo agency for small business', 'iweb' ); ?></p>
 					<p class="serp-card__result-title"><?php esc_html_e( 'Your Business', 'iweb' ); ?></p>
 					<p class="serp-card__result-desc"><?php esc_html_e( 'High-performance websites that help businesses grow.', 'iweb' ); ?></p>
 				</div>
@@ -141,7 +141,7 @@ get_header();
 					<p class="eyebrow"><?php esc_html_e( 'Real results', 'iweb' ); ?></p>
 					<h2 class="section-title"><?php esc_html_e( 'Higher Rankings.', 'iweb' ); ?><br><?php esc_html_e( 'More Traffic. Real Growth.', 'iweb' ); ?></h2>
 					<p><?php esc_html_e( 'We help businesses achieve sustainable growth through a combination of SEO, content and technical optimization.', 'iweb' ); ?></p>
-					<a class="btn btn--light" href="<?php echo esc_url( home_url( '/work/' ) ); ?>"><?php esc_html_e( 'View Our Work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+					<a class="btn btn--light" href="<?php echo esc_url( home_url( '/our-work/' ) ); ?>"><?php esc_html_e( 'View Our Work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
 				<ul class="results-list">
 					<li><?php echo iweb_icon( 'chart' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'More visibility', 'iweb' ); ?></li>
@@ -179,7 +179,7 @@ get_header();
 					<p class="eyebrow"><?php esc_html_e( 'Case studies', 'iweb' ); ?></p>
 					<h2 class="section-title"><?php esc_html_e( 'Real Businesses.', 'iweb' ); ?><br><?php esc_html_e( 'Real Results.', 'iweb' ); ?></h2>
 					<p><?php esc_html_e( 'We\'ve helped startups, SMBs and enterprises improve visibility, traffic and conversions.', 'iweb' ); ?></p>
-					<a class="btn btn--primary" href="<?php echo esc_url( home_url( '/work/' ) ); ?>"><?php esc_html_e( 'View Our Work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+					<a class="btn btn--primary" href="<?php echo esc_url( home_url( '/our-work/' ) ); ?>"><?php esc_html_e( 'View Our Work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
 				<div class="visual-placeholder" aria-hidden="true"><?php echo iweb_icon( 'image' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 			</div>

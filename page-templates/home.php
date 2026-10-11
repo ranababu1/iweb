@@ -54,7 +54,7 @@ $iweb_services = array(
 		'icon'  => 'gear',
 		'title' => __( 'Automate the busywork', 'iweb' ),
 		'blurb' => __( 'AI that saves your team hours.', 'iweb' ),
-		'url'   => home_url( '/services/automate-the-busywork/' ),
+		'url'   => home_url( '/services/automate-the-busy-work/' ),
 		'items' => array(
 			__( 'AI Chatbots', 'iweb' ),
 			__( 'Workflow Automation', 'iweb' ),
@@ -79,10 +79,10 @@ $iweb_services = array(
 );
 
 $iweb_trust = array(
-	array( 'clock', '15+', __( 'Years of Experience', 'iweb' ) ),
-	array( 'layers', '500+', __( 'Projects Delivered', 'iweb' ) ),
-	array( 'globe', __( 'Global', 'iweb' ), __( 'Client Base', 'iweb' ) ),
-	array( 'layers', __( 'End-to-End', 'iweb' ), __( 'Digital Solutions', 'iweb' ) ),
+	array( 'layers', __( 'WordPress', 'iweb' ), __( 'Fast, custom builds', 'iweb' ) ),
+	array( 'globe', __( 'SEO, AEO, GEO', 'iweb' ), __( 'Google and AI search', 'iweb' ) ),
+	array( 'clock', __( 'Automation', 'iweb' ), __( 'Less manual work', 'iweb' ) ),
+	array( 'layers', __( 'Reporting', 'iweb' ), __( 'GA4 and clear dashboards', 'iweb' ) ),
 );
 
 $iweb_steps = array(
@@ -92,12 +92,8 @@ $iweb_steps = array(
 	array( 'purple', 'chart', __( 'Grow', 'iweb' ), __( 'We support, optimize and help you scale.', 'iweb' ) ),
 );
 
-$iweb_numbers = array(
-	array( '15+', __( 'Years in Business', 'iweb' ) ),
-	array( '500+', __( 'Projects Delivered', 'iweb' ) ),
-	array( '200+', __( 'Happy Clients', 'iweb' ) ),
-	array( '95%', __( 'Client Retention', 'iweb' ) ),
-);
+// Real numbers only. Left empty until confirmed, so the strip is hidden.
+$iweb_numbers = array();
 
 get_header();
 ?>
@@ -186,10 +182,10 @@ get_header();
 			<div class="custom-dev tone-blue">
 				<span class="icon-tile"><?php echo iweb_icon( 'code' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></span>
 				<div>
-					<h3><?php esc_html_e( 'Custom development', 'iweb' ); ?> <span class="custom-dev__tech"><?php esc_html_e( '(.NET, Java, APIs)', 'iweb' ); ?></span></h3>
+					<h3><?php esc_html_e( 'Custom development', 'iweb' ); ?> <span class="custom-dev__tech"><?php esc_html_e( '(.NET, APIs)', 'iweb' ); ?></span></h3>
 					<p><?php esc_html_e( 'Build custom software and integrations for your unique business needs.', 'iweb' ); ?></p>
 				</div>
-				<a class="link-arrow" href="<?php echo esc_url( home_url( '/services/custom-development/' ) ); ?>"><?php esc_html_e( 'Learn More', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+				<a class="link-arrow" href="<?php echo esc_url( home_url( '/services/#custom-development' ) ); ?>"><?php esc_html_e( 'Learn More', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 			</div>
 		</div>
 	</section>
@@ -202,7 +198,7 @@ get_header();
 					<p class="eyebrow"><?php esc_html_e( 'Featured work', 'iweb' ); ?></p>
 					<h2 class="section-title"><?php esc_html_e( 'Real Projects.', 'iweb' ); ?><br><?php esc_html_e( 'Real Results.', 'iweb' ); ?></h2>
 					<p class="featured-work__lead"><?php esc_html_e( 'We help businesses turn ideas into digital products that drive measurable growth.', 'iweb' ); ?></p>
-					<a class="btn btn--light" href="<?php echo esc_url( home_url( '/work/' ) ); ?>"><?php esc_html_e( 'View Our Work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+					<a class="btn btn--light" href="<?php echo esc_url( home_url( '/our-work/' ) ); ?>"><?php esc_html_e( 'View Our Work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
 				<div class="featured-work__visual visual-placeholder" aria-hidden="true"><?php echo iweb_icon( 'image' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 			</div>
@@ -217,7 +213,7 @@ get_header();
 					<p class="eyebrow"><?php esc_html_e( 'How we work', 'iweb' ); ?></p>
 					<h2 class="section-title"><?php esc_html_e( 'A Simple Process.', 'iweb' ); ?><br><?php esc_html_e( 'Real Partnership.', 'iweb' ); ?></h2>
 					<p><?php esc_html_e( 'We keep things clear, collaborative and focused on results. From strategy to support, you\'ll always know what\'s happening.', 'iweb' ); ?></p>
-					<a class="btn btn--primary" href="<?php echo esc_url( home_url( '/#process' ) ); ?>"><?php esc_html_e( 'See how we work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+					<a class="btn btn--primary" href="<?php echo esc_url( home_url( '/how-we-work/' ) ); ?>"><?php esc_html_e( 'See how we work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
 				<ol class="process-steps">
 					<?php foreach ( $iweb_steps as $iweb_i => $iweb_step ) : ?>
@@ -231,11 +227,13 @@ get_header();
 				</ol>
 			</div>
 
+			<?php if ( ! empty( $iweb_numbers ) ) : ?>
 			<ul class="numbers">
 				<?php foreach ( $iweb_numbers as $iweb_n ) : ?>
 					<li><strong><?php echo esc_html( $iweb_n[0] ); ?></strong> <span><?php echo esc_html( $iweb_n[1] ); ?></span></li>
 				<?php endforeach; ?>
 			</ul>
+			<?php endif; ?>
 		</div>
 	</section>
 

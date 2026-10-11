@@ -90,7 +90,7 @@ get_header();
 					<p class="eyebrow"><?php esc_html_e( 'Featured work', 'iweb' ); ?></p>
 					<h2 class="section-title"><?php esc_html_e( 'Selected Projects', 'iweb' ); ?></h2>
 				</div>
-				<p><?php esc_html_e( 'A quick look at some of our recent work. Each project is unique, but the goal is always the same — help our clients grow.', 'iweb' ); ?></p>
+				<p><?php esc_html_e( 'A quick look at some of our recent work. Each project is unique, but the goal is always the same, help our clients grow.', 'iweb' ); ?></p>
 			</div>
 
 			<?php if ( $iweb_projects ) : ?>

@@ -41,7 +41,7 @@ $iweb_cards = array(
 		'text'  => __( 'Save your team hours with practical AI automation and integrations.', 'iweb' ),
 		'items' => array( __( 'AI chatbots', 'iweb' ), __( 'Workflow automation', 'iweb' ), __( 'AI integrations', 'iweb' ), __( 'Internal tools', 'iweb' ) ),
 		'cta'   => __( 'Explore automate the busywork', 'iweb' ),
-		'url'   => home_url( '/services/automate-the-busywork/' ),
+		'url'   => home_url( '/services/automate-the-busy-work/' ),
 	),
 	array(
 		'tone'  => 'orange',
@@ -56,7 +56,7 @@ $iweb_cards = array(
 );
 
 $iweb_custom_items = array(
-	__( '.NET and Java development', 'iweb' ),
+	__( '.NET development', 'iweb' ),
 	__( 'API development & integrations', 'iweb' ),
 	__( 'Database design', 'iweb' ),
 	__( 'Cloud deployment', 'iweb' ),
@@ -113,7 +113,7 @@ get_header();
 			<div class="section-head section-head--split">
 				<div>
 					<p class="eyebrow"><?php esc_html_e( 'Our core services', 'iweb' ); ?></p>
-					<h2 class="section-title"><?php esc_html_e( 'Four ways we help you grow.', 'iweb' ); ?></h2>
+					<h2 class="section-title"><?php esc_html_e( 'Four ways we help you grow, plus custom builds.', 'iweb' ); ?></h2>
 				</div>
 				<p><?php esc_html_e( 'Choose the area you want to focus on, or talk to us for a recommendation based on your goals.', 'iweb' ); ?></p>
 			</div>
@@ -137,11 +137,11 @@ get_header();
 				<?php endforeach; ?>
 			</div>
 
-			<div class="custom-bar">
+			<div class="custom-bar" id="custom-development">
 				<span class="core-card__icon core-card__icon--dark"><?php echo iweb_icon( 'code' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></span>
 				<div class="custom-bar__copy">
 					<h3><?php esc_html_e( 'Custom development', 'iweb' ); ?></h3>
-					<p class="custom-bar__sub"><?php esc_html_e( '.NET, Java, APIs and integrations.', 'iweb' ); ?></p>
+					<p class="custom-bar__sub"><?php esc_html_e( '.NET, APIs and integrations.', 'iweb' ); ?></p>
 					<p><?php esc_html_e( 'When off-the-shelf solutions are not enough, we build custom web applications, APIs and integrations to fit your business.', 'iweb' ); ?></p>
 				</div>
 				<ul class="custom-bar__list">
@@ -149,7 +149,7 @@ get_header();
 						<li><?php echo iweb_icon( 'chevron' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php echo esc_html( $iweb_item ); ?></li>
 					<?php endforeach; ?>
 				</ul>
-				<a class="core-card__cta" href="<?php echo esc_url( home_url( '/services/custom-development/' ) ); ?>"><?php esc_html_e( 'Explore custom development', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+				<a class="core-card__cta" href="<?php echo esc_url( home_url( '/services/#custom-development' ) ); ?>"><?php esc_html_e( 'Explore custom development', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 			</div>
 		</div>
 	</section>

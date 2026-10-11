@@ -36,7 +36,7 @@ $iweb_groups = array(
 			array( 'new-website-and-seo', __( 'Can you help with both a new website and SEO?', 'iweb' ), __( 'Yes. Building the site with SEO in mind from the start is usually faster and cheaper than fixing it later.', 'iweb' ) ),
 			array( 'ai-automation', __( 'Do you offer AI automation services?', 'iweb' ), __( 'Yes. We build AI chatbots, workflow automations and integrations that remove repetitive manual work.', 'iweb' ) ),
 			array( 'existing-website', __( 'Can you work with our existing website or platform?', 'iweb' ), __( 'Absolutely. We can audit, optimize or extend your existing website or application.', 'iweb' ) ),
-			array( 'custom-web-applications', __( 'Do you build custom web applications?', 'iweb' ), __( 'Yes. We build custom applications, APIs and integrations on .NET, Java and other stacks when off-the-shelf tools aren\'t enough.', 'iweb' ) ),
+			array( 'custom-web-applications', __( 'Do you build custom web applications?', 'iweb' ), __( 'Yes. We build custom applications, APIs and integrations on .NET and other stacks when off-the-shelf tools aren\'t enough.', 'iweb' ) ),
 			array( 'seo-writing', __( 'Do you offer SEO and content writing?', 'iweb' ), __( 'Yes. We plan and produce SEO-friendly content as part of our Get found service.', 'iweb' ) ),
 			array( 'integrate-tools', __( 'Can you integrate with our existing tools?', 'iweb' ), __( 'Usually, yes. If a tool offers an API or a connector, we can integrate it. Tell us what you use and we\'ll confirm.', 'iweb' ) ),
 			array( 'analytics-tracking', __( 'Do you set up analytics and tracking?', 'iweb' ), __( 'Yes. We set up GA4, Tag Manager, conversion tracking and dashboards so you can see what\'s working.', 'iweb' ) ),
@@ -72,7 +72,7 @@ $iweb_groups = array(
 		'title' => __( 'Technology', 'iweb' ),
 		'blurb' => __( 'The tools and platforms we use.', 'iweb' ),
 		'items' => array(
-			array( 'which-platforms', __( 'Which platforms do you work with?', 'iweb' ), __( 'We specialize in WordPress and WooCommerce, and also build on .NET, Java, PHP, Node.js and Python.', 'iweb' ) ),
+			array( 'which-platforms', __( 'Which platforms do you work with?', 'iweb' ), __( 'We specialize in WordPress and WooCommerce, and also build on .NET, PHP, Node.js and Python.', 'iweb' ) ),
 			array( 'custom-theme', __( 'Do you build custom themes and plugins?', 'iweb' ), __( 'Yes. We build custom WordPress themes and plugins when they\'re the better fit.', 'iweb' ) ),
 			array( 'hosting', __( 'Can you help with hosting and deployment?', 'iweb' ), __( 'Yes. We can advise on hosting, set up deployment and take care of performance and security.', 'iweb' ) ),
 			array( 'integrate-existing-tools', __( 'Can you integrate with our existing tools?', 'iweb' ), __( 'Usually, yes. If a tool has an API or a connector, we can integrate it.', 'iweb' ) ),
@@ -142,7 +142,7 @@ get_header();
 				</nav>
 				<p class="eyebrow"><?php esc_html_e( 'FAQ / Knowledge hub', 'iweb' ); ?></p>
 				<h1 class="faq-hero__title"><?php esc_html_e( 'Your questions,', 'iweb' ); ?> <span class="accent"><?php esc_html_e( 'answered.', 'iweb' ); ?></span></h1>
-				<p class="faq-hero__lead"><?php esc_html_e( 'Find clear answers about our services, process, pricing, technology and support. If you don\'t see your question here, feel free to reach out — we\'re happy to help.', 'iweb' ); ?></p>
+				<p class="faq-hero__lead"><?php esc_html_e( 'Find clear answers about our services, process, pricing, technology and support. If you don\'t see your question here, feel free to reach out, we\'re happy to help.', 'iweb' ); ?></p>
 			</div>
 			<div class="faq-hero__visual" aria-hidden="true"><span><?php esc_html_e( 'Questions', 'iweb' ); ?></span><span><?php esc_html_e( 'Ideas', 'iweb' ); ?></span><span><?php esc_html_e( 'Answers', 'iweb' ); ?></span></div>
 		</div>

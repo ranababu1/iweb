@@ -155,7 +155,7 @@ get_header();
 					<p class="eyebrow"><?php esc_html_e( 'Real examples', 'iweb' ); ?></p>
 					<h2 class="section-title"><?php esc_html_e( 'From Manual Work for Automated Growth', 'iweb' ); ?></h2>
 					<p><?php esc_html_e( 'We help businesses automate real workflows like lead handling, content creation, reporting and customer support.', 'iweb' ); ?></p>
-					<a class="btn btn--light" href="<?php echo esc_url( home_url( '/work/' ) ); ?>"><?php esc_html_e( 'View Our Work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+					<a class="btn btn--light" href="<?php echo esc_url( home_url( '/our-work/' ) ); ?>"><?php esc_html_e( 'View Our Work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
 				<ul class="results-list">
 					<li><?php echo iweb_icon( 'check' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Leads captured automatically', 'iweb' ); ?></li>
@@ -192,7 +192,9 @@ get_header();
 				<p class="eyebrow"><?php esc_html_e( 'Frequently asked questions', 'iweb' ); ?></p>
 				<h2 class="section-title"><?php esc_html_e( 'Your Questions, Answered.', 'iweb' ); ?></h2>
 				<p><?php esc_html_e( 'Quick answers to common questions about our AI and automation services.', 'iweb' ); ?></p>
+				<?php if ( get_page_by_path( 'faq' ) ) : ?>
 				<a class="link-arrow" href="<?php echo esc_url( home_url( '/faq/' ) ); ?>"><?php esc_html_e( 'View All FAQs', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+				<?php endif; ?>
 			</div>
 			<div class="faq__list" data-faq>
 				<?php foreach ( $iweb_faqs as $iweb_faq ) : ?>
