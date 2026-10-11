@@ -638,3 +638,8 @@ details[open] { border-color: var(--iws-ink) !important; }
 	.footer-cols { gap: 2.25rem 1.5rem; }
 	.footer-bar { flex-direction: column; align-items: flex-start; }
 }
+@media (min-width: 64rem) {
+	.footer-cta { grid-template-columns: 1.5fr 1fr; padding: 3.5rem 4rem; }
+	.footer-cta__title { font-size: clamp(2.6rem, 4vw, 3.6rem); white-space: nowrap; }
+}
+.footer-social svg { width: 1.35rem; height: 1.35rem; stroke-width: 2; }
