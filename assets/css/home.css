@@ -369,3 +369,19 @@
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 }
+
+/* Compact hero layout */
+.site-main > section.home-hero { padding-block: clamp(1.25rem, 2.5vw, 2rem) clamp(2.5rem, 5vw, 3.5rem) !important; }
+.home-hero .home-hero__inner { padding-block: 0 !important; }
+.home-hero h1.home-hero__title { font-size: clamp(2.5rem, 3.6vw, 3.5rem) !important; line-height: 1 !important; letter-spacing: -0.035em !important; margin-block-end: 1.25rem; }
+.home-hero .home-hero__lead { margin-block-end: 1.5rem; }
+@media (min-width: 64rem) {
+	.home-hero .home-hero__inner { grid-template-columns: minmax(0, 52fr) minmax(0, 48fr) !important; gap: 2.5rem !important; align-items: stretch !important; }
+	.home-hero h1.home-hero__title { white-space: nowrap; }
+	.home-hero .home-hero__visual { position: relative; padding: 0 !important; min-height: 0 !important; }
+	.home-hero .home-hero__visual .ui-mock { position: absolute; inset: 0; overflow: hidden; align-content: start; }
+	.home-hero .talk-disc { left: -1.75rem; bottom: -1.25rem; width: 6.5rem; height: 6.5rem; font-size: 0.8rem; }
+}
+@media (max-width: 63.99rem) {
+	.home-hero .home-hero__visual { padding: 0 !important; min-height: 0 !important; }
+}
