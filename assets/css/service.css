@@ -769,3 +769,5 @@
 .svc-hero__note { margin-top: 1.25rem; }
 .svc-flow__steps { gap: 0.9rem; }
 .svc-step { padding: 0.75rem 0.85rem; }
+.page-id-38068 .simple-body > .simple-cta:first-child { display: none; }
+.page-id-38068 .simple-body { padding-top: 0 !important; }
