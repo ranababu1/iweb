@@ -759,3 +759,13 @@
 	.svc-btn { width: 100%; justify-content: space-between; }
 	.svc-btn--outline { justify-content: center; }
 }
+
+/* Service hero: breathing space */
+.svc-hero { padding-block: clamp(2rem, 4.5vw, 4rem) clamp(3rem, 6vw, 5rem) !important; }
+.svc-hero__crumbs { margin-bottom: 2rem; }
+.svc-hero__eyebrow { margin-bottom: 1.5rem; }
+.svc-hero h1.svc-hero__title { line-height: 1.05 !important; margin-bottom: 1.75rem; }
+.svc-hero__lead { margin-bottom: 2.25rem; line-height: 1.6; }
+.svc-hero__note { margin-top: 1.25rem; }
+.svc-flow__steps { gap: 0.9rem; }
+.svc-step { padding: 0.75rem 0.85rem; }
