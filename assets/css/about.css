@@ -1,0 +1,289 @@
+/**
+ * About page styles. Loaded only on pages using the "About" template
+ * (see inc/enqueue.php). Shared components live in style.css.
+ */
+
+/* Hero */
+.about-hero__inner {
+	display: grid;
+	gap: 2rem;
+	padding-block: clamp(2rem, 5vw, 3.5rem);
+}
+
+.about-hero__title {
+	margin-block-end: 1.25rem;
+	font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+	font-weight: 800;
+	line-height: 1.05;
+	letter-spacing: -0.035em;
+}
+
+.about-hero__lead {
+	max-width: 32rem;
+	margin-block-end: 1.75rem;
+}
+
+.about-hero .btn--light {
+	background-color: #a3e635;
+}
+
+.about-hero__visual {
+	display: grid;
+	gap: 1rem;
+}
+
+.about-hero__photo img,
+.about-hero__photo .visual-placeholder {
+	width: 100%;
+	min-height: 18rem;
+	border-radius: var(--radius-lg);
+	object-fit: cover;
+}
+
+.about-facts {
+	display: grid;
+	gap: 1rem;
+	margin: 0;
+	padding: 1.25rem 1.5rem;
+	list-style: none;
+	border-radius: var(--radius-md);
+	background: var(--color-surface);
+	box-shadow: var(--shadow-card);
+	font-size: 0.85rem;
+}
+
+.about-facts li {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.about-facts .icon {
+	flex: none;
+	width: 1.75rem;
+	height: 1.75rem;
+	color: var(--color-heading);
+}
+
+.about-facts strong {
+	font-size: 1.25rem;
+}
+
+@media (min-width: 56rem) {
+
+	.about-hero__visual {
+		grid-template-columns: 1.3fr 1fr;
+		align-items: end;
+	}
+}
+
+/* Story */
+.about-story__inner {
+	display: grid;
+	gap: 2rem;
+	align-items: center;
+}
+
+.about-story__inner p:not(.eyebrow) {
+	margin-block-start: 1rem;
+	color: var(--color-muted);
+	font-size: 0.95rem;
+}
+
+.about-story__inner .section-title {
+	margin-block-end: 1.25rem;
+}
+
+.about-story__visual {
+	min-height: 18rem;
+}
+
+@media (min-width: 56rem) {
+
+	.about-story__inner {
+		grid-template-columns: 1fr 1.1fr;
+	}
+}
+
+/* Values */
+.about-values {
+	display: grid;
+	gap: 1.5rem;
+	padding: clamp(1.5rem, 3vw, 2rem);
+	border-radius: var(--radius-lg);
+	background-color: #eef6e8;
+}
+
+.about-badge {
+	display: inline-grid;
+	place-items: center;
+	width: 3rem;
+	height: 3rem;
+	margin-block-end: 0.75rem;
+	border-radius: 50%;
+	background-color: #7ed957;
+	color: var(--color-dark);
+}
+
+.about-badge .icon {
+	width: 1.4rem;
+	height: 1.4rem;
+}
+
+.about-value h3 {
+	margin-block-end: 0.4rem;
+	font-size: 1.05rem;
+	font-weight: 700;
+}
+
+.about-value p {
+	color: var(--color-muted);
+	font-size: 0.85rem;
+}
+
+@media (min-width: 40rem) {
+
+	.about-values {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 64rem) {
+
+	.about-values {
+		grid-template-columns: 0.9fr repeat(4, 1fr);
+		gap: 0;
+	}
+
+	.about-value {
+		padding-inline: 1.25rem;
+		border-inline-start: 1px solid rgba(15, 26, 20, 0.1);
+	}
+}
+
+/* Skills */
+.skills {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1.5rem 1rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+.skills li {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.4rem;
+	font-size: 0.8rem;
+}
+
+.skills .icon {
+	width: 2rem;
+	height: 2rem;
+}
+
+.skills strong {
+	font-size: 0.85rem;
+}
+
+.skills span {
+	color: var(--color-muted);
+}
+
+@media (min-width: 40rem) {
+
+	.skills {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 64rem) {
+
+	.skills {
+		grid-template-columns: repeat(6, minmax(0, 1fr));
+		gap: 0;
+	}
+
+	.skills li {
+		padding-inline: 0.75rem;
+	}
+
+	.skills li + li {
+		border-inline-start: 1px solid var(--color-border);
+	}
+}
+
+/* Why choose us */
+.reasons {
+	display: grid;
+	gap: 1rem;
+}
+
+.reason {
+	display: flex;
+	gap: 1rem;
+	padding: 1.25rem;
+	border-radius: var(--radius-md);
+	background-color: #f3f1ea;
+}
+
+.reason__icon {
+	flex: none;
+	color: var(--color-brand);
+}
+
+.reason__icon .icon {
+	width: 1.75rem;
+	height: 1.75rem;
+}
+
+.reason h3 {
+	margin-block-end: 0.3rem;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.reason p {
+	color: var(--color-muted);
+	font-size: 0.85rem;
+}
+
+@media (min-width: 40rem) {
+
+	.reasons {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 64rem) {
+
+	.reasons {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+}
+
+/* Closing CTA */
+.about-cta {
+	padding-block: 2.25rem;
+}
+
+.about-cta__inner {
+	display: grid;
+	gap: 1.25rem;
+	align-items: center;
+}
+
+.about-cta h2 {
+	font-size: clamp(1.6rem, 3.5vw, 2.25rem);
+	font-weight: 800;
+}
+
+@media (min-width: 56rem) {
+
+	.about-cta__inner {
+		grid-template-columns: 1fr auto;
+	}
+}
