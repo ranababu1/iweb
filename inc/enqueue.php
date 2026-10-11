@@ -124,6 +124,10 @@ function iweb_conditional_stylesheets() {
 				'file'       => 'assets/css/home.css',
 				'script'     => 'assets/js/home.js',
 			),
+			'iweb-our-work' => array(
+				'conditional' => 'iweb_is_our_work_view',
+				'file'       => 'assets/css/our-work.css',
+			),
 			'iweb-how-we-work' => array(
 				'conditional' => 'iweb_is_how_we_work_view',
 				'file'       => 'assets/css/how-we-work.css',
@@ -164,6 +168,17 @@ function iweb_is_blog_view() {
  */
 function iweb_is_home_view() {
 	return is_page_template( 'page-templates/home.php' );
+}
+
+/**
+ * Check whether the current view uses the Our work template.
+ *
+ * @since 1.7.0
+ *
+ * @return bool True on pages using the Our work template.
+ */
+function iweb_is_our_work_view() {
+	return is_page_template( 'page-templates/our-work.php' );
 }
 
 /**
