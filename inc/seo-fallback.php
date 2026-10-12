@@ -38,7 +38,7 @@ function iweb_seo_fallback_meta() {
 		'terms'                         => array( 'Terms of Service | IWS', 'The terms that apply when you use the IWS website or work with us on a project.' ),
 		'cookie-settings'               => array( 'Cookie Policy and Settings | IWS', 'How IWS uses cookies, what each type does and how to change your choices.' ),
 		'website-cost-guide'            => array( 'Website Cost Guide: What Drives the Price | IWS', 'What affects the cost of a website: pages, design, features, content, integrations and ongoing care. Plain explanations to help you plan.' ),
-		'seo-glossary'                  => array( 'SEO Glossary: Plain-English SEO, AEO and GEO Terms | IWS', 'Short, plain definitions of common SEO, AEO, GEO and analytics terms, from canonical tags to Core Web Vitals.' ),
+		'glossary'                      => array( 'Glossary: Plain-English Web, Search, AI and Analytics Terms | IWS', 'Short, plain definitions of common terms in SEO, web development, CMS, automation, analytics, AI, site speed, ecommerce and CRO.' ),
 		'book-a-call'                   => array( 'Book a Free Audit Call | IWS', 'Online booking is coming soon. Tell us about your project and we will reply with a time for a free audit call.' ),
 		'faq'                           => array( 'FAQs | IWS', 'Answers to common questions about our AI automation, search, website and analytics services, pricing, timelines and support.' ),
 	);
@@ -133,3 +133,39 @@ function iweb_yoast_site_name() {
 	return 'IWS';
 }
 add_filter( 'wpseo_opengraph_site_name', 'iweb_yoast_site_name' );
+
+/**
+ * Send the old glossary URL to the new one.
+ *
+ * @return void
+ */
+function iweb_glossary_redirect() {
+	$path = trim( (string) wp_parse_url( $_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH ), '/' );
+	if ( 'seo-glossary' === $path ) {
+		wp_safe_redirect( home_url( '/glossary/' ), 301 );
+		exit;
+	}
+}
+add_action( 'template_redirect', 'iweb_glossary_redirect', 1 );
+
+/**
+ * Yoast title and description for the glossary page.
+ *
+ * @param string $value Value from Yoast.
+ * @param int    $index 0 for title, 1 for description.
+ * @return string
+ */
+function iweb_glossary_yoast( $value, $index ) {
+	if ( is_page( 'glossary' ) ) {
+		$meta = array(
+			'Glossary: Plain-English Web, Search, AI and Analytics Terms | IWS',
+			'Short, plain definitions of common terms in SEO, web development, CMS, automation, analytics, AI, site speed, ecommerce and CRO.',
+		);
+		return $meta[ $index ];
+	}
+	return $value;
+}
+add_filter( 'wpseo_title', function ( $v ) { return iweb_glossary_yoast( $v, 0 ); }, 20 );
+add_filter( 'wpseo_opengraph_title', function ( $v ) { return iweb_glossary_yoast( $v, 0 ); }, 20 );
+add_filter( 'wpseo_metadesc', function ( $v ) { return iweb_glossary_yoast( $v, 1 ); }, 20 );
+add_filter( 'wpseo_opengraph_desc', function ( $v ) { return iweb_glossary_yoast( $v, 1 ); }, 20 );
