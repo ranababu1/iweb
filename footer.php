@@ -65,7 +65,7 @@
 						__( 'Start a project', 'iweb' ) => home_url( '/contact/' ),
 					),
 					__( 'Resources', 'iweb' ) => array(
-						__( 'SEO glossary', 'iweb' )       => home_url( '/seo-glossary/' ),
+						__( 'Glossary', 'iweb' )           => home_url( '/glossary/' ),
 						__( 'Website cost guide', 'iweb' ) => home_url( '/website-cost-guide/' ),
 						__( 'FAQs', 'iweb' )               => home_url( '/faq/' ),
 						__( 'Free audit call', 'iweb' )    => iweb_audit_url(),
