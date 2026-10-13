@@ -10,7 +10,7 @@
  * @since 1.11.0
  */
 
-$iweb_contact_url = home_url( '/contact/' );
+$iweb_contact_url = home_url( '/contact' );
 
 get_header();
 
@@ -65,7 +65,7 @@ while ( have_posts() ) :
 
 					<div class="single-byline">
 						<div class="post-card__meta">
-							<?php echo get_avatar( $iweb_author_id, 48, '', '', array( 'class' => 'avatar' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+							<?php echo get_avatar( $iweb_author_id, 48, '', get_the_author_meta( 'display_name', $iweb_author_id ), array( 'class' => 'avatar' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 							<span>
 								<strong><?php echo esc_html( sprintf( /* translators: %s: author name. */ __( 'By %s', 'iweb' ), get_the_author() ) ); ?></strong><br>
 								<?php echo esc_html( get_the_date() ); ?> · <?php echo esc_html( iweb_reading_time_label() ); ?>
@@ -134,7 +134,7 @@ while ( have_posts() ) :
 				<?php endif; ?>
 
 				<div class="author-box">
-					<?php echo get_avatar( $iweb_author_id, 72, '', '', array( 'class' => 'avatar' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+					<?php echo get_avatar( $iweb_author_id, 72, '', get_the_author_meta( 'display_name', $iweb_author_id ), array( 'class' => 'avatar' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 					<div>
 						<p class="author-box__label"><?php esc_html_e( 'About the author', 'iweb' ); ?></p>
 						<h2><?php the_author(); ?></h2>

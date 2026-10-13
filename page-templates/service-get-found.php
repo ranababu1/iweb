@@ -20,7 +20,7 @@
  */
 $iweb_show_case_studies = apply_filters( 'iweb_show_case_studies', false );
 
-$iweb_contact_url = home_url( '/contact/' );
+$iweb_contact_url = home_url( '/contact' );
 
 $iweb_benefits = array(
 	array( 'chart', __( 'Higher Visibility', 'iweb' ), __( 'on Google & AI', 'iweb' ) ),
@@ -116,7 +116,7 @@ get_header();
 						<div>
 							<h3><?php echo esc_html( $iweb_offer[2] ); ?></h3>
 							<p><?php echo esc_html( $iweb_offer[3] ); ?></p>
-							<a class="link-arrow" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Learn More', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+							<a class="link-arrow" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Learn More', 'iweb' ); ?><span class="screen-reader-text"> <?php echo esc_html( $iweb_offer[2] ); ?></span> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 						</div>
 					</article>
 				<?php endforeach; ?>
@@ -132,7 +132,7 @@ get_header();
 					<p class="eyebrow"><?php esc_html_e( 'Real results', 'iweb' ); ?></p>
 					<h2 class="section-title"><?php esc_html_e( 'Higher Rankings.', 'iweb' ); ?><br><?php esc_html_e( 'More Traffic. Real Growth.', 'iweb' ); ?></h2>
 					<p><?php esc_html_e( 'We help businesses achieve sustainable growth through a combination of SEO, content and technical optimization.', 'iweb' ); ?></p>
-					<a class="btn btn--light" href="<?php echo esc_url( home_url( '/our-work/' ) ); ?>"><?php esc_html_e( 'View Our Work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+					<a class="btn btn--light" href="<?php echo esc_url( home_url( '/our-work' ) ); ?>"><?php esc_html_e( 'View Our Work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
 				<ul class="results-list">
 					<li><?php echo iweb_icon( 'chart' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'More visibility', 'iweb' ); ?></li>
@@ -170,7 +170,7 @@ get_header();
 					<p class="eyebrow"><?php esc_html_e( 'Case studies', 'iweb' ); ?></p>
 					<h2 class="section-title"><?php esc_html_e( 'Real Businesses.', 'iweb' ); ?><br><?php esc_html_e( 'Real Results.', 'iweb' ); ?></h2>
 					<p><?php esc_html_e( 'We\'ve helped startups, SMBs and enterprises improve visibility, traffic and conversions.', 'iweb' ); ?></p>
-					<a class="btn btn--primary" href="<?php echo esc_url( home_url( '/our-work/' ) ); ?>"><?php esc_html_e( 'View Our Work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+					<a class="btn btn--primary" href="<?php echo esc_url( home_url( '/our-work' ) ); ?>"><?php esc_html_e( 'View Our Work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
 				<div class=" has-mock"><?php get_template_part( 'template-parts/ui-mock', null, array( 'variant' => 'seo' ) ); ?></div>
 			</div>

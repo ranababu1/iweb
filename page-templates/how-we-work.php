@@ -10,7 +10,7 @@
  * @since 1.6.0
  */
 
-$iweb_contact_url = home_url( '/contact/' );
+$iweb_contact_url = home_url( '/contact' );
 
 $iweb_principles = array(
 	array( 'shield', __( 'Outcome Focused', 'iweb' ), __( 'Every project starts with your business goals.', 'iweb' ) ),
@@ -145,7 +145,7 @@ get_header();
 					<h2 class="section-title"><?php esc_html_e( 'Modern Tools. Proven Stack.', 'iweb' ); ?></h2>
 					<p><?php esc_html_e( 'We use the right tools for the right job. Our tech stack is modern, flexible and scalable.', 'iweb' ); ?></p>
 				</div>
-				<a class="link-arrow" href="<?php echo esc_url( home_url( '/services/' ) ); ?>"><?php esc_html_e( 'See all services', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+				<a class="link-arrow" href="<?php echo esc_url( home_url( '/services' ) ); ?>"><?php esc_html_e( 'See all services', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 			</div>
 			<?php /* Swap these text tiles for official logos in assets/images when available. */ ?>
 			<ul class="tool-grid">

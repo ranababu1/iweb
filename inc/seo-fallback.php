@@ -24,17 +24,17 @@ function iweb_seo_plugin_active() {
  */
 function iweb_seo_fallback_meta() {
 	$map = array(
-		'home'                          => array( 'IWS | AI Solutions That Automate, Improve and Grow Your Business', 'IWS deploys AI to fix real business problems: automate repetitive work, improve customer service and grow search visibility, conversions and reporting. Book a free audit call.' ),
-		'services'                      => array( 'Services: AI Automation, Search, Conversion and Analytics | IWS', 'Four ways we help you grow: get found on Google and AI search, turn visitors into customers, automate the busywork and know what\'s working. Plus custom .NET builds.' ),
+		'home'                          => array( 'IWS | AI Solutions That Automate, Improve and Grow Your Business', 'IWS deploys AI to fix real business problems: automate repetitive work, improve customer service and grow search, conversions and reporting.' ),
+		'services'                      => array( 'Services: AI Automation, Search, Conversion and Analytics | IWS', 'How we help you grow: AI automation, better websites and CRO, analytics and tracking, search visibility, plus custom .NET builds.' ),
 		'get-found'                     => array( 'SEO, AEO and GEO Services: Get Found on Google and AI | IWS', 'Technical SEO, content, answer engine optimization and AI search visibility for growing businesses. Show up on Google, in AI answers and in paid search.' ),
 		'turn-visitors-into-customers'  => array( 'WordPress and WooCommerce Development, Speed and CRO | IWS', 'Fast WordPress and WooCommerce sites built to convert. Custom design, site speed optimization, UX and conversion rate optimization for growing businesses.' ),
 		'automate-the-busy-work'        => array( 'AI Chatbots, Workflow Automation and AI Integration | IWS', 'Practical AI for small and mid-size businesses. Website chatbots, workflow automation and AI integrations that cut repetitive work and respond to leads faster.' ),
 		'know-whats-working'            => array( 'GA4, Tag Manager and Conversion Tracking Setup | IWS', 'Accurate GA4, Google Tag Manager and conversion tracking, plus clear dashboards and reports. Know which pages, channels and campaigns bring in leads and sales.' ),
 		'contact'                       => array( 'Start a Project | IWS', 'Tell us about your website, SEO, AI automation or development project. We\'ll reply with next steps and a time for a free audit call.' ),
-		'about'                         => array( 'About Us | IWS', 'IWS helps businesses fix real problems with AI: automation, better customer experience, search visibility and custom development. Learn who we are and how we approach the work.' ),
+		'about'                         => array( 'About Us | IWS', 'IWS helps businesses fix real problems with AI: automation, better customer experience, search and custom development. See how we work.' ),
 		'how-we-work'                   => array( 'How We Work: Our Process from Plan to Launch | IWS', 'A clear, simple process: we plan, build, review and launch with you, then keep improving. See what to expect at each step of a project.' ),
 		'our-work'                      => array( 'Our Work | IWS', 'AI automation, search and website projects from IWS. See the kind of work we do and the problems we help businesses solve.' ),
-		'custom-development'            => array( 'Custom .NET and Java Development, APIs and Integrations | IWS', 'Custom application development in .NET and Java, API design and integration, and modernization of legacy systems. Built to be secure, maintainable and easy to extend.' ),
+		'custom-development'            => array( 'Custom .NET and Java Development, APIs and Integrations | IWS', 'Custom .NET and Java applications, API design and integration, and legacy system modernization. Built to be secure and easy to extend.' ),
 		'terms'                         => array( 'Terms of Service | IWS', 'The terms that apply when you use the IWS website or work with us on a project.' ),
 		'cookie-settings'               => array( 'Cookie Policy and Settings | IWS', 'How IWS uses cookies, what each type does and how to change your choices.' ),
 		'website-cost-guide'            => array( 'Website Cost Guide: What Drives the Price | IWS', 'What affects the cost of a website: pages, design, features, content, integrations and ongoing care. Plain explanations to help you plan.' ),
@@ -142,7 +142,7 @@ add_filter( 'wpseo_opengraph_site_name', 'iweb_yoast_site_name' );
 function iweb_glossary_redirect() {
 	$path = trim( (string) wp_parse_url( $_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH ), '/' );
 	if ( 'seo-glossary' === $path ) {
-		wp_safe_redirect( home_url( '/glossary/' ), 301 );
+		wp_safe_redirect( home_url( '/glossary' ), 301 );
 		exit;
 	}
 }

@@ -18,7 +18,7 @@
  */
 $iweb_show_case_studies = apply_filters( 'iweb_show_case_studies', false );
 
-$iweb_contact_url = home_url( '/contact/' );
+$iweb_contact_url = home_url( '/contact' );
 
 $iweb_services = array(
 	array(
@@ -26,7 +26,7 @@ $iweb_services = array(
 		'icon'  => 'gear',
 		'title' => __( 'Automate the busywork', 'iweb' ),
 		'blurb' => __( 'AI agents and workflows that take repetitive work off your team.', 'iweb' ),
-		'url'   => home_url( '/services/automate-the-busy-work/' ),
+		'url'   => home_url( '/services/automate-the-busy-work' ),
 		'items' => array(
 			__( 'AI Chatbots', 'iweb' ),
 			__( 'Workflow Automation', 'iweb' ),
@@ -39,7 +39,7 @@ $iweb_services = array(
 		'icon'  => 'search',
 		'title' => __( 'Get found', 'iweb' ),
 		'blurb' => __( 'AI-aware SEO so customers find you on Google and in AI answers.', 'iweb' ),
-		'url'   => home_url( '/services/get-found/' ),
+		'url'   => home_url( '/services/get-found' ),
 		'items' => array(
 			__( 'SEO Services', 'iweb' ),
 			__( 'AEO / GEO (AI Search)', 'iweb' ),
@@ -53,7 +53,7 @@ $iweb_services = array(
 		'icon'  => 'cursor',
 		'title' => __( 'Turn visitors into customers', 'iweb' ),
 		'blurb' => __( 'Faster sites and smarter testing that turn more visits into leads.', 'iweb' ),
-		'url'   => home_url( '/services/turn-visitors-into-customers/' ),
+		'url'   => home_url( '/services/turn-visitors-into-customers' ),
 		'items' => array(
 			__( 'CMS Development', 'iweb' ),
 			__( 'Ecommerce', 'iweb' ),
@@ -67,7 +67,7 @@ $iweb_services = array(
 		'icon'  => 'chart',
 		'title' => __( 'Know what\'s working', 'iweb' ),
 		'blurb' => __( 'Clean tracking and AI-assisted reports that show what drives results.', 'iweb' ),
-		'url'   => home_url( '/services/know-whats-working/' ),
+		'url'   => home_url( '/services/know-whats-working' ),
 		'items' => array(
 			__( 'GA4 Setup & Reporting', 'iweb' ),
 			__( 'Tag Manager', 'iweb' ),
@@ -158,7 +158,7 @@ get_header();
 				</div>
 				<div>
 					<p><?php esc_html_e( 'Tell us the problem you want fixed. We pick the right mix of AI, automation, search and analytics to fix it, and keep the tech in the background.', 'iweb' ); ?></p>
-					<a class="link-arrow" href="<?php echo esc_url( home_url( '/services/' ) ); ?>"><?php esc_html_e( 'Explore All Services', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+					<a class="link-arrow" href="<?php echo esc_url( home_url( '/services' ) ); ?>"><?php esc_html_e( 'Explore All Services', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
 			</div>
 
@@ -173,7 +173,7 @@ get_header();
 								<li><?php echo esc_html( $iweb_li ); ?></li>
 							<?php endforeach; ?>
 						</ul>
-						<a class="link-arrow" href="<?php echo esc_url( $iweb_service['url'] ); ?>"><?php esc_html_e( 'Learn More', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+						<a class="link-arrow" href="<?php echo esc_url( $iweb_service['url'] ); ?>"><?php esc_html_e( 'Learn More', 'iweb' ); ?><span class="screen-reader-text"> <?php echo esc_html( $iweb_service['title'] ); ?></span> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 					</article>
 				<?php endforeach; ?>
 			</div>
@@ -184,7 +184,7 @@ get_header();
 					<h3><?php esc_html_e( 'Custom development', 'iweb' ); ?> <span class="custom-dev__tech"><?php esc_html_e( '(.NET, APIs)', 'iweb' ); ?></span></h3>
 					<p><?php esc_html_e( 'Build custom software and integrations for your unique business needs.', 'iweb' ); ?></p>
 				</div>
-				<a class="link-arrow" href="<?php echo esc_url( home_url( '/services/custom-development/' ) ); ?>"><?php esc_html_e( 'Learn More', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+				<a class="link-arrow" href="<?php echo esc_url( home_url( '/services/custom-development' ) ); ?>"><?php esc_html_e( 'Learn More', 'iweb' ); ?><span class="screen-reader-text"> <?php esc_html_e( 'about custom development', 'iweb' ); ?></span> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 			</div>
 		</div>
 	</section>
@@ -197,7 +197,7 @@ get_header();
 					<p class="eyebrow"><?php esc_html_e( 'Featured work', 'iweb' ); ?></p>
 					<h2 class="section-title"><?php esc_html_e( 'Real Projects.', 'iweb' ); ?><br class="home-hero__br"><?php esc_html_e( 'Real Results.', 'iweb' ); ?></h2>
 					<p class="featured-work__lead"><?php esc_html_e( 'We help businesses turn ideas into digital products that drive measurable growth.', 'iweb' ); ?></p>
-					<a class="btn btn--light" href="<?php echo esc_url( home_url( '/our-work/' ) ); ?>"><?php esc_html_e( 'View Our Work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+					<a class="btn btn--light" href="<?php echo esc_url( home_url( '/our-work' ) ); ?>"><?php esc_html_e( 'View Our Work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
 				<div class="featured-work__visual visual-placeholder" aria-hidden="true"><?php echo iweb_icon( 'image' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 			</div>
@@ -212,7 +212,7 @@ get_header();
 					<p class="eyebrow"><?php esc_html_e( 'How we work', 'iweb' ); ?></p>
 					<h2 class="section-title"><?php esc_html_e( 'A Simple Process.', 'iweb' ); ?><br class="home-hero__br"><?php esc_html_e( 'Real Partnership.', 'iweb' ); ?></h2>
 					<p><?php esc_html_e( 'We keep things clear, collaborative and focused on results. From strategy to support, you\'ll always know what\'s happening.', 'iweb' ); ?></p>
-					<a class="btn btn--primary" href="<?php echo esc_url( home_url( '/how-we-work/' ) ); ?>"><?php esc_html_e( 'See how we work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+					<a class="btn btn--primary" href="<?php echo esc_url( home_url( '/how-we-work' ) ); ?>"><?php esc_html_e( 'See how we work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
 				<ol class="process-steps">
 					<?php foreach ( $iweb_steps as $iweb_i => $iweb_step ) : ?>
@@ -271,7 +271,7 @@ get_header();
 						<h2 class="section-title"><?php esc_html_e( 'Practical ideas for using AI and growing online', 'iweb' ); ?></h2>
 						<p><?php esc_html_e( 'Plain guides on automation, search visibility, conversion and reporting.', 'iweb' ); ?></p>
 					</div>
-					<a class="link-arrow" href="<?php echo esc_url( home_url( '/blog/' ) ); ?>"><?php esc_html_e( 'View All Articles', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+					<a class="link-arrow" href="<?php echo esc_url( home_url( '/blog' ) ); ?>"><?php esc_html_e( 'View All Articles', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
 
 				<div class="insight-cards">

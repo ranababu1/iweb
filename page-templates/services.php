@@ -10,7 +10,7 @@
  * @since 1.4.0
  */
 
-$iweb_contact_url = home_url( '/contact/' );
+$iweb_contact_url = home_url( '/contact' );
 
 $iweb_cards = array(
 	array(
@@ -21,7 +21,7 @@ $iweb_cards = array(
 		'text'  => __( 'Show up on Google and in AI search. Drive the right traffic with technical SEO, content and paid campaigns.', 'iweb' ),
 		'items' => array( __( 'Technical SEO', 'iweb' ), __( 'Content & AEO / GEO', 'iweb' ), __( 'Paid ads (PPC)', 'iweb' ), __( 'Local SEO', 'iweb' ) ),
 		'cta'   => __( 'Explore Get found', 'iweb' ),
-		'url'   => home_url( '/services/get-found/' ),
+		'url'   => home_url( '/services/get-found' ),
 	),
 	array(
 		'tone'  => 'orange',
@@ -31,7 +31,7 @@ $iweb_cards = array(
 		'text'  => __( 'Fast, conversion-focused websites that turn traffic into leads and revenue.', 'iweb' ),
 		'items' => array( __( 'CMS development', 'iweb' ), __( 'Ecommerce', 'iweb' ), __( 'Site speed optimization', 'iweb' ), __( 'UX & CRO', 'iweb' ) ),
 		'cta'   => __( 'Explore turn visitors into customers', 'iweb' ),
-		'url'   => home_url( '/services/turn-visitors-into-customers/' ),
+		'url'   => home_url( '/services/turn-visitors-into-customers' ),
 	),
 	array(
 		'tone'  => 'green',
@@ -41,7 +41,7 @@ $iweb_cards = array(
 		'text'  => __( 'Save your team hours with practical AI automation and integrations.', 'iweb' ),
 		'items' => array( __( 'AI chatbots', 'iweb' ), __( 'Workflow automation', 'iweb' ), __( 'AI integrations', 'iweb' ), __( 'Internal tools', 'iweb' ) ),
 		'cta'   => __( 'Explore automate the busywork', 'iweb' ),
-		'url'   => home_url( '/services/automate-the-busy-work/' ),
+		'url'   => home_url( '/services/automate-the-busy-work' ),
 	),
 	array(
 		'tone'  => 'orange',
@@ -51,7 +51,7 @@ $iweb_cards = array(
 		'text'  => __( 'Get clear insights with reliable tracking, dashboards and reports.', 'iweb' ),
 		'items' => array( __( 'GA4 & Tag Manager', 'iweb' ), __( 'Conversion tracking', 'iweb' ), __( 'Dashboards & reporting', 'iweb' ), __( 'Data audits', 'iweb' ) ),
 		'cta'   => __( 'Explore analytics and tracking', 'iweb' ),
-		'url'   => home_url( '/services/know-whats-working/' ),
+		'url'   => home_url( '/services/know-whats-working' ),
 	),
 );
 
@@ -139,7 +139,7 @@ get_header();
 						<li><?php echo iweb_icon( 'chevron' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php echo esc_html( $iweb_item ); ?></li>
 					<?php endforeach; ?>
 				</ul>
-				<a class="core-card__cta" href="<?php echo esc_url( home_url( '/services/custom-development/' ) ); ?>"><?php esc_html_e( 'Explore custom development', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+				<a class="core-card__cta" href="<?php echo esc_url( home_url( '/services/custom-development' ) ); ?>"><?php esc_html_e( 'Explore custom development', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 			</div>
 		</div>
 	</section>

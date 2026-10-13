@@ -68,7 +68,7 @@ if ( ! function_exists( 'iweb_svc_icon' ) ) {
 		<div class="svc-hero__copy">
 			<nav class="svc-hero__crumbs" aria-label="<?php esc_attr_e( 'Breadcrumb', 'iweb' ); ?>">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'iweb' ); ?></a> <span aria-hidden="true">›</span>
-				<a href="<?php echo esc_url( home_url( '/services/' ) ); ?>"><?php esc_html_e( 'Services', 'iweb' ); ?></a> <span aria-hidden="true">›</span>
+				<a href="<?php echo esc_url( home_url( '/services' ) ); ?>"><?php esc_html_e( 'Services', 'iweb' ); ?></a> <span aria-hidden="true">›</span>
 				<span aria-current="page"><?php echo esc_html( $iweb_h['label'] ); ?></span>
 			</nav>
 			<p class="svc-hero__eyebrow"><?php echo esc_html( $iweb_h['label'] ); ?></p>
@@ -80,8 +80,8 @@ if ( ! function_exists( 'iweb_svc_icon' ) ) {
 			</h1>
 			<p class="svc-hero__lead"><?php echo esc_html( $iweb_h['lead'] ); ?></p>
 			<div class="svc-hero__ctas">
-				<a class="svc-btn svc-btn--lime" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <span class="svc-btn__dot"><?php echo iweb_svc_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></span></a>
-				<a class="svc-btn svc-btn--outline" href="<?php echo esc_url( home_url( '/book-a-call/' ) ); ?>"><?php echo iweb_svc_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
+				<a class="svc-btn svc-btn--lime" href="<?php echo esc_url( home_url( '/contact' ) ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <span class="svc-btn__dot"><?php echo iweb_svc_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></span></a>
+				<a class="svc-btn svc-btn--outline" href="<?php echo esc_url( home_url( '/book-a-call' ) ); ?>"><?php echo iweb_svc_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
 			</div>
 			<p class="svc-hero__note"><?php esc_html_e( 'No long contracts required to get started.', 'iweb' ); ?></p>
 		</div>

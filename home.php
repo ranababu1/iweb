@@ -9,7 +9,7 @@
  * @since 1.11.0
  */
 
-$iweb_contact_url = home_url( '/contact/' );
+$iweb_contact_url = home_url( '/contact' );
 $iweb_paged       = max( 1, (int) get_query_var( 'paged' ) );
 
 // Featured article: the newest sticky post, otherwise the newest post.
@@ -82,7 +82,7 @@ get_header();
 								<h2><a href="<?php echo esc_url( get_permalink( $iweb_featured ) ); ?>"><?php echo esc_html( get_the_title( $iweb_featured ) ); ?></a></h2>
 								<p><?php echo esc_html( wp_trim_words( get_the_excerpt( $iweb_featured ), 32, '…' ) ); ?></p>
 								<div class="post-card__meta">
-									<?php echo get_avatar( $iweb_featured->post_author, 40, '', '', array( 'class' => 'avatar' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+									<?php echo get_avatar( $iweb_featured->post_author, 40, '', get_the_author_meta( 'display_name', $iweb_featured->post_author ), array( 'class' => 'avatar' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 									<span>
 										<strong><?php echo esc_html( sprintf( /* translators: %s: author name. */ __( 'By %s', 'iweb' ), get_the_author_meta( 'display_name', $iweb_featured->post_author ) ) ); ?></strong><br>
 										<?php echo esc_html( get_the_date( '', $iweb_featured ) ); ?> · <?php echo esc_html( iweb_reading_time_label( $iweb_featured ) ); ?>

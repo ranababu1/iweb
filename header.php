@@ -75,7 +75,7 @@
 
 		<div class="iws-bar__end">
 			<span class="iws-divider" aria-hidden="true"></span>
-			<a class="iws-cta" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <span class="iws-cta__arrow"><?php echo iweb_icon( 'arrow' ); // phpcs:ignore ?></span></a>
+			<a class="iws-cta" href="<?php echo esc_url( home_url( '/contact' ) ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <span class="iws-cta__arrow"><?php echo iweb_icon( 'arrow' ); // phpcs:ignore ?></span></a>
 			<button type="button" class="iws-burger" aria-expanded="false" aria-controls="iws-drawer" aria-label="<?php esc_attr_e( 'Open menu', 'iweb' ); ?>"><span></span><span></span><span></span></button>
 		</div>
 	</div>
@@ -111,7 +111,7 @@
 			</ul>
 		</div>
 		<div class="iws-drawer__foot">
-			<a class="iws-cta iws-cta--block" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <span class="iws-cta__arrow"><?php echo iweb_icon( 'arrow' ); // phpcs:ignore ?></span></a>
+			<a class="iws-cta iws-cta--block" href="<?php echo esc_url( home_url( '/contact' ) ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <span class="iws-cta__arrow"><?php echo iweb_icon( 'arrow' ); // phpcs:ignore ?></span></a>
 		</div>
 	</div>
 	<div class="iws-scrim" hidden></div>
