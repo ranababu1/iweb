@@ -76,7 +76,7 @@ function iweb_contact_budgets() {
  */
 function iweb_contact_redirect( $status ) {
 	$back = wp_get_referer();
-	$back = $back ? $back : home_url( '/contact/' );
+	$back = $back ? $back : home_url( '/contact' );
 
 	wp_safe_redirect( add_query_arg( 'iweb_contact', $status, remove_query_arg( 'iweb_contact', $back ) ) . '#enquiry' );
 	exit;
@@ -195,5 +195,5 @@ add_action( 'admin_post_iweb_contact', 'iweb_handle_contact_form' );
  * @return string
  */
 function iweb_audit_url() {
-	return home_url( '/book-a-call/' );
+	return home_url( '/book-a-call' );
 }

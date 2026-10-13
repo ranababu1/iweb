@@ -253,11 +253,11 @@ function iweb_icon( $name ) {
  */
 function iweb_fallback_menu() {
 	$items = array(
-		__( 'Services', 'iweb' )     => home_url( '/services/' ),
-		__( 'How we work', 'iweb' )  => home_url( '/how-we-work/' ),
-		__( 'Work', 'iweb' )         => home_url( '/our-work/' ),
-		__( 'Insights', 'iweb' )     => home_url( '/blog/' ),
-		__( 'About', 'iweb' )        => home_url( '/about/' ),
+		__( 'Services', 'iweb' )     => home_url( '/services' ),
+		__( 'How we work', 'iweb' )  => home_url( '/how-we-work' ),
+		__( 'Work', 'iweb' )         => home_url( '/our-work' ),
+		__( 'Insights', 'iweb' )     => home_url( '/blog' ),
+		__( 'About', 'iweb' )        => home_url( '/about' ),
 	);
 
 	echo '<ul class="nav-menu">';

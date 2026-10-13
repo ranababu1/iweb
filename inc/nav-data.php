@@ -12,7 +12,7 @@
  */
 function iweb_nav_services() {
 	$hub = function ( $slug ) {
-		return home_url( '/services/' . $slug . '/' );
+		return home_url( '/services' . $slug . '/' );
 	};
 	return array(
 		array(
@@ -75,11 +75,11 @@ function iweb_nav_services() {
  */
 function iweb_nav_links() {
 	return array(
-		__( 'How we work', 'iweb' ) => home_url( '/how-we-work/' ),
-		__( 'Work', 'iweb' )        => home_url( '/our-work/' ),
-		__( 'Insights', 'iweb' )    => home_url( '/blog/' ),
-		__( 'About', 'iweb' )       => home_url( '/about/' ),
-		__( 'FAQs', 'iweb' )        => home_url( '/faq/' ),
+		__( 'How we work', 'iweb' ) => home_url( '/how-we-work' ),
+		__( 'Work', 'iweb' )        => home_url( '/our-work' ),
+		__( 'Insights', 'iweb' )    => home_url( '/blog' ),
+		__( 'About', 'iweb' )       => home_url( '/about' ),
+		__( 'FAQs', 'iweb' )        => home_url( '/faq' ),
 	);
 }
 
@@ -89,7 +89,7 @@ function iweb_nav_links() {
 function iweb_seo_alias_redirect() {
 	$path = trim( (string) wp_parse_url( $_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH ), '/' ); // phpcs:ignore
 	if ( 'services/seo' === $path ) {
-		wp_safe_redirect( home_url( '/services/get-found/' ), 301 );
+		wp_safe_redirect( home_url( '/services/get-found' ), 301 );
 		exit;
 	}
 }

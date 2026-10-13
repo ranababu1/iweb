@@ -11,7 +11,7 @@
  * @since 1.9.0
  */
 
-$iweb_contact_url = home_url( '/contact/' );
+$iweb_contact_url = home_url( '/contact' );
 
 $iweb_facts = array(
 	array( 'trophy', '14+', __( 'Years of experience', 'iweb' ) ),

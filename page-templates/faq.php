@@ -11,7 +11,7 @@
  * @since 1.12.0
  */
 
-$iweb_contact_url = home_url( '/contact/' );
+$iweb_contact_url = home_url( '/contact' );
 
 $iweb_groups = array(
 	'general'    => array(
@@ -93,10 +93,10 @@ $iweb_groups = array(
 );
 
 $iweb_quick = array(
-	array( 'doc', __( 'Website cost guide', 'iweb' ), __( 'Get an idea of typical costs and what influences the pricing.', 'iweb' ), home_url( '/website-cost-guide/' ) ),
-	array( 'clock', __( 'Project timeline', 'iweb' ), __( 'Learn about our typical project phases and timelines.', 'iweb' ), home_url( '/how-we-work/' ) ),
-	array( 'gear', __( 'Our process', 'iweb' ), __( 'Understand how we work from discovery to launch and beyond.', 'iweb' ), home_url( '/how-we-work/' ) ),
-	array( 'shield', __( 'Ongoing support', 'iweb' ), __( 'Details about maintenance, updates and support plans.', 'iweb' ), home_url( '/contact/' ) ),
+	array( 'doc', __( 'Website cost guide', 'iweb' ), __( 'Get an idea of typical costs and what influences the pricing.', 'iweb' ), home_url( '/website-cost-guide' ) ),
+	array( 'clock', __( 'Project timeline', 'iweb' ), __( 'Learn about our typical project phases and timelines.', 'iweb' ), home_url( '/how-we-work' ) ),
+	array( 'gear', __( 'Our process', 'iweb' ), __( 'Understand how we work from discovery to launch and beyond.', 'iweb' ), home_url( '/how-we-work' ) ),
+	array( 'shield', __( 'Ongoing support', 'iweb' ), __( 'Details about maintenance, updates and support plans.', 'iweb' ), home_url( '/contact' ) ),
 );
 
 $iweb_popular = array(

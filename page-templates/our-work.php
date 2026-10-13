@@ -13,7 +13,7 @@
  * @since 1.7.0
  */
 
-$iweb_contact_url = home_url( '/contact/' );
+$iweb_contact_url = home_url( '/contact' );
 
 /**
  * Projects to list. Each item is an array with keys: category, title,

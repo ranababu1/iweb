@@ -20,7 +20,7 @@
  */
 $iweb_show_case_studies = apply_filters( 'iweb_show_case_studies', false );
 
-$iweb_contact_url = home_url( '/contact/' );
+$iweb_contact_url = home_url( '/contact' );
 
 $iweb_benefits = array(
 	array( 'chart', __( 'Reliable Data', 'iweb' ), __( 'Accurate tracking you can trust.', 'iweb' ) ),
@@ -122,7 +122,7 @@ get_header();
 						<div>
 							<h3><?php echo esc_html( $iweb_offer[2] ); ?></h3>
 							<p><?php echo esc_html( $iweb_offer[3] ); ?></p>
-							<a class="link-arrow" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Learn More', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+							<a class="link-arrow" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Learn More', 'iweb' ); ?><span class="screen-reader-text"> <?php echo esc_html( $iweb_offer[2] ); ?></span> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 						</div>
 					</article>
 				<?php endforeach; ?>
@@ -138,7 +138,7 @@ get_header();
 					<p class="eyebrow"><?php esc_html_e( 'Turn data into growth', 'iweb' ); ?></p>
 					<h2 class="section-title"><?php esc_html_e( 'Real Insights.', 'iweb' ); ?><br><?php esc_html_e( 'Real Business Impact.', 'iweb' ); ?></h2>
 					<p><?php esc_html_e( 'We help businesses track the right metrics, understand their customers and make data-driven decisions that lead to more traffic, leads and revenue.', 'iweb' ); ?></p>
-					<a class="btn btn--light" href="<?php echo esc_url( home_url( '/our-work/' ) ); ?>"><?php esc_html_e( 'View Our Work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+					<a class="btn btn--light" href="<?php echo esc_url( home_url( '/our-work' ) ); ?>"><?php esc_html_e( 'View Our Work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
 				<?php /* Replace with real client figures before enabling. */ ?>
 				<ul class="results-list">
@@ -177,7 +177,7 @@ get_header();
 				<h2 class="section-title"><?php esc_html_e( 'Your Questions, Answered.', 'iweb' ); ?></h2>
 				<p><?php esc_html_e( 'Quick answers to common questions about analytics and tracking services.', 'iweb' ); ?></p>
 				<?php if ( get_page_by_path( 'faq' ) ) : ?>
-				<a class="link-arrow" href="<?php echo esc_url( home_url( '/faq/' ) ); ?>"><?php esc_html_e( 'View All FAQs', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+				<a class="link-arrow" href="<?php echo esc_url( home_url( '/faq' ) ); ?>"><?php esc_html_e( 'View All FAQs', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				<?php endif; ?>
 			</div>
 			<div class="faq__list" data-faq>

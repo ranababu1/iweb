@@ -10,7 +10,7 @@
  * @since 1.8.0
  */
 
-$iweb_contact_url = home_url( '/contact/' );
+$iweb_contact_url = home_url( '/contact' );
 
 get_header();
 
@@ -53,7 +53,7 @@ while ( have_posts() ) :
 			<div>
 				<nav class="breadcrumb" aria-label="<?php esc_attr_e( 'Breadcrumb', 'iweb' ); ?>">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'iweb' ); ?></a> ›
-					<a href="<?php echo esc_url( home_url( '/our-work/' ) ); ?>"><?php esc_html_e( 'Work', 'iweb' ); ?></a> ›
+					<a href="<?php echo esc_url( home_url( '/our-work' ) ); ?>"><?php esc_html_e( 'Work', 'iweb' ); ?></a> ›
 					<span aria-current="page"><?php the_title(); ?></span>
 				</nav>
 				<?php if ( iweb_cs_field( 'cs_category' ) ) : ?>
@@ -183,7 +183,7 @@ while ( have_posts() ) :
 		<section class="container cs-related">
 			<div class="cs-related__head">
 				<h2><?php esc_html_e( 'Related projects', 'iweb' ); ?></h2>
-				<a class="btn btn--outline btn--sm" href="<?php echo esc_url( home_url( '/our-work/' ) ); ?>"><?php esc_html_e( 'View all work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+				<a class="btn btn--outline btn--sm" href="<?php echo esc_url( home_url( '/our-work' ) ); ?>"><?php esc_html_e( 'View all work', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 			</div>
 			<div class="cs-related__list">
 				<?php
