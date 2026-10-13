@@ -67,7 +67,7 @@ function iweb_default_og_image( $container ) {
 	if ( is_object( $container ) && method_exists( $container, 'has_images' ) && ! $container->has_images() ) {
 		$container->add_image(
 			array(
-				'url'    => get_template_directory_uri() . '/assets/images/og-default.jpg',
+				'url'    => content_url( '/uploads/2026/10/iws-og-default.jpg' ),
 				'width'  => 1200,
 				'height' => 630,
 				'type'   => 'image/jpeg',
