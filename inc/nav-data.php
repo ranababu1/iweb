@@ -12,7 +12,7 @@
  */
 function iweb_nav_services() {
 	$hub = function ( $slug ) {
-		return home_url( '/services' . $slug . '/' );
+		return home_url( '/services/' . $slug );
 	};
 	return array(
 		array(
