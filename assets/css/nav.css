@@ -93,3 +93,8 @@ html.iws-lock, html.iws-lock body { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
 	.iws-drawer, .iws-scrim, .iws-mega { transition: none; }
 }
+.iws-drawer button.iws-m__cat { text-transform: none !important; letter-spacing: 0 !important; font: 500 1.02rem/1.2 var(--iws-sans) !important; background: transparent !important; border: 0 !important; box-shadow: none !important; color: var(--iws-ink) !important; }
+.iws-drawer button.iws-m__cat[aria-expanded="true"] { background: var(--iws-glow) !important; }
+.iws-drawer button.iws-m__row { text-transform: none !important; letter-spacing: -0.01em !important; background: transparent !important; border: 0 !important; box-shadow: none !important; color: var(--iws-ink) !important; border-radius: 0 !important; }
+.iws-drawer .iws-m__subs { padding: 0.15rem 0 0.5rem 2.75rem !important; }
+.iws-header button.iws-nav__trigger { text-transform: none !important; letter-spacing: 0 !important; }
