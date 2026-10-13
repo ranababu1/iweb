@@ -306,6 +306,7 @@ function iweb_asset_version( $file ) {
 function iweb_site_layer_assets() {
 	wp_enqueue_style( 'iweb-fonts', 'https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap', array(), null );
 	wp_enqueue_style( 'iweb-site', get_template_directory_uri() . '/assets/css/site.css', array(), iweb_asset_version( 'assets/css/site.css' ) );
+	wp_enqueue_style( 'iweb-nav', get_template_directory_uri() . '/assets/css/nav.css', array( 'iweb-site' ), iweb_asset_version( 'assets/css/nav.css' ) );
 	wp_enqueue_script( 'iweb-site', get_template_directory_uri() . '/assets/js/site.js', array(), iweb_asset_version( 'assets/js/site.js' ), array( 'in_footer' => true, 'strategy' => 'defer' ) );
 }
 add_action( 'wp_enqueue_scripts', 'iweb_site_layer_assets', 100 );

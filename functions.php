@@ -28,3 +28,4 @@ require_once get_template_directory() . '/inc/contact-form.php';
 
 require_once get_template_directory() . '/inc/blog.php';
 require_once get_template_directory() . '/inc/seo-fallback.php';
+require_once get_template_directory() . '/inc/nav-data.php';
