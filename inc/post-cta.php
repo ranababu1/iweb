@@ -35,7 +35,7 @@ add_action( 'init', 'iweb_register_cta_meta' );
  * @param int $post_id Post ID.
  * @return WP_Term|null
  */
-function iweb_primary_category( $post_id ) {
+function iweb_cta_primary_category( $post_id ) {
 	$primary = (int) get_post_meta( $post_id, '_yoast_wpseo_primary_category', true );
 	if ( $primary ) {
 		$term = get_term( $primary, 'category' );
@@ -117,7 +117,7 @@ function iweb_cta_defaults() {
  */
 function iweb_post_cta( $post_id ) {
 	$defaults = iweb_cta_defaults();
-	$cat      = iweb_primary_category( $post_id );
+	$cat      = iweb_cta_primary_category( $post_id );
 	$base     = ( $cat && isset( $defaults[ $cat->slug ] ) ) ? $defaults[ $cat->slug ] : $defaults['_default'];
 	$cta      = array();
 	foreach ( array( 'heading', 'line', 'link' ) as $f ) {
