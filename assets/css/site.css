@@ -267,12 +267,16 @@ a { color: var(--iws-ink); text-underline-offset: 0.18em; }
 /* Services as numbered rows with arrow circles (home + services overview). */
 .service-cards, .core-cards { display: block !important; counter-reset: iws-row; border-top: 1px solid var(--iws-line); }
 .service-card, .core-card {
+	--iws-row-title-size: clamp(1.5rem, 2.6vw, 2.25rem);
+	--iws-row-arrow: 3rem;
+	--iws-row-pad-y: 2rem;
+	--iws-row-num: 3.5rem;
 	position: relative;
 	display: grid !important;
-	grid-template-columns: 3.5rem minmax(0, 1fr);
+	grid-template-columns: var(--iws-row-num) minmax(0, 1fr) var(--iws-row-arrow);
 	column-gap: 1.5rem;
 	align-items: start;
-	padding: 2rem 4.5rem 2rem 0 !important;
+	padding: var(--iws-row-pad-y) 0 !important;
 	border: 0 !important;
 	border-bottom: 1px solid var(--iws-line) !important;
 	border-radius: 0 !important;
@@ -282,28 +286,99 @@ a { color: var(--iws-ink); text-underline-offset: 0.18em; }
 }
 .service-card::before, .core-card::before {
 	content: counter(iws-row, decimal-leading-zero);
-	grid-row: 1 / span 6;
+	grid-column: 1;
+	grid-row: 1;
+	align-self: start;
+	justify-self: start;
+	/* Sit on the first title line's vertical center (cap-height band). */
+	margin: calc((var(--iws-row-title-size) * 1.15 - 1.05rem) / 2) 0 0;
+	padding: 0;
 	font-family: var(--iws-display);
 	font-weight: 700;
-	font-size: 1.1rem;
+	font-size: 1.05rem;
+	line-height: 1;
 	color: var(--iws-muted);
-	padding-top: 0.35rem;
 }
 .service-card > *, .core-card > * { grid-column: 2; }
-.service-card .icon-tile, .core-card .core-card__icon, .core-card__top .core-card__icon { display: none !important; }
-.core-card__top { display: block !important; }
-.service-card h3, .core-card h3 { font-size: clamp(1.5rem, 2.6vw, 2.25rem) !important; margin: 0 0 0.4rem; }
-.service-card__list, .core-card__list { display: flex !important; flex-wrap: wrap; gap: 0.5rem; padding: 0 !important; margin: 0.75rem 0 0 !important; list-style: none; }
-.service-card__list li, .core-card__list li { padding: 0.3rem 0.85rem !important; border: 1px solid var(--iws-line); border-radius: 999px; font-size: 0.85rem; }
-.service-card__list li::before, .core-card__list li::before { display: none !important; }
+.service-card .icon-tile,
+.core-card .core-card__icon,
+.core-card__top,
+.core-card__top .core-card__icon { display: none !important; }
+.service-card h3, .core-card h3 {
+	grid-column: 2;
+	grid-row: 1;
+	align-self: center;
+	font-size: var(--iws-row-title-size) !important;
+	line-height: 1.15 !important;
+	margin: 0 !important;
+}
+.service-card__blurb,
+.core-card__sub,
+.core-card__text {
+	grid-column: 2 / -1 !important;
+	margin: 0.55rem 0 0 !important;
+}
+.core-card__sub { margin-bottom: 0 !important; color: var(--iws-muted); font-size: 0.9rem; font-weight: 600; }
+.service-card__blurb,
+.core-card__text {
+	padding: 0 0 1rem !important;
+	border-bottom: 1px solid var(--iws-line) !important;
+	color: var(--iws-muted);
+	font-size: 0.95rem;
+}
+.core-card__sub + .core-card__text { margin-top: 0.35rem !important; }
+.core-card__sub { border-bottom: 0 !important; padding-bottom: 0 !important; }
+.service-card__list, .core-card__list {
+	display: flex !important;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.5rem !important;
+	grid-column: 2 / -1 !important;
+	padding: 0 !important;
+	margin: 0.9rem 0 0 !important;
+	list-style: none !important;
+}
+.service-card__list li,
+.core-card__list li {
+	display: inline-flex !important;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	min-height: 2rem;
+	margin: 0 !important;
+	padding: 0.35rem 0.85rem !important;
+	border: 1px solid var(--iws-line) !important;
+	border-radius: 999px !important;
+	background: #fff;
+	color: var(--iws-ink);
+	font-size: 0.85rem;
+	font-weight: 500;
+	line-height: 1.2 !important;
+	vertical-align: middle;
+}
+.service-card__list li + li,
+.core-card__list li + li { margin: 0 !important; }
+.service-card__list li::before,
+.core-card__list li::before { display: none !important; content: none !important; }
+.service-card__list .icon,
+.core-card__list .icon { display: none !important; }
 .service-card .link-arrow, .core-card .core-card__cta {
-	position: absolute;
-	top: 2rem;
-	right: 0;
+	position: static !important;
+	grid-column: 3;
+	grid-row: 1;
+	align-self: center;
+	justify-self: end;
+	display: inline-flex !important;
 	font-size: 0;
 	gap: 0;
+	margin: 0 !important;
 }
-.service-card .link-arrow .icon, .core-card .core-card__cta .icon { width: 3rem; height: 3rem; padding: 0.8rem; font-size: 1rem; }
+.service-card .link-arrow .icon, .core-card .core-card__cta .icon {
+	width: var(--iws-row-arrow);
+	height: var(--iws-row-arrow);
+	padding: 0.8rem;
+	font-size: 1rem;
+}
 .service-card:hover, .core-card:hover { background: var(--iws-soft) !important; padding-inline-start: 1rem !important; }
 .service-card:hover .link-arrow .icon, .core-card:hover .core-card__cta .icon { background: var(--iws-lime); border-color: var(--iws-lime); transform: rotate(0); }
 .custom-dev, .custom-bar { margin-top: 2rem; padding: 1.75rem !important; background: var(--iws-ink) !important; border: 0 !important; color: #cfcfcf; }
@@ -572,8 +647,13 @@ details[open] { border-color: var(--iws-ink) !important; }
 	.ui-mock--stack .ui-frame--dash, .ui-mock--stack .ui-frame--code { grid-column: 1 / -1; }
 	.ui-mock--stack .ui-frame--code { display: none; }
 	.talk-disc { position: relative; left: auto; bottom: auto; margin: -2.5rem 0 0 auto; width: 6.5rem; height: 6.5rem; font-size: 0.8rem; }
-	.service-card, .core-card { grid-template-columns: 2.25rem minmax(0, 1fr); column-gap: 0.75rem; padding-right: 3.5rem !important; }
-	.service-card .link-arrow .icon, .core-card .core-card__cta .icon { width: 2.5rem; height: 2.5rem; padding: 0.65rem; }
+	.service-card, .core-card {
+		--iws-row-arrow: 2.5rem;
+		--iws-row-num: 2.25rem;
+		grid-template-columns: var(--iws-row-num) minmax(0, 1fr) var(--iws-row-arrow);
+		column-gap: 0.75rem;
+	}
+	.service-card .link-arrow .icon, .core-card .core-card__cta .icon { width: var(--iws-row-arrow); height: var(--iws-row-arrow); padding: 0.65rem; }
 	.service-cta, .cta-band { text-align: left; }
 }
 

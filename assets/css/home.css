@@ -143,8 +143,6 @@
 }
 
 .service-card__blurb {
-	padding-block-end: 1rem;
-	border-bottom: 1px solid rgba(15, 26, 20, 0.08);
 	color: var(--color-muted);
 	font-size: 0.85rem;
 }
@@ -158,7 +156,8 @@
 }
 
 .service-card__list li + li {
-	margin-block-start: 0.55rem;
+	/* Spacing handled by the flex gap in site.css numbered-row layout. */
+	margin-block-start: 0;
 }
 
 @media (min-width: 40rem) {
