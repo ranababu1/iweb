@@ -786,3 +786,58 @@ html, body { overflow-x: clip; }
 .blog-filters { margin-top: clamp(1.5rem, 3vw, 2rem); }
 .site-main > section.blog-hero { padding-bottom: clamp(1.5rem, 3vw, 2.5rem) !important; }
 .error-404 .page-header, .error404 .page-header { margin-top: clamp(2.5rem, 5vw, 4.5rem); }
+
+/* Service pages: process step cards. */
+.service-process-title + .process-steps {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.25rem;
+	align-items: stretch;
+	margin-block-start: 2rem;
+}
+.service-process-title + .process-steps .process-step {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.75rem;
+	height: 100%;
+	min-width: 0;
+	padding: 1.625rem;
+	box-sizing: border-box;
+	text-align: left;
+}
+.service-process-title + .process-steps .process-step__num { flex: none; margin-block-end: 0.5rem; }
+.service-process-title + .process-steps .process-step h3,
+.service-process-title + .process-steps .process-step p { margin: 0; overflow-wrap: anywhere; width: 100%; }
+@media (min-width: 40rem) {
+	.service-process-title + .process-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 64rem) {
+	.service-process-title + .process-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* Offer cards: subtle corner glow on hover. */
+.offer-card {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+	transition: border-color 0.3s ease;
+}
+.offer-card::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	pointer-events: none;
+	background:
+		radial-gradient(circle at 0 0, rgba(198, 255, 77, 0.22), transparent 55%),
+		radial-gradient(circle at 100% 100%, rgba(198, 255, 77, 0.22), transparent 55%);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+.offer-card:hover::before, .offer-card:focus-within::before { opacity: 1; }
+.offer-card:hover, .offer-card:focus-within { border-color: #cfcfcf !important; }
+.offer-card:hover .link-arrow .icon { background: var(--iws-lime); border-color: var(--iws-lime); transform: rotate(0); }
+@media (prefers-reduced-motion: reduce) {
+	.offer-card, .offer-card::before { transition: none; }
+}
