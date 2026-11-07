@@ -864,13 +864,12 @@ html, body { overflow-x: clip; }
 	.link-arrow, .core-card__cta { transition: color 0.2s ease-out; }
 	.link-arrow .icon, .core-card__cta .icon, .btn .icon { transition: transform 0.25s ease-out, background-color 0.25s ease-out, border-color 0.25s ease-out; }
 	.link-arrow:hover .icon, .core-card__cta:hover .icon, .offer-card:hover .link-arrow .icon, .btn:hover .icon { transform: translateX(3px); }
-	.primary-navigation .nav-menu > li > a { position: relative; }
-	.primary-navigation .nav-menu > li > a::after {
-		content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 2px; background: var(--iws-lime);
+	a.iws-nav__link { position: relative; }
+	a.iws-nav__link::after {
+		content: ""; position: absolute; left: 0.95rem; right: 0.95rem; bottom: 0.3rem; height: 2px; border-radius: 2px; background: var(--iws-lime);
 		transform: scaleX(0); transform-origin: left; transition: transform 0.25s ease-out;
 	}
-	.primary-navigation .nav-menu > li > a:hover { text-decoration: none; }
-	.primary-navigation .nav-menu > li > a:hover::after { transform: scaleX(1); }
+	a.iws-nav__link:hover::after, a.iws-nav__link[aria-current="page"]::after { transform: scaleX(1); }
 	.post-card__media img, .insight-card__media img, .featured-post__media img { transition: transform 0.3s ease-out; }
 	.post-card:hover .post-card__media img, .insight-card:hover .insight-card__media img, .featured-post:hover .featured-post__media img { transform: scale(1.03); }
 	.post-card:hover, .insight-card:hover { transform: translateY(-3px); }
