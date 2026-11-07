@@ -109,7 +109,7 @@ get_header();
 					<?php esc_html_e( 'Put', 'iweb' ); ?> <span class="hl"><?php esc_html_e( 'AI', 'iweb' ); ?></span> <?php esc_html_e( 'to work', 'iweb' ); ?><br class="home-hero__br">
 					<?php esc_html_e( 'on your business.', 'iweb' ); ?>
 				</h1>
-				<p class="home-hero__lead"><?php esc_html_e( 'IWS finds the slow, manual and leaky parts of your business and fixes them with AI. We automate repetitive work, improve how you serve customers, and help you grow with better search visibility, conversions and reporting.', 'iweb' ); ?></p>
+				<p class="home-hero__lead"><?php esc_html_e( 'IWS finds the slow, manual and leaky parts of your business and fixes them, deploying AI where necessary. We automate repetitive work, improve how you serve customers, and help you grow with better search visibility, conversions and reporting.', 'iweb' ); ?></p>
 				<div class="cta-row">
 					<a class="btn btn--primary" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 					<a class="btn btn--outline" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
