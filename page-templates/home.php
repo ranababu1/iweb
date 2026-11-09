@@ -241,8 +241,8 @@ get_header();
 		<div class="container home-cta__inner">
 			<div>
 				<p class="eyebrow"><?php esc_html_e( 'Let\'s talk', 'iweb' ); ?></p>
-				<h2><?php esc_html_e( 'Got a problem we could deploy AI to solve?', 'iweb' ); ?></h2>
-				<p><?php esc_html_e( 'Tell us what slows your team down or where customers drop off. We\'ll tell you honestly whether AI can help and what it would take.', 'iweb' ); ?></p>
+				<h2><?php esc_html_e( 'Got a problem we could solve?', 'iweb' ); ?></h2>
+				<p><?php esc_html_e( 'Tell us what slows your team down or where customers drop off. We\'ll tell you how we can help and what it would take.', 'iweb' ); ?></p>
 				<div class="cta-row">
 					<a class="btn btn--light" href="<?php echo esc_url( $iweb_contact_url ); ?>"><?php esc_html_e( 'Start a project', 'iweb' ); ?> <?php echo iweb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 					<a class="btn btn--ghost-dark" href="<?php echo esc_url( iweb_audit_url() ); ?>"><?php echo iweb_icon( 'calendar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> <?php esc_html_e( 'Book a free audit call', 'iweb' ); ?></a>
