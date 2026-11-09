@@ -169,3 +169,31 @@ add_filter( 'wpseo_title', function ( $v ) { return iweb_glossary_yoast( $v, 0 )
 add_filter( 'wpseo_opengraph_title', function ( $v ) { return iweb_glossary_yoast( $v, 0 ); }, 20 );
 add_filter( 'wpseo_metadesc', function ( $v ) { return iweb_glossary_yoast( $v, 1 ); }, 20 );
 add_filter( 'wpseo_opengraph_desc', function ( $v ) { return iweb_glossary_yoast( $v, 1 ); }, 20 );
+
+
+/**
+ * One-time: refresh the site tagline (blogdescription) and root llms.txt summary.
+ *
+ * Yoast Website schema reads the WordPress tagline. The physical llms.txt in the
+ * site root also carries the same summary line. Safe to leave: becomes a no-op
+ * once both match the new copy.
+ *
+ * @return void
+ */
+function iweb_refresh_site_tagline() {
+	$old = 'We deploy AI to solve real business problems';
+	$new = 'We solve real business problems, deploying AI where necessary';
+
+	if ( get_option( 'blogdescription' ) === $old ) {
+		update_option( 'blogdescription', $new );
+	}
+
+	$llms = ABSPATH . 'llms.txt';
+	if ( is_readable( $llms ) && is_writable( $llms ) ) {
+		$contents = file_get_contents( $llms );
+		if ( is_string( $contents ) && false !== strpos( $contents, $old ) ) {
+			file_put_contents( $llms, str_replace( $old, $new, $contents ) );
+		}
+	}
+}
+add_action( 'init', 'iweb_refresh_site_tagline', 1 );
